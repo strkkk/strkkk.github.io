@@ -120,13 +120,19 @@
 									
 										
 									<tr>
-										<td class="c">ThrowsCount</td>
+										<td class="c">AnnotationUseStyle</td>
 										
 										<td class="c">
 											
-												max
+												closingParens
 												
-													<li>20000000</li>
+													<li>always</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_always</li>
 												
 												<br/>
 											
@@ -135,9 +141,97 @@
 										
 										<td class="c">
 											
-												max
+												closingParens
 												
-													<li>20000000</li>
+													<li>always</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_always</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AnnotationUseStyle</td>
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>never</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_never</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>never</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_never</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AnnotationUseStyle</td>
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>ignore</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_ignore</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>ignore</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_ignore</li>
 												
 												<br/>
 											
@@ -164,37 +258,337 @@
 							<th>Files</th>
 							<th>Violations</th>
 							
+								<th>Severity-warning</th>
+							
 						</tr>
 						<tr class="b">
 							<td>base</td>
 							<td id="filesBase">5911</td>
-							<td id="totalBase">0</td>
+							<td id="totalBase">30270</td>
+							
+								<td id="warningSeverityNumBase">30270</td>
 							
 						</tr>
 						<tr class="a">
 							<td>patch</td>
 							<td id="filesPatch">5911</td>
-							<td id="totalPatch">0</td>
+							<td id="totalPatch">30262</td>
+							
+								<td id="warningSeverityNumPatch">30262</td>
 							
 						</tr>
 						<tr class="d">
 							<td>difference</td>
-							<td id="filesDiff">0</td>
-							<td id="totalDiff">0</td>
+							<td id="filesDiff">8</td>
+							<td id="totalDiff">8</td>
+							
+								<td id="warningSeverityNumDiff">8</td>
 							
 						<tr>
 					</table>
 
 					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>AUS_always</th>
+								
+									<th>AUS_ignore</th>
+								
+									<th>AUS_never</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="AUS_alwaysModuleNumBase">30170</td>
+								
+									<td id="AUS_ignoreModuleNumBase">43</td>
+								
+									<td id="AUS_neverModuleNumBase">57</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="AUS_alwaysModuleNumPatch">30170</td>
+								
+									<td id="AUS_ignoreModuleNumPatch">43</td>
+								
+									<td id="AUS_neverModuleNumPatch">49</td>
+								
+							</tr>
+							<tr class="d">
+								<td>difference</td>
+								
+									<td id="AUS_alwaysModuleNumDiff">0</td>
+								
+									<td id="AUS_ignoreModuleNumDiff">0</td>
+								
+									<td id="AUS_neverModuleNumDiff">8</td>
+								
+							<tr>
+						</table>
+					
 
 					<br />
-					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">8</span><br />
 					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">0</span><br />
 				</div>
 			</div>
 
 			<div class="section">
 				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/SingleTestClassWithSingleLevelContextHierarchyTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/SingleTestClassWithSingleLevelContextHierarchyTests.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelOneWithBareContextConfigurationInSubclassTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelOneWithBareContextConfigurationInSubclassTests.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelOneWithSingleLevelContextHierarchyTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelOneWithSingleLevelContextHierarchyTests.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithBareContextConfigurationInSuperclassTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithBareContextConfigurationInSuperclassTests.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithSingleLevelContextHierarchyAndMixedConfigTypesTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithSingleLevelContextHierarchyAndMixedConfigTypesTests.java.html#L35">35</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithSingleLevelContextHierarchyTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/standard/TestHierarchyLevelTwoWithSingleLevelContextHierarchyTests.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/web/DispatcherWacRootWacEarTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/web/DispatcherWacRootWacEarTests.java.html#L36">36</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/web/RootWacEarTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>AUS_never</td>
+								<td>Annotation cannot have closing parenthesis.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/hierarchies/web/RootWacEarTests.java.html#L38">38</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
 			</div>
 		</div>
 	</body>

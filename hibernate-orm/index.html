@@ -120,13 +120,19 @@
 									
 										
 									<tr>
-										<td class="c">ThrowsCount</td>
+										<td class="c">AnnotationUseStyle</td>
 										
 										<td class="c">
 											
-												max
+												closingParens
 												
-													<li>20000000</li>
+													<li>always</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_always</li>
 												
 												<br/>
 											
@@ -135,9 +141,97 @@
 										
 										<td class="c">
 											
-												max
+												closingParens
 												
-													<li>20000000</li>
+													<li>always</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_always</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AnnotationUseStyle</td>
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>never</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_never</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>never</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_never</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AnnotationUseStyle</td>
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>ignore</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_ignore</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												closingParens
+												
+													<li>ignore</li>
+												
+												<br/>
+											
+												id
+												
+													<li>AUS_ignore</li>
 												
 												<br/>
 											
@@ -164,13 +258,17 @@
 							<th>Files</th>
 							<th>Violations</th>
 							
+								<th>Severity-warning</th>
+							
 								<th>Severity-error</th>
 							
 						</tr>
 						<tr class="b">
 							<td>base</td>
 							<td id="filesBase">6386</td>
-							<td id="totalBase">76</td>
+							<td id="totalBase">18397</td>
+							
+								<td id="warningSeverityNumBase">18321</td>
 							
 								<td id="errorSeverityNumBase">76</td>
 							
@@ -178,7 +276,9 @@
 						<tr class="a">
 							<td>patch</td>
 							<td id="filesPatch">6386</td>
-							<td id="totalPatch">76</td>
+							<td id="totalPatch">18397</td>
+							
+								<td id="warningSeverityNumPatch">18321</td>
 							
 								<td id="errorSeverityNumPatch">76</td>
 							
@@ -187,6 +287,8 @@
 							<td>difference</td>
 							<td id="filesDiff">0</td>
 							<td id="totalDiff">0</td>
+							
+								<td id="warningSeverityNumDiff">0</td>
 							
 								<td id="errorSeverityNumDiff">0</td>
 							
@@ -199,25 +301,49 @@
 							<tr class="a">
 								<th>Report id</th>
 								
+									<th>AUS_always</th>
+								
 									<th>com.puppycrawl.tools.checkstyle.Checker</th>
+								
+									<th>AUS_ignore</th>
+								
+									<th>AUS_never</th>
 								
 							</tr>
 							<tr class="b">
 								<td>base</td>
 								
+									<td id="AUS_alwaysModuleNumBase">16534</td>
+								
 									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumBase">76</td>
+								
+									<td id="AUS_ignoreModuleNumBase">876</td>
+								
+									<td id="AUS_neverModuleNumBase">911</td>
 								
 							</tr>
 							<tr class="a">
 								<td>patch</td>
 								
+									<td id="AUS_alwaysModuleNumPatch">16534</td>
+								
 									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumPatch">76</td>
+								
+									<td id="AUS_ignoreModuleNumPatch">876</td>
+								
+									<td id="AUS_neverModuleNumPatch">911</td>
 								
 							</tr>
 							<tr class="d">
 								<td>difference</td>
 								
+									<td id="AUS_alwaysModuleNumDiff">0</td>
+								
 									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumDiff">0</td>
+								
+									<td id="AUS_ignoreModuleNumDiff">0</td>
+								
+									<td id="AUS_neverModuleNumDiff">0</td>
 								
 							<tr>
 						</table>
