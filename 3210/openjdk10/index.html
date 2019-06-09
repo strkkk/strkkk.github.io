@@ -1,0 +1,6214 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">AnnotationUseStyle</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+								<th>Severity-error</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">20004</td>
+							<td id="totalBase">88</td>
+							
+								<td id="warningSeverityNumBase">84</td>
+							
+								<td id="errorSeverityNumBase">4</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">20004</td>
+							<td id="totalPatch">385</td>
+							
+								<td id="warningSeverityNumPatch">381</td>
+							
+								<td id="errorSeverityNumPatch">4</td>
+							
+						</tr>
+						<tr class="d">
+							<td>difference</td>
+							<td id="filesDiff">66</td>
+							<td id="totalDiff">297</td>
+							
+								<td id="warningSeverityNumDiff">297</td>
+							
+								<td id="errorSeverityNumDiff">0</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.Checker</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumBase">4</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheckModuleNumBase">84</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumPatch">4</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheckModuleNumPatch">381</td>
+								
+							</tr>
+							<tr class="d">
+								<td>difference</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumDiff">0</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationUseStyleCheckModuleNumDiff">297</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">297</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/com/sun/corba/serialization/ObjectStreamTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/com/sun/corba/serialization/ObjectStreamTest.java.html#L174">174</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/com/sun/corba/serialization/ObjectStreamTest.java.html#L190">190</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/4058433/TestBeanInfoPriority.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/4058433/TestBeanInfoPriority.java.html#L63">63</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/CBase.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/CBase.java.html#L32">32</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/OverridePropertyInfoTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/OverridePropertyInfoTest.java.html#L44">44</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/OverrideUserDefPropertyInfoTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/8132566/OverrideUserDefPropertyInfoTest.java.html#L54">54</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L268">268</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L293">293</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L318">318</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L343">343</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L424">424</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L517">517</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L610">610</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L638">638</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L662">662</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L696">696</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L724">724</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/AnonymousClassBeanPropertyTest.java.html#L747">747</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L67">67</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L88">88</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L110">110</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L132">132</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L154">154</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L176">176</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L198">198</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L220">220</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L242">242</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L267">267</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L289">289</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L310">310</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L332">332</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L356">356</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L381">381</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L406">406</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L430">430</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L462">462</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L495">495</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L520">520</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L543">543</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L568">568</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L592">592</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L615">615</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L637">637</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L662">662</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L689">689</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L711">711</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L733">733</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L756">756</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L780">780</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L858">858</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/BeanPropertyTest.java.html#L873">873</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L78">78</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L109">109</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L136">136</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L163">163</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L249">249</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L278">278</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L309">309</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L353">353</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L373">373</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L463">463</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L483">483</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L527">527</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L548">548</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L660">660</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L681">681</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L702">702</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L757">757</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L777">777</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L883">883</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L903">903</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L924">924</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L966">966</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/Introspector/InheritanceBeanPropertyTest.java.html#L1019">1019</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/io/Serializable/serialFilter/FilterWithSecurityManagerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/io/Serializable/serialFilter/FilterWithSecurityManagerTest.java.html#L90">90</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L928">928</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L956">956</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L996">996</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1090">1090</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1108">1108</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1127">1127</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1146">1146</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1161">1161</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1167">1167</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1173">1173</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1179">1179</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1185">1185</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1190">1190</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ModuleLayer/BasicLayerTest.java.html#L1198">1198</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L121">121</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L128">128</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L133">133</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L138">138</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L143">143</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L148">148</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L153">153</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/ProcessHandle/PermissionTest.java.html#L158">158</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/LiteralReplace.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A98" href = "#A98">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/LiteralReplace.java.html#L76">76</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/StringJoinTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A99" href = "#A99">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/StringJoinTest.java.html#L77">77</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A100" href = "#A100">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/StringJoinTest.java.html#L84">84</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A101" href = "#A101">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/String/StringJoinTest.java.html#L110">110</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DefineClassTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A102" href = "#A102">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DefineClassTest.java.html#L219">219</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A103" href = "#A103">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DefineClassTest.java.html#L224">224</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A104" href = "#A104">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DefineClassTest.java.html#L230">230</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A105" href = "#A105">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DefineClassTest.java.html#L235">235</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DropLookupModeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A106" href = "#A106">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/DropLookupModeTest.java.html#L155">155</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/FindAccessTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A107" href = "#A107">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/FindAccessTest.java.html#L75">75</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A108" href = "#A108">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L101">101</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A109" href = "#A109">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L149">149</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A110" href = "#A110">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L164">164</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A111" href = "#A111">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L179">179</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A112" href = "#A112">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L185">185</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A113" href = "#A113">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L191">191</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A114" href = "#A114">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L197">197</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A115" href = "#A115">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/MethodHandles/privateLookupIn/test/p/PrivateLookupInTests.java.html#L203">203</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/SpreadCollectTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A116" href = "#A116">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/SpreadCollectTest.java.html#L91">91</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestAccessClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A117" href = "#A117">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestAccessClass.java.html#L70">70</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestFindClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A118" href = "#A118">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestFindClass.java.html#L64">64</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A119" href = "#A119">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestFindClass.java.html#L80">80</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestLookup.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A120" href = "#A120">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/t8150782/TestLookup.java.html#L48">48</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/AutomaticModulesTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A121" href = "#A121">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/AutomaticModulesTest.java.html#L914">914</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A122" href = "#A122">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/AutomaticModulesTest.java.html#L941">941</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A123" href = "#A123">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1452">1452</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A124" href = "#A124">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1461">1461</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A125" href = "#A125">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1472">1472</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A126" href = "#A126">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1484">1484</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A127" href = "#A127">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1510">1510</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A128" href = "#A128">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1523">1523</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A129" href = "#A129">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1554">1554</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A130" href = "#A130">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1585">1585</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A131" href = "#A131">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1620">1620</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A132" href = "#A132">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1648">1648</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A133" href = "#A133">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1702">1702</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A134" href = "#A134">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1739">1739</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A135" href = "#A135">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1778">1778</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A136" href = "#A136">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1799">1799</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A137" href = "#A137">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1815">1815</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A138" href = "#A138">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1904">1904</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A139" href = "#A139">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1910">1910</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A140" href = "#A140">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1959">1959</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A141" href = "#A141">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1964">1964</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A142" href = "#A142">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1969">1969</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A143" href = "#A143">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1975">1975</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A144" href = "#A144">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1981">1981</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A145" href = "#A145">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1987">1987</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A146" href = "#A146">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1994">1994</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A147" href = "#A147">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L1999">1999</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A148" href = "#A148">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2004">2004</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A149" href = "#A149">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2010">2010</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A150" href = "#A150">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2016">2016</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A151" href = "#A151">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2022">2022</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A152" href = "#A152">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2029">2029</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A153" href = "#A153">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2036">2036</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A154" href = "#A154">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ConfigurationTest.java.html#L2043">2043</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ModuleReferenceTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A155" href = "#A155">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/module/ModuleReferenceTest.java.html#L67">67</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/reflect/DefaultMethodMembers/FilterNotMostSpecific.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A156" href = "#A156">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/reflect/DefaultMethodMembers/FilterNotMostSpecific.java.html#L544">544</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A157" href = "#A157">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/reflect/DefaultMethodMembers/FilterNotMostSpecific.java.html#L552">552</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A158" href = "#A158">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1199">1199</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A159" href = "#A159">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1205">1205</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A160" href = "#A160">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1241">1241</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A161" href = "#A161">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1247">1247</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A162" href = "#A162">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1283">1283</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A163" href = "#A163">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1289">1289</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A164" href = "#A164">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1330">1330</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A165" href = "#A165">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1336">1336</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A166" href = "#A166">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1428">1428</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A167" href = "#A167">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1442">1442</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A168" href = "#A168">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1532">1532</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A169" href = "#A169">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1538">1538</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A170" href = "#A170">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1818">1818</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A171" href = "#A171">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1824">1824</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A172" href = "#A172">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1860">1860</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A173" href = "#A173">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1866">1866</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A174" href = "#A174">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1902">1902</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A175" href = "#A175">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1908">1908</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A176" href = "#A176">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1949">1949</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A177" href = "#A177">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L1955">1955</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A178" href = "#A178">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L2047">2047</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A179" href = "#A179">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L2061">2061</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A180" href = "#A180">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L2151">2151</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A181" href = "#A181">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKDuration.java.html#L2157">2157</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKInstant.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A182" href = "#A182">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKInstant.java.html#L1497">1497</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A183" href = "#A183">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKInstant.java.html#L1503">1503</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A184" href = "#A184">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L604">604</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A185" href = "#A185">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1193">1193</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A186" href = "#A186">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1210">1210</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A187" href = "#A187">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1271">1271</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A188" href = "#A188">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1276">1276</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A189" href = "#A189">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1281">1281</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A190" href = "#A190">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1286">1286</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A191" href = "#A191">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1371">1371</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A192" href = "#A192">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1376">1376</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A193" href = "#A193">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1572">1572</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A194" href = "#A194">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1589">1589</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A195" href = "#A195">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1650">1650</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A196" href = "#A196">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1655">1655</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A197" href = "#A197">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1660">1660</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A198" href = "#A198">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1665">1665</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A199" href = "#A199">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1726">1726</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A200" href = "#A200">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalDate.java.html#L1731">1731</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalTime.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A201" href = "#A201">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalTime.java.html#L542">542</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A202" href = "#A202">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKLocalTime.java.html#L564">564</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKOffsetTime.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A203" href = "#A203">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKOffsetTime.java.html#L423">423</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A204" href = "#A204">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKOffsetTime.java.html#L429">429</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A205" href = "#A205">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKOffsetTime.java.html#L434">434</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A206" href = "#A206">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKOffsetTime.java.html#L439">439</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKYearMonth.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A207" href = "#A207">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKYearMonth.java.html#L713">713</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A208" href = "#A208">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKYearMonth.java.html#L731">731</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A209" href = "#A209">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKYearMonth.java.html#L928">928</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A210" href = "#A210">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/time/tck/java/time/TCKYearMonth.java.html#L946">946</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A211" href = "#A211">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java.html#L429">429</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A212" href = "#A212">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java.html#L434">434</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A213" href = "#A213">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java.html#L439">439</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A214" href = "#A214">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java.html#L445">445</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A215" href = "#A215">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ModulesTest.java.html#L450">450</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ReloadTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A216" href = "#A216">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ReloadTest.java.html#L64">64</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A217" href = "#A217">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ReloadTest.java.html#L72">72</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A218" href = "#A218">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ReloadTest.java.html#L81">81</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A219" href = "#A219">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/ServiceLoader/ReloadTest.java.html#L89">89</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/MergeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A220" href = "#A220">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/MergeTest.java.html#L69">69</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/StringJoinerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A221" href = "#A221">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/StringJoinerTest.java.html#L205">205</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A222" href = "#A222">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/StringJoinerTest.java.html#L210">210</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A223" href = "#A223">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/StringJoinerTest.java.html#L215">215</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A224" href = "#A224">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/StringJoiner/StringJoinerTest.java.html#L220">220</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/DoubleNodeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A225" href = "#A225">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/DoubleNodeTest.java.html#L142">142</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A226" href = "#A226">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/DoubleNodeTest.java.html#L161">161</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/IntNodeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A227" href = "#A227">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/IntNodeTest.java.html#L142">142</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/LongNodeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A228" href = "#A228">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/LongNodeTest.java.html#L142">142</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/NodeBuilderTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A229" href = "#A229">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/NodeBuilderTest.java.html#L71">71</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A230" href = "#A230">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/NodeBuilderTest.java.html#L116">116</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/NodeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A231" href = "#A231">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/NodeTest.java.html#L120">120</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A232" href = "#A232">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L95">95</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A233" href = "#A233">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L117">117</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A234" href = "#A234">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L170">170</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A235" href = "#A235">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L192">192</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A236" href = "#A236">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L245">245</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A237" href = "#A237">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L267">267</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A238" href = "#A238">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L321">321</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A239" href = "#A239">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/boottest/java.base/java/util/stream/SpinedBufferTest.java.html#L343">343</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/lang/invoke/DeserializeMethodTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A240" href = "#A240">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/lang/invoke/DeserializeMethodTest.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/MapTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A241" href = "#A241">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/MapTest.java.html#L79">79</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/CollectionAndMapModifyStreamTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A242" href = "#A242">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/CollectionAndMapModifyStreamTest.java.html#L143">143</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A243" href = "#A243">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/CollectionAndMapModifyStreamTest.java.html#L148">148</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/CollectorsTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A244" href = "#A244">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/CollectorsTest.java.html#L538">538</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/DistinctOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A245" href = "#A245">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/DistinctOpTest.java.html#L174">174</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A246" href = "#A246">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java.html#L42">42</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A247" href = "#A247">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java.html#L72">72</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A248" href = "#A248">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java.html#L119">119</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A249" href = "#A249">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java.html#L167">167</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A250" href = "#A250">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ForEachOpTest.java.html#L215">215</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntPrimitiveOpsTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A251" href = "#A251">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntPrimitiveOpsTests.java.html#L64">64</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A252" href = "#A252">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntPrimitiveOpsTests.java.html#L71">71</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A253" href = "#A253">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntPrimitiveOpsTests.java.html#L78">78</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntSliceOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A254" href = "#A254">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/IntSliceOpTest.java.html#L175">175</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/LongPrimitiveOpsTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A255" href = "#A255">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/LongPrimitiveOpsTests.java.html#L64">64</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A256" href = "#A256">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/LongPrimitiveOpsTests.java.html#L71">71</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A257" href = "#A257">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/LongPrimitiveOpsTests.java.html#L78">78</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SequentialOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A258" href = "#A258">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SequentialOpTest.java.html#L50">50</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A259" href = "#A259">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java.html#L156">156</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A260" href = "#A260">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java.html#L179">179</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A261" href = "#A261">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java.html#L199">199</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A262" href = "#A262">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java.html#L247">247</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A263" href = "#A263">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SliceOpTest.java.html#L329">329</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SortedOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A264" href = "#A264">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SortedOpTest.java.html#L126">126</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A265" href = "#A265">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SortedOpTest.java.html#L210">210</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A266" href = "#A266">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SortedOpTest.java.html#L258">258</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A267" href = "#A267">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/SortedOpTest.java.html#L306">306</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamBuilderTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A268" href = "#A268">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamBuilderTest.java.html#L106">106</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A269" href = "#A269">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamBuilderTest.java.html#L168">168</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A270" href = "#A270">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamBuilderTest.java.html#L230">230</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A271" href = "#A271">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamBuilderTest.java.html#L291">291</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamCloseTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A272" href = "#A272">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamCloseTest.java.html#L42">42</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamSpliteratorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A273" href = "#A273">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamSpliteratorTest.java.html#L291">291</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A274" href = "#A274">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamSpliteratorTest.java.html#L387">387</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A275" href = "#A275">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamSpliteratorTest.java.html#L480">480</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A276" href = "#A276">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/StreamSpliteratorTest.java.html#L573">573</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/TeeOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A277" href = "#A277">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/TeeOpTest.java.html#L42">42</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ToArrayOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A278" href = "#A278">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/ToArrayOpTest.java.html#L168">168</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpStatefulTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A279" href = "#A279">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpStatefulTest.java.html#L90">90</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A280" href = "#A280">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpStatefulTest.java.html#L119">119</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A281" href = "#A281">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpStatefulTest.java.html#L149">149</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A282" href = "#A282">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpStatefulTest.java.html#L182">182</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A283" href = "#A283">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L54">54</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A284" href = "#A284">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L77">77</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A285" href = "#A285">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L99">99</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A286" href = "#A286">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L325">325</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A287" href = "#A287">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L335">335</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A288" href = "#A288">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L345">345</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A289" href = "#A289">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/java/util/stream/test/org/openjdk/tests/java/util/stream/WhileOpTest.java.html#L355">355</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/management/Introspector/AnnotationTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A290" href = "#A290">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/management/Introspector/AnnotationTest.java.html#L144">144</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/management/security/SimpleMBean.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A291" href = "#A291">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/management/security/SimpleMBean.java.html#L45">45</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A292" href = "#A292">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/management/security/SimpleMBean.java.html#L55">55</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/jxc/8073872/Foo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A293" href = "#A293">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/jxc/8073872/Foo.java.html#L32">32</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/marshal/8134111/testTypes/Root.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A294" href = "#A294">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/marshal/8134111/testTypes/Root.java.html#L37">37</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/marshal/8134111/testTypes/WhenType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A295" href = "#A295">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/javax/xml/bind/marshal/8134111/testTypes/WhenType.java.html#L38">38</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/tools/jar/InputFilesTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A296" href = "#A296">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/tools/jar/InputFilesTest.java.html#L140">140</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A297" href = "#A297">#</a></td>
+								<td>warning</td>
+								<td>AnnotationUseStyle</td>
+								<td>Annotation style must be &#39;COMPACT_NO_ARRAY&#39;.</td>
+								
+									
+									<td><a href = "xref/home/andrey/Java/Eclipse/DefaultWorkspace/contribution/checkstyle-tester/repositories/openjdk10/test/tools/jar/InputFilesTest.java.html#L148">148</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
