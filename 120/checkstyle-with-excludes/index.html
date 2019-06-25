@@ -1,0 +1,2483 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">PreferMethodReference</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+								<th>Severity-error</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+								<td id="errorSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">2045</td>
+							<td id="totalPatch">97</td>
+							
+								<td id="warningSeverityNumPatch">90</td>
+							
+								<td id="errorSeverityNumPatch">7</td>
+							
+						</tr>
+						<tr class="d">
+							<td>difference</td>
+							<td id="filesDiff">23</td>
+							<td id="totalDiff">97</td>
+							
+								<td id="warningSeverityNumDiff">90</td>
+							
+								<td id="errorSeverityNumDiff">7</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.PreferMethodReferenceCheck</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.Checker</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.PreferMethodReferenceCheckModuleNumBase">0</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.PreferMethodReferenceCheckModuleNumPatch">90</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumPatch">7</td>
+								
+							</tr>
+							<tr class="d">
+								<td>difference</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.PreferMethodReferenceCheckModuleNumDiff">90</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumDiff">7</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">97</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/it/resources/org/checkstyle/suppressionxpathfilter/hiddenfield/SuppressionXpathRegressionExplicitOne.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/it/resources/org/checkstyle/suppressionxpathfilter/hiddenfield/SuppressionXpathRegressionExplicitOne.java.html#L10">10</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/asttreestringprinter/InputAstTreeStringPrinter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/asttreestringprinter/InputAstTreeStringPrinter.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/asttreestringprinter/InputAstTreeStringPrinter.java:2:1: unexpected token: classD<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/asttreestringprinter/InputAstTreeStringPrinter.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/filefilters/beforeexecutionexclusionfilefilter/InputBeforeExecutionExclusionFileFilterIncorrectClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/filefilters/beforeexecutionexclusionfilefilter/InputBeforeExecutionExclusionFileFilterIncorrectClass.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/filefilters/beforeexecutionexclusionfilefilter/InputBeforeExecutionExclusionFileFilterIncorrectClass.java:2:1: unexpected token: !<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/filefilters/beforeexecutionexclusionfilefilter/InputBeforeExecutionExclusionFileFilterIncorrectClass.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/gui/mainframemodel/InputMainFrameModelIncorrectClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/gui/mainframemodel/InputMainFrameModelIncorrectClass.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/gui/mainframemodel/InputMainFrameModelIncorrectClass.java:2:1: unexpected token: !<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/gui/mainframemodel/InputMainFrameModelIncorrectClass.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javadocpropertiesgenerator/InputJavadocPropertiesGeneratorParseError.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: IllegalStateException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javadocpropertiesgenerator/InputJavadocPropertiesGeneratorParseError.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: java.lang.IllegalStateException: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javadocpropertiesgenerator/InputJavadocPropertiesGeneratorParseError.java:9:1: expecting RCURLY, found &#39;!&#39;<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser$1.reportError(JavaParser.java:93)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.typeDefinition(GeneratedJavaRecognizer.java:411)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:202)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javadocpropertiesgenerator/InputJavadocPropertiesGeneratorParseError.java:9:1: expecting RCURLY, found &#39;!&#39;<br />
+#x9;at antlr.Parser.match(Parser.java:211)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.classBlock(GeneratedJavaRecognizer.java:2564)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.classDefinition(GeneratedJavaRecognizer.java:634)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.typeDefinitionInternal(GeneratedJavaRecognizer.java:556)<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.typeDefinition(GeneratedJavaRecognizer.java:389)<br />
+#x9;... 38 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javadocpropertiesgenerator/InputJavadocPropertiesGeneratorParseError.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javaparser/InputJavaParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javaparser/InputJavaParser.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javaparser/InputJavaParser.java:2:1: unexpected token: classD<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/javaparser/InputJavaParser.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/main/InputMainIncorrectClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/main/InputMainIncorrectClass.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/main/InputMainIncorrectClass.java:2:1: unexpected token: !<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/main/InputMainIncorrectClass.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/suppressionsstringprinter/InputSuppressionsStringPrinter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>error</td>
+								<td>Checker</td>
+								<td>Got an exception - com.puppycrawl.tools.checkstyle.api.CheckstyleException: NoViableAltException occurred while parsing file /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/suppressionsstringprinter/InputSuppressionsStringPrinter.java.<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:105)<br />
+#x9;at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:160)<br />
+#x9;at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:85)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:332)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:294)<br />
+#x9;at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:220)<br />
+#x9;at org.apache.maven.plugins.checkstyle.exec.DefaultCheckstyleExecutor.executeCheckstyle(DefaultCheckstyleExecutor.java:248)<br />
+#x9;at org.apache.maven.plugins.checkstyle.AbstractCheckstyleReport.executeReport(AbstractCheckstyleReport.java:463)<br />
+#x9;at org.apache.maven.plugins.checkstyle.CheckstyleReport.executeReport(CheckstyleReport.java:57)<br />
+#x9;at org.apache.maven.reporting.AbstractMavenReport.generate(AbstractMavenReport.java:255)<br />
+#x9;at org.apache.maven.plugins.site.ReportDocumentRenderer.renderDocument(ReportDocumentRenderer.java:219)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(DefaultSiteRenderer.java:319)<br />
+#x9;at org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteRenderer.java:135)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.renderLocale(SiteMojo.java:175)<br />
+#x9;at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:138)<br />
+#x9;at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)<br />
+#x9;at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)<br />
+#x9;at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)<br />
+#x9;at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)<br />
+#x9;at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)<br />
+#x9;at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)<br />
+#x9;at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)<br />
+#x9;at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)<br />
+#x9;at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+#x9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+#x9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+#x9;at java.lang.reflect.Method.invoke(Method.java:498)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)<br />
+#x9;at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)<br />
+Caused by: /home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/suppressionsstringprinter/InputSuppressionsStringPrinter.java:2:1: unexpected token: classD<br />
+#x9;at com.puppycrawl.tools.checkstyle.grammar.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:181)<br />
+#x9;at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:99)<br />
+#x9;... 36 more<br />
+</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources-noncompilable/com/puppycrawl/tools/checkstyle/suppressionsstringprinter/InputSuppressionsStringPrinter.java.html#L1">1</a></td>
+								
+								
+									<td> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L19">19</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L30">30</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L41">41</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L51">51</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L101">101</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L112">112</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L219">219</a></td>
+								
+								
+									
+									<td>67</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/hiddenfield/InputHiddenFieldLambdas.java.html#L227">227</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L28">28</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L32">32</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L34">34</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L37">37</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L39">39</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L41">41</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L59">59</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L63">63</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L68">68</a></td>
+								
+								
+									
+									<td>12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L73">73</a></td>
+								
+								
+									
+									<td>12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L76">76</a></td>
+								
+								
+									
+									<td>12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L80">80</a></td>
+								
+								
+									
+									<td>12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L83">83</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L86">86</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L90">90</a></td>
+								
+								
+									
+									<td>12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L94">94</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L104">104</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L105">105</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L106">106</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L108">108</a></td>
+								
+								
+									
+									<td>11</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L115">115</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationLambda1.java.html#L167">167</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L5">5</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L9">9</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L15">15</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L17">17</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambda.java.html#L19">19</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L5">5</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L9">9</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L15">15</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L17">17</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnly.java.html#L19">19</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L5">5</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L9">9</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L15">15</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L17">17</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaOnlyWithSpace.java.html#L19">19</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L5">5</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L9">9</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L15">15</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L17">17</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadLambdaWithSpace.java.html#L19">19</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L5">5</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L9">9</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L15">15</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L17">17</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithDisabledLambda.java.html#L19">19</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L5">5</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L7">7</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L9">9</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L11">11</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L13">13</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L15">15</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L17">17</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/parenpad/InputParenPadWithSpaceAndDisabledLambda.java.html#L19">19</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/whitespacearound/InputWhitespaceAroundAllowEmptyLambdaExpressions.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/whitespacearound/InputWhitespaceAroundAllowEmptyLambdaExpressions.java.html#L13">13</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/whitespacearound/InputWhitespaceAroundLambda.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/whitespacearound/InputWhitespaceAroundLambda.java.html#L8">8</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJava8Class1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJava8Class1.java.html#L54">54</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJava8Class1.java.html#L55">55</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJava8Class1.java.html#L57">57</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda10.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda10.java.html#L18">18</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda11.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda11.java.html#L18">18</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda15.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda15.java.html#L12">12</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda15.java.html#L13">13</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda15.java.html#L14">14</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda18.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>PreferMethodReference</td>
+								<td>Lambda can be replaced with method reference.</td>
+								
+									
+									<td><a href = "xref/home/andrei_paikin@epam.com/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/java8/InputLambda18.java.html#L10">10</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
