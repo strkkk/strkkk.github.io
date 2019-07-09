@@ -1,0 +1,3889 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">InnerAssignment</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+								<th>Severity-error</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">15770</td>
+							<td id="totalBase">4853</td>
+							
+								<td id="warningSeverityNumBase">4852</td>
+							
+								<td id="errorSeverityNumBase">1</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">15770</td>
+							<td id="totalPatch">4701</td>
+							
+								<td id="warningSeverityNumPatch">4700</td>
+							
+								<td id="errorSeverityNumPatch">1</td>
+							
+						</tr>
+						<tr class="d">
+							<td>difference</td>
+							<td id="filesDiff">76</td>
+							<td id="totalDiff">152</td>
+							
+								<td id="warningSeverityNumDiff">152</td>
+							
+								<td id="errorSeverityNumDiff">0</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.Checker</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumBase">1</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheckModuleNumBase">4852</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumPatch">1</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheckModuleNumPatch">4700</td>
+								
+							</tr>
+							<tr class="d">
+								<td>difference</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.CheckerModuleNumDiff">0</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheckModuleNumDiff">152</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">152</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">0</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/imageio/plugins/png/PNGImageReader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/imageio/plugins/png/PNGImageReader.java.html#L215">215</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/jndi/ldap/Connection.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/jndi/ldap/Connection.java.html#L444">444</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/example/debug/bdi/ChildSession.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/example/debug/bdi/ChildSession.java.html#L256">256</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/hat/internal/server/HttpReader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/hat/internal/server/HttpReader.java.html#L87">87</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/jdi/SDE.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/jdi/SDE.java.html#L334">334</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/jdi/SDE.java.html#L414">414</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/jdi/SDE.java.html#L422">422</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/com/sun/tools/jdi/SDE.java.html#L436">436</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/DataInputStream.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/DataInputStream.java.html#L220">220</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/FilePermission.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/FilePermission.java.html#L451">451</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/StreamTokenizer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/StreamTokenizer.java.html#L710">710</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/StreamTokenizer.java.html#L729">729</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/StreamTokenizer.java.html#L735">735</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/io/StreamTokenizer.java.html#L746">746</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/net/SocketPermission.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/net/SocketPermission.java.html#L529">529</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L139">139</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L139">139</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L288">288</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L288">288</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L437">437</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L437">437</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L586">586</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/ArrayPrefixHelpers.java.html#L586">586</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/Date.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/Date.java.html#L492">492</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/PropertyPermission.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/PropertyPermission.java.html#L260">260</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/Timer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/Timer.java.html#L701">701</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/TreeMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/TreeMap.java.html#L2747">2747</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/TreeMap.java.html#L2825">2825</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/TreeMap.java.html#L2898">2898</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/TreeMap.java.html#L2970">2970</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1634">1634</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1635">1635</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1702">1702</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1703">1703</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1768">1768</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1769">1769</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1822">1822</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1822">1822</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1874">1874</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1874">1874</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1925">1925</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L1925">1925</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L2738">2738</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L2738">2738</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L2840">2840</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CompletableFuture.java.html#L2840">2840</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L2225">2225</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L2275">2275</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L2276">2276</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L2303">2303</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L3365">3365</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L3365">3365</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L4880">4880</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentHashMap.java.html#L4880">4880</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentLinkedDeque.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentLinkedDeque.java.html#L607">607</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ConcurrentLinkedDeque.java.html#L637">637</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CountedCompleter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/CountedCompleter.java.html#L722">722</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L823">823</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L913">913</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L1327">1327</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L1328">1328</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L1441">1441</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L1441">1441</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L2009">2009</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L2280">2280</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L2281">2281</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L2282">2282</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L3084">3084</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ForkJoinPool.java.html#L3085">3085</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java.html#L679">679</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java.html#L680">680</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java.html#L681">681</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java.html#L868">868</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/LinkedTransferQueue.java.html#L870">870</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/Phaser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/Phaser.java.html#L495">495</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/Phaser.java.html#L977">977</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/PriorityBlockingQueue.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/PriorityBlockingQueue.java.html#L562">562</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ScheduledThreadPoolExecutor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ScheduledThreadPoolExecutor.java.html#L1211">1211</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/SynchronousQueue.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/SynchronousQueue.java.html#L497">497</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ThreadPoolExecutor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/ThreadPoolExecutor.java.html#L1127">1127</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/locks/StampedLock.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/locks/StampedLock.java.html#L760">760</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/concurrent/locks/StampedLock.java.html#L1332">1332</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/AbstractTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/AbstractTask.java.html#L297">297</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/ForEachOps.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/ForEachOps.java.html#L365">365</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/Nodes.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/java/util/stream/Nodes.java.html#L1864">1864</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/MBeanPermission.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/MBeanPermission.java.html#L647">647</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/MatchQueryExp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/MatchQueryExp.java.html#L142">142</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/ObjectName.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/ObjectName.java.html#L542">542</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/ObjectName.java.html#L568">568</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/management/ObjectName.java.html#L605">605</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/security/auth/kerberos/ServicePermission.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/security/auth/kerberos/ServicePermission.java.html#L323">323</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/plaf/nimbus/NimbusStyle.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/plaf/nimbus/NimbusStyle.java.html#L670">670</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/CompositeView.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/CompositeView.java.html#L345">345</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/DefaultStyledDocument.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/DefaultStyledDocument.java.html#L841">841</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/GlyphView.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/GlyphView.java.html#L473">473</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/html/CSS.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/html/CSS.java.html#L1262">1262</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/html/CSSParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/javax/swing/text/html/CSSParser.java.html#L817">817</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/jdk/internal/org/objectweb/asm/TypePath.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A98" href = "#A98">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/jdk/internal/org/objectweb/asm/TypePath.java.html#L180">180</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/awt/image/XbmImageDecoder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A99" href = "#A99">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/awt/image/XbmImageDecoder.java.html#L86">86</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/font/FontRunIterator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A100" href = "#A100">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/font/FontRunIterator.java.html#L123">123</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/font/ScriptRun.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A101" href = "#A101">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/font/ScriptRun.java.html#L191">191</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/java2d/Disposer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A102" href = "#A102">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/java2d/Disposer.java.html#L213">213</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/jvmstat/perfdata/monitor/v2_0/PerfDataBuffer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A103" href = "#A103">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/jvmstat/perfdata/monitor/v2_0/PerfDataBuffer.java.html#L421">421</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/misc/Cache.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A104" href = "#A104">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/misc/Cache.java.html#L327">327</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A105" href = "#A105">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/misc/Cache.java.html#L335">335</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/misc/JarIndex.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A106" href = "#A106">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/misc/JarIndex.java.html#L309">309</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/net/spi/nameservice/dns/DNSNameService.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A107" href = "#A107">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/net/spi/nameservice/dns/DNSNameService.java.html#L328">328</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/net/www/MessageHeader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A108" href = "#A108">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/net/www/MessageHeader.java.html#L422">422</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A109" href = "#A109">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/net/www/MessageHeader.java.html#L427">427</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/rmi/transport/tcp/MultiplexOutputStream.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A110" href = "#A110">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/rmi/transport/tcp/MultiplexOutputStream.java.html#L127">127</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A111" href = "#A111">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/rmi/transport/tcp/MultiplexOutputStream.java.html#L204">204</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/ssl/SSLSocketImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A112" href = "#A112">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/ssl/SSLSocketImpl.java.html#L945">945</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A113" href = "#A113">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/ssl/SSLSocketImpl.java.html#L1728">1728</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/tools/jarsigner/Main.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A114" href = "#A114">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/tools/jarsigner/Main.java.html#L1623">1623</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A115" href = "#A115">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/tools/jarsigner/Main.java.html#L1983">1983</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A116" href = "#A116">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/security/tools/jarsigner/Main.java.html#L2030">2030</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/text/normalizer/NormalizerImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A117" href = "#A117">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/text/normalizer/NormalizerImpl.java.html#L967">967</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A118" href = "#A118">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/text/normalizer/NormalizerImpl.java.html#L1808">1808</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A119" href = "#A119">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/text/normalizer/NormalizerImpl.java.html#L2539">2539</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/java/MemberDefinition.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A120" href = "#A120">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/java/MemberDefinition.java.html#L439">439</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/java/Scanner.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A121" href = "#A121">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/java/Scanner.java.html#L1019">1019</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/javac/BatchEnvironment.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A122" href = "#A122">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/javac/BatchEnvironment.java.html#L1127">1127</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A123" href = "#A123">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/javac/BatchEnvironment.java.html#L1135">1135</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/serialver/SerialVer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A124" href = "#A124">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/classes/sun/tools/serialver/SerialVer.java.html#L192">192</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/demo/nio/zipfs/src/com/sun/nio/zipfs/ZipFileSystem.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A125" href = "#A125">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/demo/nio/zipfs/src/com/sun/nio/zipfs/ZipFileSystem.java.html#L861">861</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A126" href = "#A126">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/share/demo/nio/zipfs/src/com/sun/nio/zipfs/ZipFileSystem.java.html#L1171">1171</a></td>
+								
+								
+									
+									<td>16</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/solaris/classes/sun/awt/X11InputMethod.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A127" href = "#A127">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/src/solaris/classes/sun/awt/X11InputMethod.java.html#L953">953</a></td>
+								
+								
+									
+									<td>61</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/com/sun/nio/sctp/SctpChannel/Shutdown.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A128" href = "#A128">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/com/sun/nio/sctp/SctpChannel/Shutdown.java.html#L129">129</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/lang/ProcessBuilder/FeelingLucky.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A129" href = "#A129">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/lang/ProcessBuilder/FeelingLucky.java.html#L41">41</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/lang/Thread/ThreadStateController.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A130" href = "#A130">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/lang/Thread/ThreadStateController.java.html#L55">55</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/nio/channels/TestServers.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A131" href = "#A131">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/nio/channels/TestServers.java.html#L223">223</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/nio/file/Files/walkFileTree/CreateFileTree.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A132" href = "#A132">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/nio/file/Files/walkFileTree/CreateFileTree.java.html#L61">61</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/Random/RandomTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A133" href = "#A133">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/Random/RandomTest.java.html#L160">160</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A134" href = "#A134">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java.html#L187">187</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A135" href = "#A135">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java.html#L208">208</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A136" href = "#A136">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java.html#L247">247</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A137" href = "#A137">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java.html#L268">268</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A138" href = "#A138">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/SplittableRandom/SplittableRandomTest.java.html#L337">337</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A139" href = "#A139">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java.html#L170">170</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A140" href = "#A140">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java.html#L190">190</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A141" href = "#A141">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java.html#L226">226</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A142" href = "#A142">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java.html#L246">246</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A143" href = "#A143">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java.html#L314">314</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/SimpleFormatterFormat.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A144" href = "#A144">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/SimpleFormatterFormat.java.html#L101">101</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/TestLogConfigurationDeadLock.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A145" href = "#A145">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/TestLogConfigurationDeadLock.java.html#L229">229</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/TestLoggerBundleSync.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A146" href = "#A146">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/java/util/logging/TestLoggerBundleSync.java.html#L508">508</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/lib/testlibrary/jdk/testlibrary/StreamPumper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A147" href = "#A147">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/lib/testlibrary/jdk/testlibrary/StreamPumper.java.html#L112">112</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/java2d/DirectX/InfiniteValidationLoopTest/InfiniteValidationLoopTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A148" href = "#A148">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/java2d/DirectX/InfiniteValidationLoopTest/InfiniteValidationLoopTest.java.html#L66">66</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/net/www/http/ChunkedOutputStream/Test.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A149" href = "#A149">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/net/www/http/ChunkedOutputStream/Test.java.html#L224">224</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/net/www/httptest/TestHttpServer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A150" href = "#A150">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/net/www/httptest/TestHttpServer.java.html#L289">289</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/security/ssl/sun/net/www/httpstest/TestHttpsServer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A151" href = "#A151">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/security/ssl/sun/net/www/httpstest/TestHttpsServer.java.html#L474">474</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/HttpsPost.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="b">
+								
+								<td><a name="A152" href = "#A152">#</a></td>
+								<td>warning</td>
+								<td>InnerAssignment</td>
+								<td>Inner assignments should be avoided.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk8/test/sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/HttpsPost.java.html#L120">120</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
