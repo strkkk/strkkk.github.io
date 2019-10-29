@@ -1,0 +1,4682 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">RequireThisCheck</td>
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">20004</td>
+							<td id="totalBase">315600</td>
+							
+								<td id="warningSeverityNumBase">315600</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">20004</td>
+							<td id="totalPatch">315803 (203 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">315803 (203 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">66 files with differences</td>
+							<td id="totalDiff">203 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">203 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumBase">315600</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleStatisticsPatch">315803 (203 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumDiff">203</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">203</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/make/src/classes/build/tools/generatecharacter/UnicodeSpec.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/make/src/classes/build/tools/generatecharacter/UnicodeSpec.java.html#L519">519</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/com/sun/java/util/jar/pack/Attribute.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bytes&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/com/sun/java/util/jar/pack/Attribute.java.html#L82">82</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;fixups&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/com/sun/java/util/jar/pack/Attribute.java.html#L83">83</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/net/URI.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;authority&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/net/URI.java.html#L1977">1977</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/text/DateFormatSymbols.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;locale&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/text/DateFormatSymbols.java.html#L729">729</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/text/DecimalFormatSymbols.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currency&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/text/DecimalFormatSymbols.java.html#L396">396</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/ResourceBundle.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;locale&#39; needs &quot;ResourceBundle.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/ResourceBundle.java.html#L378">378</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;ResourceBundle.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/ResourceBundle.java.html#L383">383</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/Scanner.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;radix&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/Scanner.java.html#L1261">1261</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/regex/Matcher.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;from&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/regex/Matcher.java.html#L1719">1719</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;from&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/java/util/regex/Matcher.java.html#L1746">1746</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/jdk/internal/org/objectweb/asm/tree/ClassNode.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/jdk/internal/org/objectweb/asm/tree/ClassNode.java.html#L273">273</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/sun/security/tools/keytool/Main.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;storePass&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/share/classes/sun/security/tools/keytool/Main.java.html#L3333">3333</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/unix/classes/java/io/FileDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;fd&#39; needs &quot;FileDescriptor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/unix/classes/java/io/FileDescriptor.java.html#L153">153</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;append&#39; needs &quot;FileDescriptor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/unix/classes/java/io/FileDescriptor.java.html#L161">161</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/java/io/FileDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;fd&#39; needs &quot;FileDescriptor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/java/io/FileDescriptor.java.html#L78">78</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;append&#39; needs &quot;FileDescriptor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/java/io/FileDescriptor.java.html#L86">86</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;handle&#39; needs &quot;FileDescriptor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/java/io/FileDescriptor.java.html#L94">94</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L371">371</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L377">377</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L381">381</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L387">387</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L394">394</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;updateCount&#39; needs &quot;WindowsSelectorImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.base/windows/classes/sun/nio/ch/WindowsSelectorImpl.java.html#L398">398</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/beans/decoder/AccessorElementHandler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;value&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/beans/decoder/AccessorElementHandler.java.html#L57">57</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/imageio/plugins/tiff/TIFFImageWriter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;param&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/imageio/plugins/tiff/TIFFImageWriter.java.html#L414">414</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/java/swing/plaf/windows/WindowsComboBoxUI.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;isRollover&#39; needs &quot;WindowsComboBoxUI.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/java/swing/plaf/windows/WindowsComboBoxUI.java.html#L81">81</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/media/sound/SoftChannel.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mute&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/media/sound/SoftChannel.java.html#L1600">1600</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/media/sound/SoftReverb.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;input&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/com/sun/media/sound/SoftReverb.java.html#L268">268</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/AWTEvent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bdata&#39; needs &quot;AWTEvent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/AWTEvent.java.html#L281">281</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;appContext&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L874">874</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;parent&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L880">880</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;width&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L883">883</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;height&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L884">884</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;x&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L890">890</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;y&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L891">891</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;peer&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L907">907</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;background&#39; needs &quot;Component.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Component.java.html#L934">934</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Cursor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;pData&#39; needs &quot;Cursor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Cursor.java.html#L197">197</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Frame.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;Frame.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Frame.java.html#L826">826</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/GradientPaintContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dx&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/GradientPaintContext.java.html#L277">277</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dx&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/GradientPaintContext.java.html#L282">282</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/GradientPaintContext.java.html#L292">292</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/MenuComponent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;appContext&#39; needs &quot;MenuComponent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/MenuComponent.java.html#L151">151</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bWidth&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L440">440</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bWidth&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L447">447</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L474">474</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L478">478</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L481">481</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L485">485</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L490">490</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L494">494</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L497">497</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L501">501</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bWidth&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L576">576</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bWidth&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L583">583</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L594">594</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L598">598</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L601">601</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L605">605</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L610">610</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L614">614</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L617">617</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L621">621</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L704">704</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L708">708</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L711">711</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L715">715</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L719">719</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L723">723</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L726">726</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L730">730</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L795">795</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L799">799</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L802">802</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L806">806</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincxerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L810">810</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincx&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L814">814</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincyerr&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L817">817</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rowincy&#39; needs &quot;TexturePaintContext.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/TexturePaintContext.java.html#L821">821</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Window.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;isTrayIconWindow&#39; needs &quot;Window.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/Window.java.html#L4123">4123</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/InputEvent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;canAccessSystemClipboard&#39; needs &quot;InputEvent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/InputEvent.java.html#L334">334</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/KeyEvent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rawCode&#39; needs &quot;KeyEvent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/KeyEvent.java.html#L1078">1078</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;primaryLevelUnicode&#39; needs &quot;KeyEvent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/KeyEvent.java.html#L1083">1083</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;extendedKeyCode&#39; needs &quot;KeyEvent.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/java/awt/event/KeyEvent.java.html#L1088">1088</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/BoxLayout.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;axis&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/BoxLayout.java.html#L520">520</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/plaf/basic/BasicProgressBarUI.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;interval&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/plaf/basic/BasicProgressBarUI.java.html#L1231">1231</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/plaf/basic/BasicTableUI.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dx&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/plaf/basic/BasicTableUI.java.html#L368">368</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/plaf/basic/BasicTableUI.java.html#L383">383</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/MaskFormatter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;placeholder&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/MaskFormatter.java.html#L291">291</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/CSS.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;value&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/CSS.java.html#L2051">2051</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;value&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/CSS.java.html#L2096">2096</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/parser/Parser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;pos&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/parser/Parser.java.html#L853">853</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;pos&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/javax/swing/text/html/parser/Parser.java.html#L860">860</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/sun/font/GlyphList.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;len&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/sun/font/GlyphList.java.html#L168">168</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;len&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/sun/font/GlyphList.java.html#L175">175</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/sun/print/PSPrinterJob.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;spoolFile&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/share/classes/sun/print/PSPrinterJob.java.html#L1667">1667</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/awt/X11/XFileDialogPeer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A98" href = "#A98">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;file&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/awt/X11/XFileDialogPeer.java.html#L400">400</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/awt/X11/XTrayIconPeer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A99" href = "#A99">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tooltip&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/awt/X11/XTrayIconPeer.java.html#L322">322</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/print/UnixPrintJob.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A100" href = "#A100">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;spoolFile&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/unix/classes/sun/print/UnixPrintJob.java.html#L937">937</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/windows/classes/sun/awt/windows/WInputMethod.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A101" href = "#A101">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;context&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.desktop/windows/classes/sun/awt/windows/WInputMethod.java.html#L148">148</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.logging/share/classes/java/util/logging/Logger.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A102" href = "#A102">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.logging/share/classes/java/util/logging/Logger.java.html#L2190">2190</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A103" href = "#A103">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.logging/share/classes/java/util/logging/Logger.java.html#L2217">2217</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A104" href = "#A104">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.logging/share/classes/java/util/logging/Logger.java.html#L2234">2234</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.naming/share/classes/com/sun/jndi/ldap/LdapSchemaCtx.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A105" href = "#A105">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;objectType&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.naming/share/classes/com/sun/jndi/ldap/LdapSchemaCtx.java.html#L198">198</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.naming/share/classes/javax/naming/NameClassPair.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A106" href = "#A106">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.naming/share/classes/javax/naming/NameClassPair.java.html#L200">200</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.rmi/share/classes/sun/rmi/server/Activation.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A107" href = "#A107">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;desc&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.rmi/share/classes/sun/rmi/server/Activation.java.html#L1036">1036</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.scripting/share/classes/javax/script/SimpleScriptContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A108" href = "#A108">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;writer&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.scripting/share/classes/javax/script/SimpleScriptContext.java.html#L273">273</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A109" href = "#A109">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L442">442</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A110" href = "#A110">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L446">446</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A111" href = "#A111">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L450">450</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A112" href = "#A112">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L454">454</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A113" href = "#A113">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L458">458</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A114" href = "#A114">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L462">462</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A115" href = "#A115">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;state&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.security.jgss/share/classes/sun/security/jgss/krb5/Krb5Context.java.html#L466">466</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.xml.crypto/share/classes/com/sun/org/apache/xml/internal/security/encryption/XMLCipher.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A116" href = "#A116">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;type&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/java.xml.crypto/share/classes/com/sun/org/apache/xml/internal/security/encryption/XMLCipher.java.html#L2946">2946</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.internal.le/share/classes/jdk/internal/jline/TerminalSupport.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A117" href = "#A117">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;supported&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.internal.le/share/classes/jdk/internal/jline/TerminalSupport.java.html#L79">79</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jartool/share/classes/sun/security/tools/jarsigner/Main.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A118" href = "#A118">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;alias&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jartool/share/classes/sun/security/tools/jarsigner/Main.java.html#L1314">1314</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jconsole/share/classes/sun/tools/jconsole/inspector/XMBeanAttributes.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A119" href = "#A119">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mbean&#39; needs &quot;XMBeanAttributes.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jconsole/share/classes/sun/tools/jconsole/inspector/XMBeanAttributes.java.html#L526">526</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jdi/share/classes/com/sun/tools/jdi/ReferenceTypeImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A120" href = "#A120">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;signature&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/src/jdk.jdi/share/classes/com/sun/tools/jdi/ReferenceTypeImpl.java.html#L1151">1151</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/awt/image/OpaquePNGToGIFTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A121" href = "#A121">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;img&#39; needs &quot;OpaquePNGToGIFTest.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/awt/image/OpaquePNGToGIFTest.java.html#L405">405</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A122" href = "#A122">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L168">168</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A123" href = "#A123">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L179">179</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A124" href = "#A124">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L190">190</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A125" href = "#A125">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L201">201</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A126" href = "#A126">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L212">212</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A127" href = "#A127">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L223">223</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A128" href = "#A128">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L234">234</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A129" href = "#A129">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L245">245</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A130" href = "#A130">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L256">256</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A131" href = "#A131">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L267">267</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A132" href = "#A132">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L278">278</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A133" href = "#A133">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L289">289</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A134" href = "#A134">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L300">300</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A135" href = "#A135">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L311">311</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A136" href = "#A136">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L322">322</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A137" href = "#A137">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L333">333</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A138" href = "#A138">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L344">344</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A139" href = "#A139">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L355">355</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A140" href = "#A140">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L366">366</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A141" href = "#A141">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L377">377</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A142" href = "#A142">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L388">388</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A143" href = "#A143">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L399">399</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A144" href = "#A144">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L410">410</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A145" href = "#A145">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L421">421</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A146" href = "#A146">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L432">432</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A147" href = "#A147">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L443">443</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A148" href = "#A148">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L454">454</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A149" href = "#A149">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L465">465</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A150" href = "#A150">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L476">476</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A151" href = "#A151">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L487">487</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A152" href = "#A152">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L498">498</a></td>
+								
+								
+									
+									<td>53</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A153" href = "#A153">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L509">509</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A154" href = "#A154">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L520">520</a></td>
+								
+								
+									
+									<td>55</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A155" href = "#A155">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L531">531</a></td>
+								
+								
+									
+									<td>56</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A156" href = "#A156">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L542">542</a></td>
+								
+								
+									
+									<td>57</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A157" href = "#A157">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L553">553</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A158" href = "#A158">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L564">564</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A159" href = "#A159">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L575">575</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A160" href = "#A160">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L586">586</a></td>
+								
+								
+									
+									<td>61</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A161" href = "#A161">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L597">597</a></td>
+								
+								
+									
+									<td>62</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A162" href = "#A162">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L608">608</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A163" href = "#A163">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L619">619</a></td>
+								
+								
+									
+									<td>64</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A164" href = "#A164">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L630">630</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A165" href = "#A165">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L641">641</a></td>
+								
+								
+									
+									<td>66</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A166" href = "#A166">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L652">652</a></td>
+								
+								
+									
+									<td>67</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A167" href = "#A167">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L663">663</a></td>
+								
+								
+									
+									<td>68</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A168" href = "#A168">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L674">674</a></td>
+								
+								
+									
+									<td>69</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A169" href = "#A169">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L685">685</a></td>
+								
+								
+									
+									<td>70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A170" href = "#A170">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L696">696</a></td>
+								
+								
+									
+									<td>71</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A171" href = "#A171">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L707">707</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A172" href = "#A172">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L718">718</a></td>
+								
+								
+									
+									<td>73</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A173" href = "#A173">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L729">729</a></td>
+								
+								
+									
+									<td>74</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A174" href = "#A174">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L740">740</a></td>
+								
+								
+									
+									<td>75</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A175" href = "#A175">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L751">751</a></td>
+								
+								
+									
+									<td>76</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A176" href = "#A176">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L762">762</a></td>
+								
+								
+									
+									<td>77</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A177" href = "#A177">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L773">773</a></td>
+								
+								
+									
+									<td>78</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A178" href = "#A178">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L784">784</a></td>
+								
+								
+									
+									<td>79</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A179" href = "#A179">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L795">795</a></td>
+								
+								
+									
+									<td>80</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A180" href = "#A180">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L806">806</a></td>
+								
+								
+									
+									<td>81</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A181" href = "#A181">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L817">817</a></td>
+								
+								
+									
+									<td>82</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A182" href = "#A182">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L828">828</a></td>
+								
+								
+									
+									<td>83</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A183" href = "#A183">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L839">839</a></td>
+								
+								
+									
+									<td>84</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A184" href = "#A184">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L850">850</a></td>
+								
+								
+									
+									<td>85</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A185" href = "#A185">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L861">861</a></td>
+								
+								
+									
+									<td>86</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A186" href = "#A186">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L872">872</a></td>
+								
+								
+									
+									<td>87</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A187" href = "#A187">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L883">883</a></td>
+								
+								
+									
+									<td>88</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A188" href = "#A188">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L894">894</a></td>
+								
+								
+									
+									<td>89</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A189" href = "#A189">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L905">905</a></td>
+								
+								
+									
+									<td>90</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A190" href = "#A190">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/beans/XMLEncoder/Test4880633.java.html#L916">916</a></td>
+								
+								
+									
+									<td>91</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/Logger/interface/LoggerInterfaceTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A191" href = "#A191">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;level&#39; needs &quot;LoggerImpl.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/Logger/interface/LoggerInterfaceTest.java.html#L66">66</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/BaseLoggerBridgeTest/BaseLoggerBridgeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A192" href = "#A192">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/BaseLoggerBridgeTest/BaseLoggerBridgeTest.java.html#L226">226</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/BasePlatformLoggerTest/BasePlatformLoggerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A193" href = "#A193">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/BasePlatformLoggerTest/BasePlatformLoggerTest.java.html#L220">220</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/LoggerBridgeTest/LoggerBridgeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A194" href = "#A194">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/LoggerBridgeTest/LoggerBridgeTest.java.html#L155">155</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/PlatformLoggerBridgeTest/PlatformLoggerBridgeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A195" href = "#A195">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/internal/PlatformLoggerBridgeTest/PlatformLoggerBridgeTest.java.html#L162">162</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/jdk/DefaultLoggerBridgeTest/DefaultLoggerBridgeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A196" href = "#A196">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/jdk/DefaultLoggerBridgeTest/DefaultLoggerBridgeTest.java.html#L146">146</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/jdk/DefaultPlatformLoggerTest/DefaultPlatformLoggerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A197" href = "#A197">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sequenceNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/System/LoggerFinder/jdk/DefaultPlatformLoggerTest/DefaultPlatformLoggerTest.java.html#L131">131</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/PrivateInvokeTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A198" href = "#A198">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;counter&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/java/lang/invoke/PrivateInvokeTest.java.html#L291">291</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/javax/script/MyContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A199" href = "#A199">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;writer&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/javax/script/MyContext.java.html#L183">183</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sanity/client/lib/SwingSet3/src/com/sun/swingset3/demos/JHyperlink.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A200" href = "#A200">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;visited&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sanity/client/lib/SwingSet3/src/com/sun/swingset3/demos/JHyperlink.java.html#L153">153</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sun/java2d/pipe/hw/VSyncedBufferStrategyTest/VSyncedBufferStrategyTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A201" href = "#A201">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;requestVSync&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sun/java2d/pipe/hw/VSyncedBufferStrategyTest/VSyncedBufferStrategyTest.java.html#L109">109</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sun/security/tools/jarsigner/compatibility/Compatibility.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A202" href = "#A202">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;status&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/sun/security/tools/jarsigner/compatibility/Compatibility.java.html#L1120">1120</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/tools/lib/tests/JImageGenerator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A203" href = "#A203">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;modulePath&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/openjdk10/test/tools/lib/tests/JImageGenerator.java.html#L589">589</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
