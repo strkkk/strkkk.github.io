@@ -1,0 +1,4652 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">RequireThisCheck</td>
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">2062</td>
+							<td id="totalBase">6829</td>
+							
+								<td id="warningSeverityNumBase">6829</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">2062</td>
+							<td id="totalPatch">7022 (193 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">7022 (193 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">76 files with differences</td>
+							<td id="totalDiff">193 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">193 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumBase">6829</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleStatisticsPatch">7022 (193 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumDiff">193</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">193</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DefaultConfiguration.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DefaultConfiguration.java.html#L87">87</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DefaultLogger.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;infoWriter&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DefaultLogger.java.html#L129">129</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;infoWriter&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DefaultLogger.java.html#L191">191</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DetailAstImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DetailAstImpl.java.html#L215">215</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;columnNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/DetailAstImpl.java.html#L239">239</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/JavadocDetailNodeParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;blockCommentLineNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/JavadocDetailNodeParser.java.html#L319">319</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;blockCommentLineNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/JavadocDetailNodeParser.java.html#L333">333</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/Main.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;printAstWithComments&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/Main.java.html#L728">728</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;printJavadocTree&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/Main.java.html#L728">728</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;printTreeWithJavadoc&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/Main.java.html#L728">728</a></td>
+								
+								
+									
+									<td>78</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/TreeWalker.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;commentChecks&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/TreeWalker.java.html#L319">319</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ordinaryChecks&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/TreeWalker.java.html#L322">322</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;commentChecks&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/TreeWalker.java.html#L341">341</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ordinaryChecks&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/TreeWalker.java.html#L344">344</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/ant/CheckstyleAntTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;config&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/ant/CheckstyleAntTask.java.html#L343">343</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxErrors&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/ant/CheckstyleAntTask.java.html#L358">358</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxWarnings&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/ant/CheckstyleAntTask.java.html#L358">358</a></td>
+								
+								
+									
+									<td>73</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;properties&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/ant/CheckstyleAntTask.java.html#L437">437</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;startColNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L92">92</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endColNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L93">93</a></td>
+								
+								
+									
+									<td>55</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;startLineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L103">103</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endLineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L104">104</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;startColNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L105">105</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endColNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/api/Comment.java.html#L106">106</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/ArrayTypeStyleCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;javaStyle&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/ArrayTypeStyleCheck.java.html#L77">77</a></td>
+								
+								
+									
+									<td>81</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;minimumNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L250">250</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maximumNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L263">263</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;minimumNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L291">291</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maximumNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L300">300</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maximumDepth&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L317">317</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;minimumDepth&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/DescendantTokenCheck.java.html#L319">319</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/annotation/AnnotationLocationCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;allowSamelineParameterizedAnnotation&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/annotation/AnnotationLocationCheck.java.html#L339">339</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;allowSamelineSingleParameterlessAnnotation&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/annotation/AnnotationLocationCheck.java.html#L342">342</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/FallThroughCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;checkLastCaseGroup&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/FallThroughCheck.java.html#L173">173</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/MultipleStringLiteralsCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;allowedDuplicates&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/MultipleStringLiteralsCheck.java.html#L227">227</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedForDepthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedForDepthCheck.java.html#L98">98</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedIfDepthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedIfDepthCheck.java.html#L100">100</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedTryDepthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/NestedTryDepthCheck.java.html#L98">98</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/OneStatementPerLineCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastVariableResourceStatementEnd&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/OneStatementPerLineCheck.java.html#L259">259</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/ReturnCountCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxAllowed&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/ReturnCountCheck.java.html#L339">339</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/VariableDeclarationUsageDistanceCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;allowedDistance&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/coding/VariableDeclarationUsageDistanceCheck.java.html#L300">300</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/design/ThrowsCountCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/design/ThrowsCountCheck.java.html#L158">158</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/header/AbstractHeaderCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;headerFile&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/header/AbstractHeaderCheck.java.html#L117">117</a></td>
+								
+								
+									
+									<td>53</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;option&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L642">642</a></td>
+								
+								
+									
+									<td>64</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;staticImportsApart&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L661">661</a></td>
+								
+								
+									
+									<td>57</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastGroup&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L663">663</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastImportLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L664">664</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastGroup&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L668">668</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;separated&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L688">688</a></td>
+								
+								
+									
+									<td>58</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;separatedStaticGroups&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L691">691</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;separated&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L694">694</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastImportStatic&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L696">696</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;separatedStaticGroups&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L697">697</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;staticImportsApart&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L697">697</a></td>
+								
+								
+									
+									<td>56</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastGroup&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L710">710</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastImportLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L720">720</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;staticGroups&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L862">862</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;groups&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/ImportOrderCheck.java.html#L865">865</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/PkgImportRule.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exactMatch&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/PkgImportRule.java.html#L66">66</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exactMatch&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/imports/PkgImportRule.java.html#L73">73</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;surroundingClass&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L488">488</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;loadable&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L490">490</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;classObj&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L491">491</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L586">586</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L586">586</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;columnNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/AbstractTypeAwareCheck.java.html#L587">587</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;id&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L120">120</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L121">121</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;position&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L122">122</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L123">123</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;closedTag&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L124">124</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;incompleteTag&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/HtmlTag.java.html#L125">125</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocMethodCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;excludeScope&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocMethodCheck.java.html#L349">349</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;excludeScope&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocMethodCheck.java.html#L350">350</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;validateThrows&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocMethodCheck.java.html#L786">786</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;index&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java.html#L173">173</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java.html#L175">175</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java.html#L176">176</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;columnNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java.html#L177">177</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;parent&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocNodeImpl.java.html#L179">179</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTag.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTag.java.html#L95">95</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;columnNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTag.java.html#L96">96</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstArg&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTag.java.html#L97">97</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagContinuationIndentationCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;offset&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagContinuationIndentationCheck.java.html#L91">91</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagInfo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagInfo.java.html#L518">518</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagInfo.java.html#L518">518</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;type&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/JavadocTagInfo.java.html#L519">519</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/MissingJavadocMethodCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;minLineCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/MissingJavadocMethodCheck.java.html#L295">295</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;excludeScope&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/MissingJavadocMethodCheck.java.html#L330">330</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;excludeScope&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/javadoc/MissingJavadocMethodCheck.java.html#L331">331</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/AbstractClassCouplingCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;className&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/AbstractClassCouplingCheck.java.html#L386">386</a></td>
+								
+								
+									
+									<td>61</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;AbstractClassCouplingCheck.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/AbstractClassCouplingCheck.java.html#L388">388</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/BooleanExpressionComplexityCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;BooleanExpressionComplexityCheck.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/BooleanExpressionComplexityCheck.java.html#L245">245</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/JavaNCSSCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;methodMaximum&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/JavaNCSSCheck.java.html#L168">168</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;classMaximum&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/JavaNCSSCheck.java.html#L177">177</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;fileMaximum&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/JavaNCSSCheck.java.html#L189">189</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/NPathComplexityCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endLineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/NPathComplexityCheck.java.html#L435">435</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A98" href = "#A98">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endLineNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/NPathComplexityCheck.java.html#L436">436</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A99" href = "#A99">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endColumnNo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/metrics/NPathComplexityCheck.java.html#L437">437</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/naming/AbbreviationAsWordInNameCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A100" href = "#A100">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ignoreStatic&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/naming/AbbreviationAsWordInNameCheck.java.html#L302">302</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A101" href = "#A101">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;allowedAbbreviationLength&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/naming/AbbreviationAsWordInNameCheck.java.html#L413">413</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A102" href = "#A102">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;duplicateLimit&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java.html#L210">210</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A103" href = "#A103">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;illegalPattern&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java.html#L231">231</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A104" href = "#A104">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;checkForDuplicates&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java.html#L231">231</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A105" href = "#A105">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;message&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java.html#L272">272</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A106" href = "#A106">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;errorLimit&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpCheck.java.html#L275">275</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpOnFilenameCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A107" href = "#A107">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;match&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpOnFilenameCheck.java.html#L312">312</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A108" href = "#A108">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;match&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/RegexpOnFilenameCheck.java.html#L328">328</a></td>
+								
+								
+									
+									<td>87</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/AnonInnerLengthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A109" href = "#A109">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/AnonInnerLengthCheck.java.html#L97">97</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/ExecutableStatementCountCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A110" href = "#A110">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/ExecutableStatementCountCheck.java.html#L152">152</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/FileLengthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A111" href = "#A111">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/FileLengthCheck.java.html#L74">74</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/LineLengthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A112" href = "#A112">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/LineLengthCheck.java.html#L119">119</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/MethodLengthCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A113" href = "#A113">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/MethodLengthCheck.java.html#L98">98</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/OuterTypeNumberCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A114" href = "#A114">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outerNum&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/OuterTypeNumberCheck.java.html#L70">70</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/ParameterNumberCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A115" href = "#A115">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;max&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/sizes/ParameterNumberCheck.java.html#L127">127</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A116" href = "#A116">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ignoreEnhancedForColon&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java.html#L679">679</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/IntMatchFilterElement.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A117" href = "#A117">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;matchValue&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/IntMatchFilterElement.java.html#L45">45</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A118" href = "#A118">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L398">398</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A119" href = "#A119">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L398">398</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A120" href = "#A120">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L420">420</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A121" href = "#A121">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L421">421</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A122" href = "#A122">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lastLine&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L422">422</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A123" href = "#A123">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tagCheckRegexp&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L423">423</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A124" href = "#A124">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tagMessageRegexp&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressWithNearbyCommentFilter.java.html#L424">424</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A125" href = "#A125">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;text&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L471">471</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A126" href = "#A126">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;line&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L472">472</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A127" href = "#A127">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;column&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L473">473</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A128" href = "#A128">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tagType&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L474">474</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A129" href = "#A129">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tagCheckRegexp&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L475">475</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A130" href = "#A130">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tagMessageRegexp&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/SuppressionCommentFilter.java.html#L476">476</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/XpathFilterElement.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A131" href = "#A131">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;xpathQuery&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/XpathFilterElement.java.html#L114">114</a></td>
+								
+								
+									
+									<td>81</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A132" href = "#A132">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;xpathQuery&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/XpathFilterElement.java.html#L164">164</a></td>
+								
+								
+									
+									<td>80</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A133" href = "#A133">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;xpathQuery&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/filters/XpathFilterElement.java.html#L245">245</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/CodeSelectorPresentation.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A134" href = "#A134">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;node&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/CodeSelectorPresentation.java.html#L85">85</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A135" href = "#A135">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;node&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/CodeSelectorPresentation.java.html#L88">88</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A136" href = "#A136">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;selectionStart&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/CodeSelectorPresentation.java.html#L101">101</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/MainFrameModel.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A137" href = "#A137">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;parseMode&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/MainFrameModel.java.html#L204">204</a></td>
+								
+								
+									
+									<td>79</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/ParseTreeTablePresentation.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A138" href = "#A138">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;root&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/gui/ParseTreeTablePresentation.java.html#L79">79</a></td>
+								
+								
+									
+									<td>16</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/xpath/XpathQueryGenerator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A139" href = "#A139">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;lineNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/xpath/XpathQueryGenerator.java.html#L320">320</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A140" href = "#A140">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;columnNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/main/java/com/puppycrawl/tools/checkstyle/xpath/XpathQueryGenerator.java.html#L321">321</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/api/AutomaticBeanTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A141" href = "#A141">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;wrong&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/api/AutomaticBeanTest.java.html#L274">274</a></td>
+								
+								
+									
+									<td>66</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A142" href = "#A142">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;val&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/api/AutomaticBeanTest.java.html#L274">274</a></td>
+								
+								
+									
+									<td>80</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/checks/indentation/IndentationCheckTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A143" href = "#A143">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;position&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/checks/indentation/IndentationCheckTest.java.html#L2054">2054</a></td>
+								
+								
+									
+									<td>71</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A144" href = "#A144">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;indentOffset&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/java/com/puppycrawl/tools/checkstyle/checks/indentation/IndentationCheckTest.java.html#L2124">2124</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/annotation/annotationonsameline/InputAnnotationOnSameLineCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A145" href = "#A145">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;x&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/annotation/annotationonsameline/InputAnnotationOnSameLineCheck.java.html#L13">13</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/annotation/annotationonsameline/InputAnnotationOnSameLineCheckOnDifferentTokens.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A146" href = "#A146">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;x&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/annotation/annotationonsameline/InputAnnotationOnSameLineCheckOnDifferentTokens.java.html#L44">44</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A147" href = "#A147">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;x&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/annotation/annotationonsameline/InputAnnotationOnSameLineCheckOnDifferentTokens.java.html#L48">48</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/declarationorder/InputDeclarationOrder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A148" href = "#A148">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mFoo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/declarationorder/InputDeclarationOrder.java.html#L68">68</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A149" href = "#A149">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mFoo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/declarationorder/InputDeclarationOrder.java.html#L166">166</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/equalsavoidnull/InputEqualsAvoidNull.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A150" href = "#A150">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;s&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/equalsavoidnull/InputEqualsAvoidNull.java.html#L415">415</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A151" href = "#A151">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;s&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/equalsavoidnull/InputEqualsAvoidNull.java.html#L417">417</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/finallocalvariable/InputFinalLocalVariableNameShadowing.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A152" href = "#A152">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;foo1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/finallocalvariable/InputFinalLocalVariableNameShadowing.java.html#L34">34</a></td>
+								
+								
+									
+									<td>16</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypeArrays.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A153" href = "#A153">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;array&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypeArrays.java.html#L11">11</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A154" href = "#A154">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;matrix&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypeArrays.java.html#L16">16</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypePlainAndArrays.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A155" href = "#A155">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;array&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypePlainAndArrays.java.html#L17">17</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A156" href = "#A156">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;matrix&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/illegaltype/InputIllegalTypePlainAndArrays.java.html#L22">22</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A157" href = "#A157">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;i&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L144">144</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A158" href = "#A158">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;k&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L145">145</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A159" href = "#A159">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;i&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L156">156</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A160" href = "#A160">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;k&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L157">157</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A161" href = "#A161">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;i&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L168">168</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A162" href = "#A162">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;k&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L168">168</a></td>
+								
+								
+									
+									<td>68</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A163" href = "#A163">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;i&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L179">179</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A164" href = "#A164">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;k&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/onestatementperline/InputOneStatementPerLineMultiline.java.html#L179">179</a></td>
+								
+								
+									
+									<td>67</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisCaseGroup.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A165" href = "#A165">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;aVariable&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisCaseGroup.java.html#L41">41</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisEnumInnerClassesAndBugs.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A166" href = "#A166">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisEnumInnerClassesAndBugs.java.html#L168">168</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A167" href = "#A167">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;b&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisEnumInnerClassesAndBugs.java.html#L174">174</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisValidateOnlyOverlappingFalse.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A168" href = "#A168">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;booleanField&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisValidateOnlyOverlappingFalse.java.html#L217">217</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisValidateOnlyOverlappingTrue.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A169" href = "#A169">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;booleanField&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/coding/requirethis/InputRequireThisValidateOnlyOverlappingTrue.java.html#L217">217</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/design/onetoplevelclass/InputOneTopLevelClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A170" href = "#A170">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mFoo&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/design/onetoplevelclass/InputOneTopLevelClass.java.html#L61">61</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationValidAssignIndent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A171" href = "#A171">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;candidate&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/indentation/indentation/InputIndentationValidAssignIndent.java.html#L37">37</a></td>
+								
+								
+									
+									<td>15</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/javadoc/javadocmethod/InputJavadocMethodSetterGetter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A172" href = "#A172">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/javadoc/javadocmethod/InputJavadocMethodSetterGetter.java.html#L19">19</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/javadoc/missingjavadocmethod/InputMissingJavadocMethodSetterGetter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A173" href = "#A173">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;mNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/javadoc/missingjavadocmethod/InputMissingJavadocMethodSetterGetter.java.html#L19">19</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A174" href = "#A174">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_b&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L10">10</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A175" href = "#A175">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L10">10</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A176" href = "#A176">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_c&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L13">13</a></td>
+								
+								
+									
+									<td>27</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A177" href = "#A177">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L13">13</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A178" href = "#A178">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_b&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L16">16</a></td>
+								
+								
+									
+									<td>19</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A179" href = "#A179">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_c&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L16">16</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A180" href = "#A180">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_b&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L19">19</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A181" href = "#A181">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_a&#39; needs &quot;InputBooleanExpressionComplexity.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L29">29</a></td>
+								
+								
+									
+									<td>84</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A182" href = "#A182">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_b&#39; needs &quot;InputBooleanExpressionComplexity.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L29">29</a></td>
+								
+								
+									
+									<td>90</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A183" href = "#A183">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_c&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L34">34</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A184" href = "#A184">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L34">34</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A185" href = "#A185">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L34">34</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A186" href = "#A186">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_c&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L39">39</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A187" href = "#A187">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L39">39</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A188" href = "#A188">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;_d&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/metrics/booleanexpressioncomplexity/InputBooleanExpressionComplexity.java.html#L39">39</a></td>
+								
+								
+									
+									<td>55</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/nowhitespaceafter/InputNoWhitespaceAfterArrayDeclarations2.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A189" href = "#A189">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;someStuff5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/nowhitespaceafter/InputNoWhitespaceAfterArrayDeclarations2.java.html#L69">69</a></td>
+								
+								
+									
+									<td>56</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A190" href = "#A190">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;someStuff5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/nowhitespaceafter/InputNoWhitespaceAfterArrayDeclarations2.java.html#L70">70</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A191" href = "#A191">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;someStuff4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/nowhitespaceafter/InputNoWhitespaceAfterArrayDeclarations2.java.html#L94">94</a></td>
+								
+								
+									
+									<td>34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/singlespaceseparator/InputSingleSpaceSeparatorChildNodes.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A192" href = "#A192">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;j&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/checks/whitespace/singlespaceseparator/InputSingleSpaceSeparatorChildNodes.java.html#L5">5</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJavaClass1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A193" href = "#A193">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;f9&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/checkstyle-with-excludes/src/test/resources/com/puppycrawl/tools/checkstyle/grammar/InputRegressionJavaClass1.java.html#L337">337</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

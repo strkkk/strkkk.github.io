@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>JIS_X_0212_MS5022X_Decoder xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * Copyright (c) 2005, 2006, Oracle and/or its affiliates. All rights reserved.</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> * This code is free software; you can redistribute it and/or modify it</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * under the terms of the GNU General Public License version 2 only, as</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> * published by the Free Software Foundation.  Oracle designates this</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * particular file as subject to the "Classpath" exception as provided</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> * by Oracle in the LICENSE file that accompanied this code.</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> * This code is distributed in the hope that it will be useful, but WITHOUT</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> * version 2 for more details (a copy is included in the LICENSE file that</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> * accompanied this code).</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment"> * You should have received a copy of the GNU General Public License version</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_comment"> * 2 along with this work; if not, write to the Free Software Foundation,</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_comment"> * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_comment"> * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_comment"> * or visit www.oracle.com if you need additional information or have any</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_comment"> * questions.</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">package</strong> sun.nio.cs.ext;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> java.nio.charset.Charset;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> java.nio.charset.CharsetDecoder;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> java.nio.charset.CharsetEncoder;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">class</strong> JIS_X_0212_MS5022X_Decoder <strong class="jxr_keyword">extends</strong> JIS_X_0212_Decoder
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> _start, _end;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <strong class="jxr_keyword">public</strong> JIS_X_0212_MS5022X_Decoder(Charset cs) {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">super</strong>(cs);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          _start = 0x21;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          _end = 0x7E;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      }
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">char</strong> decodeDouble(<strong class="jxr_keyword">int</strong> byte1, <strong class="jxr_keyword">int</strong> byte2) {
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">if</strong> (((byte1 &lt; 0) || (byte1 &gt; _index1.length))
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>              || ((byte2 &lt; _start) || (byte2 &gt; _end)))
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>              <strong class="jxr_keyword">return</strong> REPLACE_CHAR;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">int</strong> n = (_index1[byte1] &amp; 0xf)*(_end - _start + 1) + (byte2 - _start);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <strong class="jxr_keyword">char</strong> unicode = _index2[_index1[byte1] &gt;&gt; 4].charAt(n);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          <strong class="jxr_keyword">if</strong> (unicode == '\u0000')
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              <strong class="jxr_keyword">return</strong> (<strong class="jxr_keyword">super</strong>.decodeDouble(byte1, byte2));
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <strong class="jxr_keyword">else</strong>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>              <strong class="jxr_keyword">return</strong> unicode;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> String _innerIndex0=
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u2170\u2171"</span>+
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <span class="jxr_string">"\u2172\u2173\u2174\u2175\u2176\u2177\u2178\u2179"</span>+
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <span class="jxr_string">"\u0000\u0000\uFF07\uFF02\u0000\u0000\u0000\u70BB"</span>+
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <span class="jxr_string">"\u4EFC\u50F4\u51EC\u5307\u5324\uFA0E\u548A\u5759"</span>+
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <span class="jxr_string">"\uFA0F\uFA10\u589E\u5BEC\u5CF5\u5D53\uFA11\u5FB7"</span>+
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <span class="jxr_string">"\u6085\u6120\u654E\u0000\u6665\uFA12\uF929\u6801"</span>+
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <span class="jxr_string">"\uFA13\uFA14\u6A6B\u6AE2\u6DF8\u6DF2\u7028\uFA15"</span>+
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <span class="jxr_string">"\uFA16\u7501\u7682\u769E\uFA17\u7930\uFA18\uFA19"</span>+
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          <span class="jxr_string">"\uFA1A\uFA1B\u7AE7\uFA1C\uFA1D\u7DA0\u7DD6\uFA1E"</span>+
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <span class="jxr_string">"\u8362\uFA1F\u85B0\uFA20\uFA21\u8807\uFA22\u8B7F"</span>+
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <span class="jxr_string">"\u8CF4\u8D76\uFA23\uFA24\uFA25\u90DE\uFA26\u9115"</span>+
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <span class="jxr_string">"\uFA27\uFA28\u9592\uF9DC\uFA29\u973B\u0000\u9751"</span>+
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <span class="jxr_string">"\uFA2A\uFA2B\uFA2C\u999E\u9AD9\u9B72\uFA2D\u9ED1"</span>+
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u974D\u0000"</span>+
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          <span class="jxr_string">"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"</span>+
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          <span class="jxr_string">"\u0000\u0000\uE3AC\uE3AD\uE3AE\uE3AF\uE3B0\uE3B1"</span>+
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          <span class="jxr_string">"\uE3B2\uE3B3\uE3B4\uE3B5\uE3B6\uE3B7\uE3B8\uE3B9"</span>+
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <span class="jxr_string">"\uE3BA\uE3BB\uE3BC\uE3BD\uE3BE\uE3BF\uE3C0\uE3C1"</span>+
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          <span class="jxr_string">"\uE3C2\uE3C3\uE3C4\uE3C5\uE3C6\uE3C7\uE3C8\uE3C9"</span>+
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          <span class="jxr_string">"\uE3CA\uE3CB\uE3CC\uE3CD\uE3CE\uE3CF\uE3D0\uE3D1"</span>+
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          <span class="jxr_string">"\uE3D2\uE3D3\uE3D4\uE3D5\uE3D6\uE3D7\uE3D8\uE3D9"</span>+
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          <span class="jxr_string">"\uE3DA\uE3DB\uE3DC\uE3DD\uE3DE\uE3DF\uE3E0\uE3E1"</span>+
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          <span class="jxr_string">"\uE3E2\uE3E3\uE3E4\uE3E5\uE3E6\uE3E7\uE3E8\uE3E9"</span>+
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          <span class="jxr_string">"\uE3EA\uE3EB\uE3EC\uE3ED\uE3EE\uE3EF\uE3F0\uE3F1"</span>+
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          <span class="jxr_string">"\uE3F2\uE3F3\uE3F4\uE3F5\uE3F6\uE3F7\uE3F8\uE3F9"</span>+
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         <span class="jxr_string">"\uE3FA\uE3FB\uE3FC\uE3FD\uE3FE\uE3FF\uE400\uE401"</span>+
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <span class="jxr_string">"\uE402\uE403\uE404\uE405\uE406\uE407\uE408\uE409"</span>+
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         <span class="jxr_string">"\uE40A\uE40B\uE40C\uE40D\uE40E\uE40F\uE410\uE411"</span>+
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         <span class="jxr_string">"\uE412\uE413\uE414\uE415\uE416\uE417\uE418\uE419"</span>+
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         <span class="jxr_string">"\uE41A\uE41B\uE41C\uE41D\uE41E\uE41F\uE420\uE421"</span>+
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         <span class="jxr_string">"\uE422\uE423\uE424\uE425\uE426\uE427\uE428\uE429"</span>+
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         <span class="jxr_string">"\uE42A\uE42B\uE42C\uE42D\uE42E\uE42F\uE430\uE431"</span>+
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         <span class="jxr_string">"\uE432\uE433\uE434\uE435\uE436\uE437\uE438\uE439"</span>+
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <span class="jxr_string">"\uE43A\uE43B\uE43C\uE43D\uE43E\uE43F\uE440\uE441"</span>+
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         <span class="jxr_string">"\uE442\uE443\uE444\uE445\uE446\uE447\uE448\uE449"</span>+
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <span class="jxr_string">"\uE44A\uE44B\uE44C\uE44D\uE44E\uE44F\uE450\uE451"</span>+
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         <span class="jxr_string">"\uE452\uE453\uE454\uE455\uE456\uE457\uE458\uE459"</span>+
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         <span class="jxr_string">"\uE45A\uE45B\uE45C\uE45D\uE45E\uE45F\uE460\uE461"</span>+
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         <span class="jxr_string">"\uE462\uE463\uE464\uE465\uE466\uE467\uE468\uE469"</span>+
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         <span class="jxr_string">"\uE46A\uE46B\uE46C\uE46D\uE46E\uE46F\uE470\uE471"</span>+
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         <span class="jxr_string">"\uE472\uE473\uE474\uE475\uE476\uE477\uE478\uE479"</span>+
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         <span class="jxr_string">"\uE47A\uE47B\uE47C\uE47D\uE47E\uE47F\uE480\uE481"</span>+
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         <span class="jxr_string">"\uE482\uE483\uE484\uE485\uE486\uE487\uE488\uE489"</span>+
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         <span class="jxr_string">"\uE48A\uE48B\uE48C\uE48D\uE48E\uE48F\uE490\uE491"</span>+
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         <span class="jxr_string">"\uE492\uE493\uE494\uE495\uE496\uE497\uE498\uE499"</span>+
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         <span class="jxr_string">"\uE49A\uE49B\uE49C\uE49D\uE49E\uE49F\uE4A0\uE4A1"</span>+
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         <span class="jxr_string">"\uE4A2\uE4A3\uE4A4\uE4A5\uE4A6\uE4A7\uE4A8\uE4A9"</span>+
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         <span class="jxr_string">"\uE4AA\uE4AB\uE4AC\uE4AD\uE4AE\uE4AF\uE4B0\uE4B1"</span>+
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         <span class="jxr_string">"\uE4B2\uE4B3\uE4B4\uE4B5\uE4B6\uE4B7\uE4B8\uE4B9"</span>+
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         <span class="jxr_string">"\uE4BA\uE4BB\uE4BC\uE4BD\uE4BE\uE4BF\uE4C0\uE4C1"</span>+
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         <span class="jxr_string">"\uE4C2\uE4C3\uE4C4\uE4C5\uE4C6\uE4C7\uE4C8\uE4C9"</span>+
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         <span class="jxr_string">"\uE4CA\uE4CB\uE4CC\uE4CD\uE4CE\uE4CF\uE4D0\uE4D1"</span>+
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         <span class="jxr_string">"\uE4D2\uE4D3\uE4D4\uE4D5\uE4D6\uE4D7\uE4D8\uE4D9"</span>+
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         <span class="jxr_string">"\uE4DA\uE4DB\uE4DC\uE4DD\uE4DE\uE4DF\uE4E0\uE4E1"</span>+
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         <span class="jxr_string">"\uE4E2\uE4E3\uE4E4\uE4E5\uE4E6\uE4E7\uE4E8\uE4E9"</span>+
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         <span class="jxr_string">"\uE4EA\uE4EB\uE4EC\uE4ED\uE4EE\uE4EF\uE4F0\uE4F1"</span>+
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>         <span class="jxr_string">"\uE4F2\uE4F3\uE4F4\uE4F5\uE4F6\uE4F7\uE4F8\uE4F9"</span>+
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         <span class="jxr_string">"\uE4FA\uE4FB\uE4FC\uE4FD\uE4FE\uE4FF\uE500\uE501"</span>+
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>         <span class="jxr_string">"\uE502\uE503\uE504\uE505\uE506\uE507\uE508\uE509"</span>+
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         <span class="jxr_string">"\uE50A\uE50B\uE50C\uE50D\uE50E\uE50F\uE510\uE511"</span>+
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         <span class="jxr_string">"\uE512\uE513\uE514\uE515\uE516\uE517\uE518\uE519"</span>+
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         <span class="jxr_string">"\uE51A\uE51B\uE51C\uE51D\uE51E\uE51F\uE520\uE521"</span>+
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         <span class="jxr_string">"\uE522\uE523\uE524\uE525\uE526\uE527\uE528\uE529"</span>+
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         <span class="jxr_string">"\uE52A\uE52B\uE52C\uE52D\uE52E\uE52F\uE530\uE531"</span>+
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         <span class="jxr_string">"\uE532\uE533\uE534\uE535\uE536\uE537\uE538\uE539"</span>+
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         <span class="jxr_string">"\uE53A\uE53B\uE53C\uE53D\uE53E\uE53F\uE540\uE541"</span>+
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         <span class="jxr_string">"\uE542\uE543\uE544\uE545\uE546\uE547\uE548\uE549"</span>+
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         <span class="jxr_string">"\uE54A\uE54B\uE54C\uE54D\uE54E\uE54F\uE550\uE551"</span>+
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         <span class="jxr_string">"\uE552\uE553\uE554\uE555\uE556\uE557\uE558\uE559"</span>+
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         <span class="jxr_string">"\uE55A\uE55B\uE55C\uE55D\uE55E\uE55F\uE560\uE561"</span>+
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <span class="jxr_string">"\uE562\uE563\uE564\uE565\uE566\uE567\uE568\uE569"</span>+
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         <span class="jxr_string">"\uE56A\uE56B\uE56C\uE56D\uE56E\uE56F\uE570\uE571"</span>+
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         <span class="jxr_string">"\uE572\uE573\uE574\uE575\uE576\uE577\uE578\uE579"</span>+
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         <span class="jxr_string">"\uE57A\uE57B\uE57C\uE57D\uE57E\uE57F\uE580\uE581"</span>+
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         <span class="jxr_string">"\uE582\uE583\uE584\uE585\uE586\uE587\uE588\uE589"</span>+
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         <span class="jxr_string">"\uE58A\uE58B\uE58C\uE58D\uE58E\uE58F\uE590\uE591"</span>+
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         <span class="jxr_string">"\uE592\uE593\uE594\uE595\uE596\uE597\uE598\uE599"</span>+
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         <span class="jxr_string">"\uE59A\uE59B\uE59C\uE59D\uE59E\uE59F\uE5A0\uE5A1"</span>+
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         <span class="jxr_string">"\uE5A2\uE5A3\uE5A4\uE5A5\uE5A6\uE5A7\uE5A8\uE5A9"</span>+
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <span class="jxr_string">"\uE5AA\uE5AB\uE5AC\uE5AD\uE5AE\uE5AF\uE5B0\uE5B1"</span>+
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         <span class="jxr_string">"\uE5B2\uE5B3\uE5B4\uE5B5\uE5B6\uE5B7\uE5B8\uE5B9"</span>+
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         <span class="jxr_string">"\uE5BA\uE5BB\uE5BC\uE5BD\uE5BE\uE5BF\uE5C0\uE5C1"</span>+
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         <span class="jxr_string">"\uE5C2\uE5C3\uE5C4\uE5C5\uE5C6\uE5C7\uE5C8\uE5C9"</span>+
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         <span class="jxr_string">"\uE5CA\uE5CB\uE5CC\uE5CD\uE5CE\uE5CF\uE5D0\uE5D1"</span>+
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         <span class="jxr_string">"\uE5D2\uE5D3\uE5D4\uE5D5\uE5D6\uE5D7\uE5D8\uE5D9"</span>+
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         <span class="jxr_string">"\uE5DA\uE5DB\uE5DC\uE5DD\uE5DE\uE5DF\uE5E0\uE5E1"</span>+
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         <span class="jxr_string">"\uE5E2\uE5E3\uE5E4\uE5E5\uE5E6\uE5E7\uE5E8\uE5E9"</span>+
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         <span class="jxr_string">"\uE5EA\uE5EB\uE5EC\uE5ED\uE5EE\uE5EF\uE5F0\uE5F1"</span>+
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         <span class="jxr_string">"\uE5F2\uE5F3\uE5F4\uE5F5\uE5F6\uE5F7\uE5F8\uE5F9"</span>+
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         <span class="jxr_string">"\uE5FA\uE5FB\uE5FC\uE5FD\uE5FE\uE5FF\uE600\uE601"</span>+
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <span class="jxr_string">"\uE602\uE603\uE604\uE605\uE606\uE607\uE608\uE609"</span>+
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         <span class="jxr_string">"\uE60A\uE60B\uE60C\uE60D\uE60E\uE60F\uE610\uE611"</span>+
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         <span class="jxr_string">"\uE612\uE613\uE614\uE615\uE616\uE617\uE618\uE619"</span>+
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         <span class="jxr_string">"\uE61A\uE61B\uE61C\uE61D\uE61E\uE61F\uE620\uE621"</span>+
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <span class="jxr_string">"\uE622\uE623\uE624\uE625\uE626\uE627\uE628\uE629"</span>+
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         <span class="jxr_string">"\uE62A\uE62B\uE62C\uE62D\uE62E\uE62F\uE630\uE631"</span>+
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         <span class="jxr_string">"\uE632\uE633\uE634\uE635\uE636\uE637\uE638\uE639"</span>+
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         <span class="jxr_string">"\uE63A\uE63B\uE63C\uE63D\uE63E\uE63F\uE640\uE641"</span>+
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         <span class="jxr_string">"\uE642\uE643\uE644\uE645\uE646\uE647\uE648\uE649"</span>+
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         <span class="jxr_string">"\uE64A\uE64B\uE64C\uE64D\uE64E\uE64F\uE650\uE651"</span>+
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         <span class="jxr_string">"\uE652\uE653\uE654\uE655\uE656\uE657\uE658\uE659"</span>+
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         <span class="jxr_string">"\uE65A\uE65B\uE65C\uE65D\uE65E\uE65F\uE660\uE661"</span>+
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         <span class="jxr_string">"\uE662\uE663\uE664\uE665\uE666\uE667\uE668\uE669"</span>+
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         <span class="jxr_string">"\uE66A\uE66B\uE66C\uE66D\uE66E\uE66F\uE670\uE671"</span>+
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         <span class="jxr_string">"\uE672\uE673\uE674\uE675\uE676\uE677\uE678\uE679"</span>+
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         <span class="jxr_string">"\uE67A\uE67B\uE67C\uE67D\uE67E\uE67F\uE680\uE681"</span>+
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <span class="jxr_string">"\uE682\uE683\uE684\uE685\uE686\uE687\uE688\uE689"</span>+
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <span class="jxr_string">"\uE68A\uE68B\uE68C\uE68D\uE68E\uE68F\uE690\uE691"</span>+
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <span class="jxr_string">"\uE692\uE693\uE694\uE695\uE696\uE697\uE698\uE699"</span>+
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <span class="jxr_string">"\uE69A\uE69B\uE69C\uE69D\uE69E\uE69F\uE6A0\uE6A1"</span>+
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         <span class="jxr_string">"\uE6A2\uE6A3\uE6A4\uE6A5\uE6A6\uE6A7\uE6A8\uE6A9"</span>+
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         <span class="jxr_string">"\uE6AA\uE6AB\uE6AC\uE6AD\uE6AE\uE6AF\uE6B0\uE6B1"</span>+
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         <span class="jxr_string">"\uE6B2\uE6B3\uE6B4\uE6B5\uE6B6\uE6B7\uE6B8\uE6B9"</span>+
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         <span class="jxr_string">"\uE6BA\uE6BB\uE6BC\uE6BD\uE6BE\uE6BF\uE6C0\uE6C1"</span>+
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         <span class="jxr_string">"\uE6C2\uE6C3\uE6C4\uE6C5\uE6C6\uE6C7\uE6C8\uE6C9"</span>+
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         <span class="jxr_string">"\uE6CA\uE6CB\uE6CC\uE6CD\uE6CE\uE6CF\uE6D0\uE6D1"</span>+
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         <span class="jxr_string">"\uE6D2\uE6D3\uE6D4\uE6D5\uE6D6\uE6D7\uE6D8\uE6D9"</span>+
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         <span class="jxr_string">"\uE6DA\uE6DB\uE6DC\uE6DD\uE6DE\uE6DF\uE6E0\uE6E1"</span>+
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         <span class="jxr_string">"\uE6E2\uE6E3\uE6E4\uE6E5\uE6E6\uE6E7\uE6E8\uE6E9"</span>+
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         <span class="jxr_string">"\uE6EA\uE6EB\uE6EC\uE6ED\uE6EE\uE6EF\uE6F0\uE6F1"</span>+
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         <span class="jxr_string">"\uE6F2\uE6F3\uE6F4\uE6F5\uE6F6\uE6F7\uE6F8\uE6F9"</span>+
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         <span class="jxr_string">"\uE6FA\uE6FB\uE6FC\uE6FD\uE6FE\uE6FF\uE700\uE701"</span>+
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         <span class="jxr_string">"\uE702\uE703\uE704\uE705\uE706\uE707\uE708\uE709"</span>+
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         <span class="jxr_string">"\uE70A\uE70B\uE70C\uE70D\uE70E\uE70F\uE710\uE711"</span>+
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         <span class="jxr_string">"\uE712\uE713\uE714\uE715\uE716\uE717\uE718\uE719"</span>+
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         <span class="jxr_string">"\uE71A\uE71B\uE71C\uE71D\uE71E\uE71F\uE720\uE721"</span>+
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         <span class="jxr_string">"\uE722\uE723\uE724\uE725\uE726\uE727\uE728\uE729"</span>+
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         <span class="jxr_string">"\uE72A\uE72B\uE72C\uE72D\uE72E\uE72F\uE730\uE731"</span>+
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         <span class="jxr_string">"\uE732\uE733\uE734\uE735\uE736\uE737\uE738\uE739"</span>+
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         <span class="jxr_string">"\uE73A\uE73B\uE73C\uE73D\uE73E\uE73F\uE740\uE741"</span>+
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         <span class="jxr_string">"\uE742\uE743\uE744\uE745\uE746\uE747\uE748\uE749"</span>+
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         <span class="jxr_string">"\uE74A\uE74B\uE74C\uE74D\uE74E\uE74F\uE750\uE751"</span>+
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <span class="jxr_string">"\uE752\uE753\uE754\uE755\uE756\uE757"</span>;
+<a class="jxr_linenumber" name="L208" href="#L208">208</a> 
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">short</strong> _index1[] = {
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 0,
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>     };
+<a class="jxr_linenumber" name="L227" href="#L227">227</a> 
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> String _index2[] = {
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         _innerIndex0
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>     };
+<a class="jxr_linenumber" name="L231" href="#L231">231</a> 
+<a class="jxr_linenumber" name="L232" href="#L232">232</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>

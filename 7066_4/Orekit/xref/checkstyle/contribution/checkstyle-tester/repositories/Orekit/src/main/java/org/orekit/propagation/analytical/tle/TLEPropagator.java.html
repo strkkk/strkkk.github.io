@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>TLEPropagator xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/* Copyright 2002-2016 CS Systèmes d'Information</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * Licensed to CS Systèmes d'Information (CS) under one or more</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * contributor license agreements.  See the NOTICE file distributed with</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * this work for additional information regarding copyright ownership.</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> * CS licenses this file to You under the Apache License, Version 2.0</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * (the "License"); you may not use this file except in compliance with</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> * the License.  You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *   <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">package</strong> org.orekit.propagation.analytical.tle;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> org.hipparchus.geometry.euclidean.threed.Vector3D;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> org.hipparchus.util.FastMath;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> org.hipparchus.util.MathUtils;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> org.orekit.attitudes.Attitude;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> org.orekit.attitudes.AttitudeProvider;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> org.orekit.errors.OrekitException;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> org.orekit.errors.OrekitMessages;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> org.orekit.frames.Frame;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> org.orekit.frames.FramesFactory;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> org.orekit.orbits.CartesianOrbit;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> org.orekit.orbits.Orbit;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> org.orekit.propagation.SpacecraftState;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> org.orekit.propagation.analytical.AbstractAnalyticalPropagator;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> org.orekit.time.AbsoluteDate;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> org.orekit.utils.PVCoordinates;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <em class="jxr_javadoccomment">/** This class provides elements to propagate TLE's.</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <em class="jxr_javadoccomment"> * &lt;p&gt;</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <em class="jxr_javadoccomment"> * The models used are SGP4 and SDP4, initially proposed by NORAD as the unique convenient</em>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <em class="jxr_javadoccomment"> * propagator for TLE's. Inputs and outputs of this propagator are only suited for</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <em class="jxr_javadoccomment"> * NORAD two lines elements sets, since it uses estimations and mean values appropriate</em>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <em class="jxr_javadoccomment"> * for TLE's only.</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  <em class="jxr_javadoccomment"> * &lt;/p&gt;</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <em class="jxr_javadoccomment"> * &lt;p&gt;</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_javadoccomment"> * Deep- or near- space propagator is selected internally according to NORAD recommendations</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <em class="jxr_javadoccomment"> * so that the user has not to worry about the used computation methods. One instance is created</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment"> * for each TLE (this instance can only be get using {@link #selectExtrapolator(TLE)} method,</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment"> * and can compute {@link PVCoordinates position and velocity coordinates} at any</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment"> * time. Maximum accuracy is guaranteed in a 24h range period before and after the provided</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment"> * TLE epoch (of course this accuracy is not really measurable nor predictable: according to</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment"> * &lt;a href="<a href="http://www.celestrak.com/" target="alexandria_uri">http://www.celestrak.com/</a>"&gt;CelesTrak&lt;/a&gt;, the precision is close to one kilometer</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  <em class="jxr_javadoccomment"> * and error won't probably rise above 2 km).</em>
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  <em class="jxr_javadoccomment"> * &lt;/p&gt;</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_javadoccomment"> * &lt;p&gt;This implementation is largely inspired from the paper and source code &lt;a</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  <em class="jxr_javadoccomment"> * href="<a href="http://www.celestrak.com/publications/AIAA/2006-6753/" target="alexandria_uri">http://www.celestrak.com/publications/AIAA/2006-6753/</a>"&gt;Revisiting Spacetrack</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  <em class="jxr_javadoccomment"> * Report #3&lt;/a&gt; and is fully compliant with its results and tests cases.&lt;/p&gt;</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  <em class="jxr_javadoccomment"> * @author Felix R. Hoots, Ronald L. Roehrich, December 1980 (original fortran)</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  <em class="jxr_javadoccomment"> * @author David A. Vallado, Paul Crawford, Richard Hujsak, T.S. Kelso (C++ translation and improvements)</em>
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  <em class="jxr_javadoccomment"> * @author Fabien Maussion (java translation)</em>
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  <em class="jxr_javadoccomment"> * @see TLE</em>
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">class</strong> TLEPropagator <strong class="jxr_keyword">extends</strong> AbstractAnalyticalPropagator {
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      <em class="jxr_comment">// CHECKSTYLE: stop VisibilityModifierCheck</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      <em class="jxr_javadoccomment">/** Initial state. */</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> TLE tle;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      <em class="jxr_javadoccomment">/** final RAAN. */</em>
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xnode;
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <em class="jxr_javadoccomment">/** final semi major axis. */</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> a;
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      <em class="jxr_javadoccomment">/** final eccentricity. */</em>
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> e;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      <em class="jxr_javadoccomment">/** final inclination. */</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> i;
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      <em class="jxr_javadoccomment">/** final perigee argument. */</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> omega;
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      <em class="jxr_javadoccomment">/** L from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xl;
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      <em class="jxr_javadoccomment">/** original recovered semi major axis. */</em>
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> a0dp;
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>      <em class="jxr_javadoccomment">/** original recovered mean motion. */</em>
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xn0dp;
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      <em class="jxr_javadoccomment">/** cosinus original inclination. */</em>
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> cosi0;
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>  
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>      <em class="jxr_javadoccomment">/** cos io squared. */</em>
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> theta2;
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      <em class="jxr_javadoccomment">/** sinus original inclination. */</em>
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> sini0;
+<a class="jxr_linenumber" name="L100" href="#L100">100</a> 
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>     <em class="jxr_javadoccomment">/** common parameter for mean anomaly (M) computation. */</em>
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xmdot;
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     <em class="jxr_javadoccomment">/** common parameter for perigee argument (omega) computation. */</em>
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> omgdot;
+<a class="jxr_linenumber" name="L106" href="#L106">106</a> 
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     <em class="jxr_javadoccomment">/** common parameter for raan (OMEGA) computation. */</em>
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xnodot;
+<a class="jxr_linenumber" name="L109" href="#L109">109</a> 
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     <em class="jxr_javadoccomment">/** original eccentricity squared. */</em>
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> e0sq;
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     <em class="jxr_javadoccomment">/** 1 - e2. */</em>
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> beta02;
+<a class="jxr_linenumber" name="L114" href="#L114">114</a> 
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>     <em class="jxr_javadoccomment">/** sqrt (1 - e2). */</em>
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> beta0;
+<a class="jxr_linenumber" name="L117" href="#L117">117</a> 
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>     <em class="jxr_javadoccomment">/** perigee, expressed in KM and ALTITUDE. */</em>
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> perige;
+<a class="jxr_linenumber" name="L120" href="#L120">120</a> 
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>     <em class="jxr_javadoccomment">/** eta squared. */</em>
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> etasq;
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> 
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>     <em class="jxr_javadoccomment">/** original eccentricity * eta. */</em>
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> eeta;
+<a class="jxr_linenumber" name="L126" href="#L126">126</a> 
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>     <em class="jxr_javadoccomment">/** s* new value for the contant s. */</em>
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> s4;
+<a class="jxr_linenumber" name="L129" href="#L129">129</a> 
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>     <em class="jxr_javadoccomment">/** tsi from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> tsi;
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     <em class="jxr_javadoccomment">/** eta from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> eta;
+<a class="jxr_linenumber" name="L135" href="#L135">135</a> 
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>     <em class="jxr_javadoccomment">/** coef for SGP C3 computation. */</em>
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> coef;
+<a class="jxr_linenumber" name="L138" href="#L138">138</a> 
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     <em class="jxr_javadoccomment">/** coef for SGP C5 computation. */</em>
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> coef1;
+<a class="jxr_linenumber" name="L141" href="#L141">141</a> 
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>     <em class="jxr_javadoccomment">/** C1 from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> c1;
+<a class="jxr_linenumber" name="L144" href="#L144">144</a> 
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>     <em class="jxr_javadoccomment">/** C2 from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> c2;
+<a class="jxr_linenumber" name="L147" href="#L147">147</a> 
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>     <em class="jxr_javadoccomment">/** C4 from SPTRCK #3. */</em>
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> c4;
+<a class="jxr_linenumber" name="L150" href="#L150">150</a> 
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>     <em class="jxr_javadoccomment">/** common parameter for raan (OMEGA) computation. */</em>
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> xnodcf;
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> 
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     <em class="jxr_javadoccomment">/** 3/2 * C1. */</em>
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> t2cof;
+<a class="jxr_linenumber" name="L156" href="#L156">156</a> 
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>     <em class="jxr_comment">// CHECKSTYLE: resume VisibilityModifierCheck</em>
+<a class="jxr_linenumber" name="L158" href="#L158">158</a> 
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     <em class="jxr_javadoccomment">/** TLE frame. */</em>
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Frame teme;
+<a class="jxr_linenumber" name="L161" href="#L161">161</a> 
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>     <em class="jxr_javadoccomment">/** Spacecraft mass (kg). */</em>
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> mass;
+<a class="jxr_linenumber" name="L164" href="#L164">164</a> 
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     <em class="jxr_javadoccomment">/** Protected constructor for derived classes.</em>
+<a class="jxr_linenumber" name="L166" href="#L166">166</a> <em class="jxr_javadoccomment">     * @param initialTLE the unique TLE to propagate</em>
+<a class="jxr_linenumber" name="L167" href="#L167">167</a> <em class="jxr_javadoccomment">     * @param attitudeProvider provider for attitude computation</em>
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> <em class="jxr_javadoccomment">     * @param mass spacecraft mass (kg)</em>
+<a class="jxr_linenumber" name="L169" href="#L169">169</a> <em class="jxr_javadoccomment">     * @exception OrekitException if some specific error occurs</em>
+<a class="jxr_linenumber" name="L170" href="#L170">170</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>     <strong class="jxr_keyword">protected</strong> TLEPropagator(<strong class="jxr_keyword">final</strong> TLE initialTLE, <strong class="jxr_keyword">final</strong> AttitudeProvider attitudeProvider,
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>                             <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> mass)
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         <strong class="jxr_keyword">super</strong>(attitudeProvider);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         setStartDate(initialTLE.getDate());
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         <strong class="jxr_keyword">this</strong>.tle  = initialTLE;
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         <strong class="jxr_keyword">this</strong>.teme = FramesFactory.getTEME();
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         <strong class="jxr_keyword">this</strong>.mass = mass;
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         initializeCommons();
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         sxpInitialize();
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <em class="jxr_comment">// set the initial state</em>
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <strong class="jxr_keyword">final</strong> Orbit orbit = propagateOrbit(initialTLE.getDate());
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <strong class="jxr_keyword">final</strong> Attitude attitude = attitudeProvider.getAttitude(orbit, orbit.getDate(), orbit.getFrame());
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <strong class="jxr_keyword">super</strong>.resetInitialState(<strong class="jxr_keyword">new</strong> SpacecraftState(orbit, attitude, mass));
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>     }
+<a class="jxr_linenumber" name="L186" href="#L186">186</a> 
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>     <em class="jxr_javadoccomment">/** Selects the extrapolator to use with the selected TLE.</em>
+<a class="jxr_linenumber" name="L188" href="#L188">188</a> <em class="jxr_javadoccomment">     * @param tle the TLE to propagate.</em>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> <em class="jxr_javadoccomment">     * @return the correct propagator.</em>
+<a class="jxr_linenumber" name="L190" href="#L190">190</a> <em class="jxr_javadoccomment">     * @exception OrekitException if the underlying model cannot be initialized</em>
+<a class="jxr_linenumber" name="L191" href="#L191">191</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TLEPropagator selectExtrapolator(<strong class="jxr_keyword">final</strong> TLE tle) <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         <strong class="jxr_keyword">return</strong> selectExtrapolator(tle, DEFAULT_LAW, DEFAULT_MASS);
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>     }
+<a class="jxr_linenumber" name="L195" href="#L195">195</a> 
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>     <em class="jxr_javadoccomment">/** Selects the extrapolator to use with the selected TLE.</em>
+<a class="jxr_linenumber" name="L197" href="#L197">197</a> <em class="jxr_javadoccomment">     * @param tle the TLE to propagate.</em>
+<a class="jxr_linenumber" name="L198" href="#L198">198</a> <em class="jxr_javadoccomment">     * @param attitudeProvider provider for attitude computation</em>
+<a class="jxr_linenumber" name="L199" href="#L199">199</a> <em class="jxr_javadoccomment">     * @param mass spacecraft mass (kg)</em>
+<a class="jxr_linenumber" name="L200" href="#L200">200</a> <em class="jxr_javadoccomment">     * @return the correct propagator.</em>
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> <em class="jxr_javadoccomment">     * @exception OrekitException if the underlying model cannot be initialized</em>
+<a class="jxr_linenumber" name="L202" href="#L202">202</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TLEPropagator selectExtrapolator(<strong class="jxr_keyword">final</strong> TLE tle, <strong class="jxr_keyword">final</strong> AttitudeProvider attitudeProvider,
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>                                                    <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> mass) <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L205" href="#L205">205</a> 
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> a1 = FastMath.pow( TLEConstants.XKE / (tle.getMeanMotion() * 60.0), TLEConstants.TWO_THIRD);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosi0 = FastMath.cos(tle.getI());
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp = TLEConstants.CK2 * 1.5 * (3 * cosi0 * cosi0 - 1.0) *
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>                             FastMath.pow(1.0 - tle.getE() * tle.getE(), -1.5);
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> delta1 = temp / (a1 * a1);
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> a0 = a1 * (1.0 - delta1 * (TLEConstants.ONE_THIRD + delta1 * (delta1 * 134.0 / 81.0 + 1.0)));
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> delta0 = temp / (a0 * a0);
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> 
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         <em class="jxr_comment">// recover original mean motion :</em>
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xn0dp = tle.getMeanMotion() * 60.0 / (delta0 + 1.0);
+<a class="jxr_linenumber" name="L216" href="#L216">216</a> 
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         <em class="jxr_comment">// Period &gt;= 225 minutes is deep space</em>
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         <strong class="jxr_keyword">if</strong> (MathUtils.TWO_PI / (xn0dp * TLEConstants.MINUTES_PER_DAY) &gt;= (1.0 / 6.4)) {
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> DeepSDP4(tle, attitudeProvider, mass);
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> SGP4(tle, attitudeProvider, mass);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         }
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>     }
+<a class="jxr_linenumber" name="L224" href="#L224">224</a> 
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>     <em class="jxr_javadoccomment">/** Get the Earth gravity coefficient used for TLE propagation.</em>
+<a class="jxr_linenumber" name="L226" href="#L226">226</a> <em class="jxr_javadoccomment">     * @return the Earth gravity coefficient.</em>
+<a class="jxr_linenumber" name="L227" href="#L227">227</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">double</strong> getMU() {
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         <strong class="jxr_keyword">return</strong> TLEConstants.MU;
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>     }
+<a class="jxr_linenumber" name="L231" href="#L231">231</a> 
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>     <em class="jxr_javadoccomment">/** Get the extrapolated position and velocity from an initial TLE.</em>
+<a class="jxr_linenumber" name="L233" href="#L233">233</a> <em class="jxr_javadoccomment">     * @param date the final date</em>
+<a class="jxr_linenumber" name="L234" href="#L234">234</a> <em class="jxr_javadoccomment">     * @return the final PVCoordinates</em>
+<a class="jxr_linenumber" name="L235" href="#L235">235</a> <em class="jxr_javadoccomment">     * @exception OrekitException if propagation cannot be performed at given date</em>
+<a class="jxr_linenumber" name="L236" href="#L236">236</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>     <strong class="jxr_keyword">public</strong> PVCoordinates getPVCoordinates(<strong class="jxr_keyword">final</strong> AbsoluteDate date)
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L239" href="#L239">239</a> 
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         sxpPropagate(date.durationFrom(tle.getDate()) / 60.0);
+<a class="jxr_linenumber" name="L241" href="#L241">241</a> 
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         <em class="jxr_comment">// Compute PV with previous calculated parameters</em>
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         <strong class="jxr_keyword">return</strong> computePVCoordinates();
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>     }
+<a class="jxr_linenumber" name="L245" href="#L245">245</a> 
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>     <em class="jxr_javadoccomment">/** Computation of the first commons parameters.</em>
+<a class="jxr_linenumber" name="L247" href="#L247">247</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> initializeCommons() {
+<a class="jxr_linenumber" name="L249" href="#L249">249</a> 
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> a1 = FastMath.pow(TLEConstants.XKE / (tle.getMeanMotion() * 60.0), TLEConstants.TWO_THIRD);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         cosi0 = FastMath.cos(tle.getI());
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         theta2 = cosi0 * cosi0;
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x3thm1 = 3.0 * theta2 - 1.0;
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         e0sq = tle.getE() * tle.getE();
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         beta02 = 1.0 - e0sq;
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         beta0 = FastMath.sqrt(beta02);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> tval = TLEConstants.CK2 * 1.5 * x3thm1 / (beta0 * beta02);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> delta1 = tval / (a1 * a1);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> a0 = a1 * (1.0 - delta1 * (TLEConstants.ONE_THIRD + delta1 * (1.0 + 134.0 / 81.0 * delta1)));
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> delta0 = tval / (a0 * a0);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a> 
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         <em class="jxr_comment">// recover original mean motion and semi-major axis :</em>
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         xn0dp = tle.getMeanMotion() * 60.0 / (delta0 + 1.0);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         a0dp = a0 / (1.0 - delta0);
+<a class="jxr_linenumber" name="L265" href="#L265">265</a> 
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         <em class="jxr_comment">// Values of s and qms2t :</em>
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         s4 = TLEConstants.S;  <em class="jxr_comment">// unmodified value for s</em>
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         <strong class="jxr_keyword">double</strong> q0ms24 = TLEConstants.QOMS2T; <em class="jxr_comment">// unmodified value for q0ms2T</em>
+<a class="jxr_linenumber" name="L269" href="#L269">269</a> 
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         perige = (a0dp * (1 - tle.getE()) - TLEConstants.NORMALIZED_EQUATORIAL_RADIUS) * TLEConstants.EARTH_RADIUS; <em class="jxr_comment">// perige</em>
+<a class="jxr_linenumber" name="L271" href="#L271">271</a> 
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         <em class="jxr_comment">//  For perigee below 156 km, the values of s and qoms2t are changed :</em>
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         <strong class="jxr_keyword">if</strong> (perige &lt; 156.0) {
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>             <strong class="jxr_keyword">if</strong> (perige &lt;= 98.0) {
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>                 s4 = 20.0;
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>                 s4 = perige - 78.0;
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>             }
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>             <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp_val = (120.0 - s4) * TLEConstants.NORMALIZED_EQUATORIAL_RADIUS / TLEConstants.EARTH_RADIUS;
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>             <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp_val_squared = temp_val * temp_val;
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>             q0ms24 = temp_val_squared * temp_val_squared;
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>             s4 = s4 / TLEConstants.EARTH_RADIUS + TLEConstants.NORMALIZED_EQUATORIAL_RADIUS; <em class="jxr_comment">// new value for q0ms2T and s</em>
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         }
+<a class="jxr_linenumber" name="L284" href="#L284">284</a> 
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> pinv = 1.0 / (a0dp * beta02);
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> pinvsq = pinv * pinv;
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         tsi = 1.0 / (a0dp - s4);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         eta = a0dp * tle.getE() * tsi;
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         etasq = eta * eta;
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         eeta = tle.getE() * eta;
+<a class="jxr_linenumber" name="L291" href="#L291">291</a> 
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> psisq = FastMath.abs(1.0 - etasq); <em class="jxr_comment">// abs because pow 3.5 needs positive value</em>
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> tsi_squared = tsi * tsi;
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         coef = q0ms24 * tsi_squared * tsi_squared;
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         coef1 = coef / FastMath.pow(psisq, 3.5);
+<a class="jxr_linenumber" name="L296" href="#L296">296</a> 
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         <em class="jxr_comment">// C2 and C1 coefficients computation :</em>
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         c2 = coef1 * xn0dp * (a0dp * (1.0 + 1.5 * etasq + eeta * (4.0 + etasq)) +
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>              0.75 * TLEConstants.CK2 * tsi / psisq * x3thm1 * (8.0 + 3.0 * etasq * (8.0 + etasq)));
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         c1 = tle.getBStar() * c2;
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         sini0 = FastMath.sin(tle.getI());
+<a class="jxr_linenumber" name="L302" href="#L302">302</a> 
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x1mth2 = 1.0 - theta2;
+<a class="jxr_linenumber" name="L304" href="#L304">304</a> 
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         <em class="jxr_comment">// C4 coefficient computation :</em>
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         c4 = 2.0 * xn0dp * coef1 * a0dp * beta02 * (eta * (2.0 + 0.5 * etasq) +
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>              tle.getE() * (0.5 + 2.0 * etasq) -
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>              2 * TLEConstants.CK2 * tsi / (a0dp * psisq) *
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>              (-3.0 * x3thm1 * (1.0 - 2.0 * eeta + etasq * (1.5 - 0.5 * eeta)) +
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>               0.75 * x1mth2 * (2.0 * etasq - eeta * (1.0 + etasq)) * FastMath.cos(2.0 * tle.getPerigeeArgument())));
+<a class="jxr_linenumber" name="L311" href="#L311">311</a> 
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> theta4 = theta2 * theta2;
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp1 = 3 * TLEConstants.CK2 * pinvsq * xn0dp;
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp2 = temp1 * TLEConstants.CK2 * pinvsq;
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp3 = 1.25 * TLEConstants.CK4 * pinvsq * pinvsq * xn0dp;
+<a class="jxr_linenumber" name="L316" href="#L316">316</a> 
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         <em class="jxr_comment">// atmospheric and gravitation coefs :(Mdf and OMEGAdf)</em>
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>         xmdot = xn0dp +
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>                 0.5 * temp1 * beta0 * x3thm1 +
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>                 0.0625 * temp2 * beta0 * (13.0 - 78.0 * theta2 + 137.0 * theta4);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x1m5th = 1.0 - 5.0 * theta2;
+<a class="jxr_linenumber" name="L323" href="#L323">323</a> 
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         omgdot = -0.5 * temp1 * x1m5th +
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>                  0.0625 * temp2 * (7.0 - 114.0 * theta2 + 395.0 * theta4) +
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>                  temp3 * (3.0 - 36.0 * theta2 + 49.0 * theta4);
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xhdot1 = -temp1 * cosi0;
+<a class="jxr_linenumber" name="L329" href="#L329">329</a> 
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         xnodot = xhdot1 + (0.5 * temp2 * (4.0 - 19.0 * theta2) + 2.0 * temp3 * (3.0 - 7.0 * theta2)) * cosi0;
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         xnodcf = 3.5 * beta02 * xhdot1 * c1;
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         t2cof = 1.5 * c1;
+<a class="jxr_linenumber" name="L333" href="#L333">333</a> 
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>     }
+<a class="jxr_linenumber" name="L335" href="#L335">335</a> 
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>     <em class="jxr_javadoccomment">/** Retrieves the position and velocity.</em>
+<a class="jxr_linenumber" name="L337" href="#L337">337</a> <em class="jxr_javadoccomment">     * @return the computed PVCoordinates.</em>
+<a class="jxr_linenumber" name="L338" href="#L338">338</a> <em class="jxr_javadoccomment">     * @exception OrekitException if current orbit is out of supported range</em>
+<a class="jxr_linenumber" name="L339" href="#L339">339</a> <em class="jxr_javadoccomment">     * (too large eccentricity, too low perigee ...)</em>
+<a class="jxr_linenumber" name="L340" href="#L340">340</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>     <strong class="jxr_keyword">private</strong> PVCoordinates computePVCoordinates() <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L342" href="#L342">342</a> 
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         <em class="jxr_comment">// Long period periodics</em>
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> axn = e * FastMath.cos(omega);
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         <strong class="jxr_keyword">double</strong> temp = 1.0 / (a * (1.0 - e * e));
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xlcof = 0.125 * TLEConstants.A3OVK2 * sini0 * (3.0 + 5.0 * cosi0) / (1.0 + cosi0);
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> aycof = 0.25 * TLEConstants.A3OVK2 * sini0;
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xll = temp * xlcof * axn;
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> aynl = temp * aycof;
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xlt = xl + xll;
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> ayn = e * FastMath.sin(omega) + aynl;
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> elsq = axn * axn + ayn * ayn;
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> capu = MathUtils.normalizeAngle(xlt - xnode, FastMath.PI);
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         <strong class="jxr_keyword">double</strong> epw = capu;
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>         <strong class="jxr_keyword">double</strong> ecosE = 0;
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>         <strong class="jxr_keyword">double</strong> esinE = 0;
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>         <strong class="jxr_keyword">double</strong> sinEPW = 0;
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         <strong class="jxr_keyword">double</strong> cosEPW = 0;
+<a class="jxr_linenumber" name="L359" href="#L359">359</a> 
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>         <em class="jxr_comment">// Dundee changes:  items dependent on cosio get recomputed:</em>
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosi0Sq = cosi0 * cosi0;
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x3thm1 = 3.0 * cosi0Sq - 1.0;
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x1mth2 = 1.0 - cosi0Sq;
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> x7thm1 = 7.0 * cosi0Sq - 1.0;
+<a class="jxr_linenumber" name="L365" href="#L365">365</a> 
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>         <strong class="jxr_keyword">if</strong> (e &gt; (1 - 1e-6)) {
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> OrekitException(OrekitMessages.TOO_LARGE_ECCENTRICITY_FOR_PROPAGATION_MODEL, e);
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>         }
+<a class="jxr_linenumber" name="L369" href="#L369">369</a> 
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>         <em class="jxr_comment">// Solve Kepler's' Equation.</em>
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> newtonRaphsonEpsilon = 1e-12;
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> j = 0; j &lt; 10; j++) {
+<a class="jxr_linenumber" name="L373" href="#L373">373</a> 
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>             <strong class="jxr_keyword">boolean</strong> doSecondOrderNewtonRaphson = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L375" href="#L375">375</a> 
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>             sinEPW = FastMath.sin( epw);
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>             cosEPW = FastMath.cos( epw);
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>             ecosE = axn * cosEPW + ayn * sinEPW;
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>             esinE = axn * sinEPW - ayn * cosEPW;
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>             <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> f = capu - epw + esinE;
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>             <strong class="jxr_keyword">if</strong> (FastMath.abs(f) &lt; newtonRaphsonEpsilon) {
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>             }
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>             <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> fdot = 1.0 - ecosE;
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>             <strong class="jxr_keyword">double</strong> delta_epw = f / fdot;
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>             <strong class="jxr_keyword">if</strong> (j == 0) {
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>                 <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> maxNewtonRaphson = 1.25 * FastMath.abs(e);
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>                 doSecondOrderNewtonRaphson = false;
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>                 <strong class="jxr_keyword">if</strong> (delta_epw &gt; maxNewtonRaphson) {
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>                     delta_epw = maxNewtonRaphson;
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (delta_epw &lt; -maxNewtonRaphson) {
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>                     delta_epw = -maxNewtonRaphson;
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>                     doSecondOrderNewtonRaphson = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>                 }
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>             }
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>             <strong class="jxr_keyword">if</strong> (doSecondOrderNewtonRaphson) {
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>                 delta_epw = f / (fdot + 0.5 * esinE * delta_epw);
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>             }
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>             epw += delta_epw;
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         }
+<a class="jxr_linenumber" name="L402" href="#L402">402</a> 
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         <em class="jxr_comment">// Short period preliminary quantities</em>
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         temp = 1.0 - elsq;
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> pl = a * temp;
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> r = a * (1.0 - ecosE);
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>         <strong class="jxr_keyword">double</strong> temp2 = a / r;
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> betal = FastMath.sqrt(temp);
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         temp = esinE / (1.0 + betal);
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosu = temp2 * (cosEPW - axn + ayn * temp);
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> sinu = temp2 * (sinEPW - ayn - axn * temp);
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> u = FastMath.atan2(sinu, cosu);
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> sin2u = 2.0 * sinu * cosu;
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cos2u = 2.0 * cosu * cosu - 1.0;
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> temp1 = TLEConstants.CK2 / pl;
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>         temp2 = temp1 / pl;
+<a class="jxr_linenumber" name="L417" href="#L417">417</a> 
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>         <em class="jxr_comment">// Update for short periodics</em>
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> rk = r * (1.0 - 1.5 * temp2 * betal * x3thm1) + 0.5 * temp1 * x1mth2 * cos2u;
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> uk = u - 0.25 * temp2 * x7thm1 * sin2u;
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xnodek = xnode + 1.5 * temp2 * cosi0 * sin2u;
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xinck = i + 1.5 * temp2 * cosi0 * sini0 * cos2u;
+<a class="jxr_linenumber" name="L423" href="#L423">423</a> 
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         <em class="jxr_comment">// Orientation vectors</em>
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> sinuk = FastMath.sin(uk);
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosuk = FastMath.cos(uk);
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> sinik = FastMath.sin(xinck);
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosik = FastMath.cos(xinck);
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> sinnok = FastMath.sin(xnodek);
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cosnok = FastMath.cos(xnodek);
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xmx = -sinnok * cosik;
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xmy = cosnok * cosik;
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> ux = xmx * sinuk + cosnok * cosuk;
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> uy = xmy * sinuk + sinnok * cosuk;
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> uz = sinik * sinuk;
+<a class="jxr_linenumber" name="L436" href="#L436">436</a> 
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>         <em class="jxr_comment">// Position and velocity</em>
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cr = 1000 * rk * TLEConstants.EARTH_RADIUS;
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         <strong class="jxr_keyword">final</strong> Vector3D pos = <strong class="jxr_keyword">new</strong> Vector3D(cr * ux, cr * uy, cr * uz);
+<a class="jxr_linenumber" name="L440" href="#L440">440</a> 
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> rdot   = TLEConstants.XKE * FastMath.sqrt(a) * esinE / r;
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> rfdot  = TLEConstants.XKE * FastMath.sqrt(pl) / r;
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> xn     = TLEConstants.XKE / (a * FastMath.sqrt(a));
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> rdotk  = rdot - xn * temp1 * x1mth2 * sin2u;
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> rfdotk = rfdot + xn * temp1 * (x1mth2 * cos2u + 1.5 * x3thm1);
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> vx     = xmx * cosuk - cosnok * sinuk;
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> vy     = xmy * cosuk - sinnok * sinuk;
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> vz     = sinik * cosuk;
+<a class="jxr_linenumber" name="L449" href="#L449">449</a> 
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">double</strong> cv = 1000.0 * TLEConstants.EARTH_RADIUS / 60.0;
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>         <strong class="jxr_keyword">final</strong> Vector3D vel = <strong class="jxr_keyword">new</strong> Vector3D(cv * (rdotk * ux + rfdotk * vx),
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>                                           cv * (rdotk * uy + rfdotk * vy),
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>                                           cv * (rdotk * uz + rfdotk * vz));
+<a class="jxr_linenumber" name="L454" href="#L454">454</a> 
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> PVCoordinates(pos, vel);
+<a class="jxr_linenumber" name="L456" href="#L456">456</a> 
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>     }
+<a class="jxr_linenumber" name="L458" href="#L458">458</a> 
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>     <em class="jxr_javadoccomment">/** Initialization proper to each propagator (SGP or SDP).</em>
+<a class="jxr_linenumber" name="L460" href="#L460">460</a> <em class="jxr_javadoccomment">     * @exception OrekitException if some specific error occurs</em>
+<a class="jxr_linenumber" name="L461" href="#L461">461</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">void</strong> sxpInitialize() <strong class="jxr_keyword">throws</strong> OrekitException;
+<a class="jxr_linenumber" name="L463" href="#L463">463</a> 
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>     <em class="jxr_javadoccomment">/** Propagation proper to each propagator (SGP or SDP).</em>
+<a class="jxr_linenumber" name="L465" href="#L465">465</a> <em class="jxr_javadoccomment">     * @param t the offset from initial epoch (min)</em>
+<a class="jxr_linenumber" name="L466" href="#L466">466</a> <em class="jxr_javadoccomment">     * @exception OrekitException if current state cannot be propagated</em>
+<a class="jxr_linenumber" name="L467" href="#L467">467</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">void</strong> sxpPropagate(<strong class="jxr_keyword">double</strong> t) <strong class="jxr_keyword">throws</strong> OrekitException;
+<a class="jxr_linenumber" name="L469" href="#L469">469</a> 
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>     <em class="jxr_javadoccomment">/** {@inheritDoc} */</em>
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> resetInitialState(<strong class="jxr_keyword">final</strong> SpacecraftState state)
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>         <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> OrekitException(OrekitMessages.NON_RESETABLE_STATE);
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>     }
+<a class="jxr_linenumber" name="L475" href="#L475">475</a> 
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>     <em class="jxr_javadoccomment">/** {@inheritDoc} */</em>
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> resetIntermediateState(<strong class="jxr_keyword">final</strong> SpacecraftState state, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> forward)
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>         <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> OrekitException(OrekitMessages.NON_RESETABLE_STATE);
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>     }
+<a class="jxr_linenumber" name="L481" href="#L481">481</a> 
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>     <em class="jxr_javadoccomment">/** {@inheritDoc} */</em>
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">double</strong> getMass(<strong class="jxr_keyword">final</strong> AbsoluteDate date) {
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>         <strong class="jxr_keyword">return</strong> mass;
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>     }
+<a class="jxr_linenumber" name="L486" href="#L486">486</a> 
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>     <em class="jxr_javadoccomment">/** {@inheritDoc} */</em>
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>     <strong class="jxr_keyword">protected</strong> Orbit propagateOrbit(<strong class="jxr_keyword">final</strong> AbsoluteDate date) <strong class="jxr_keyword">throws</strong> OrekitException {
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> CartesianOrbit(getPVCoordinates(date), teme, date, TLEConstants.MU);
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>     }
+<a class="jxr_linenumber" name="L491" href="#L491">491</a> 
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>     <em class="jxr_javadoccomment">/** Get the underlying TLE.</em>
+<a class="jxr_linenumber" name="L493" href="#L493">493</a> <em class="jxr_javadoccomment">     * @return underlying TLE</em>
+<a class="jxr_linenumber" name="L494" href="#L494">494</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>     <strong class="jxr_keyword">public</strong> TLE getTLE() {
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>         <strong class="jxr_keyword">return</strong> tle;
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>     }
+<a class="jxr_linenumber" name="L498" href="#L498">498</a> 
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>     <em class="jxr_javadoccomment">/** {@inheritDoc} */</em>
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>     <strong class="jxr_keyword">public</strong> Frame getFrame() {
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>         <strong class="jxr_keyword">return</strong> teme;
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>     }
+<a class="jxr_linenumber" name="L503" href="#L503">503</a> 
+<a class="jxr_linenumber" name="L504" href="#L504">504</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>

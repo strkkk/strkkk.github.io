@@ -1,0 +1,6025 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">RequireThisCheck</td>
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">5911</td>
+							<td id="totalBase">38223</td>
+							
+								<td id="warningSeverityNumBase">38223</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">5911</td>
+							<td id="totalPatch">38491 (268 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">38491 (268 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">83 files with differences</td>
+							<td id="totalDiff">268 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">268 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumBase">38223</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleStatisticsPatch">38491 (268 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumDiff">268</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">268</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/InstantiationModelAwarePointcutAdvisorImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;declaredPointcut&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/InstantiationModelAwarePointcutAdvisorImpl.java.html#L90">90</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-aop/src/test/java/org/springframework/tests/sample/beans/SerializablePerson.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;age&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-aop/src/test/java/org/springframework/tests/sample/beans/SerializablePerson.java.html#L77">77</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/access/SingletonBeanFactoryLocator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;resourceLocation&#39; needs &quot;SingletonBeanFactoryLocator.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/access/SingletonBeanFactoryLocator.java.html#L529">529</a></td>
+								
+								
+									
+									<td>128</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/support/DisposableBeanAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bean&#39; needs &quot;DisposableBeanAdapter.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/support/DisposableBeanAdapter.java.html#L252">252</a></td>
+								
+								
+									
+									<td>75</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;bean&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/support/DisposableBeanAdapter.java.html#L258">258</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleSecurityContextProvider.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;acc&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleSecurityContextProvider.java.html#L56">56</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/test/java/org/springframework/beans/factory/FactoryBeanLookupTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;beanFactory&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-beans/src/test/java/org/springframework/beans/factory/FactoryBeanLookupTests.java.html#L42">42</a></td>
+								
+								
+									
+									<td>70</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context-support/src/main/java/org/springframework/cache/jcache/interceptor/CacheResolverAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;target&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context-support/src/main/java/org/springframework/cache/jcache/interceptor/CacheResolverAdapter.java.html#L49">49</a></td>
+								
+								
+									
+									<td>94</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;beanFactory&#39; needs &quot;CommonAnnotationBeanPostProcessor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.java.html#L543">543</a></td>
+								
+								
+									
+									<td>75</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;beanFactory&#39; needs &quot;CommonAnnotationBeanPostProcessor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.java.html#L690">690</a></td>
+								
+								
+									
+									<td>76</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/context/support/ResourceBundleMessageSource.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;cacheMillis&#39; needs &quot;ResourceBundleMessageSource.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/context/support/ResourceBundleMessageSource.java.html#L460">460</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/scheduling/concurrent/ConcurrentTaskScheduler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;scheduledExecutor&#39; needs &quot;ConcurrentTaskScheduler.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/main/java/org/springframework/scheduling/concurrent/ConcurrentTaskScheduler.java.html#L247">247</a></td>
+								
+								
+									
+									<td>102</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AfterAdviceBindingTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBeanProxy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AfterAdviceBindingTests.java.html#L57">57</a></td>
+								
+								
+									
+									<td>56</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AfterReturningAdviceBindingTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBeanProxy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AfterReturningAdviceBindingTests.java.html#L69">69</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AroundAdviceBindingTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBeanProxy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AroundAdviceBindingTests.java.html#L62">62</a></td>
+								
+								
+									
+									<td>61</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AspectAndAdvicePrecedenceTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;adviceInvocationNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AspectAndAdvicePrecedenceTests.java.html#L105">105</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;adviceInvocationNumber&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/AspectAndAdvicePrecedenceTests.java.html#L109">109</a></td>
+								
+								
+									
+									<td>94</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/BeforeAdviceBindingTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBeanProxy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/BeforeAdviceBindingTests.java.html#L60">60</a></td>
+								
+								
+									
+									<td>56</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/DeclareParentsDelegateRefTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;noMethodsBean&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/DeclareParentsDelegateRefTests.java.html#L53">53</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/DeclareParentsTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBeanProxy&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/aspectj/DeclareParentsTests.java.html#L66">66</a></td>
+								
+								
+									
+									<td>48</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/framework/AbstractAopProxyTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;releases&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/framework/AbstractAopProxyTests.java.html#L2070">2070</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;gets&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/framework/AbstractAopProxyTests.java.html#L2071">2071</a></td>
+								
+								
+									
+									<td>85</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;releases&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/aop/framework/AbstractAopProxyTests.java.html#L2071">2071</a></td>
+								
+								
+									
+									<td>107</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/AbstractApplicationContextTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;applicationContext&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/AbstractApplicationContextTests.java.html#L72">72</a></td>
+								
+								
+									
+									<td>82</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;applicationContext&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/AbstractApplicationContextTests.java.html#L80">80</a></td>
+								
+								
+									
+									<td>82</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/AnnotationConfigApplicationContextTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;autowiredName&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/AnnotationConfigApplicationContextTests.java.html#L233">233</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/configuration/ConfigurationClassProcessingTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;myProp&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/configuration/ConfigurationClassProcessingTests.java.html#L340">340</a></td>
+								
+								
+									
+									<td>69</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;nameSuffix&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/configuration/ConfigurationClassProcessingTests.java.html#L349">349</a></td>
+								
+								
+									
+									<td>107</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;myProp&#39; needs &quot;ConfigWithPostProcessor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/annotation/configuration/ConfigurationClassProcessingTests.java.html#L371">371</a></td>
+								
+								
+									
+									<td>111</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/support/Assembler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/support/Assembler.java.html#L45">45</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/support/Logic.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/context/support/Logic.java.html#L38">38</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/scheduling/concurrent/ThreadPoolTaskSchedulerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expectedRunCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/scheduling/concurrent/ThreadPoolTaskSchedulerTests.java.html#L247">247</a></td>
+								
+								
+									
+									<td>64</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expectedRunCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-context/src/test/java/org/springframework/scheduling/concurrent/ThreadPoolTaskSchedulerTests.java.html#L267">267</a></td>
+								
+								
+									
+									<td>64</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/AnnotationWriter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;size&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/AnnotationWriter.java.html#L230">230</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Attribute.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;value&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Attribute.java.html#L162">162</a></td>
+								
+								
+									
+									<td>18</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;interfaceCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L678">678</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;anns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L715">715</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ianns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L718">718</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L738">738</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;itanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L741">741</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;attrs&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L749">749</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;innerClassesCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L776">776</a></td>
+								
+								
+									
+									<td>31</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;interfaceCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L815">815</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;interfaceCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L910">910</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstField&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L914">914</a></td>
+								
+								
+									
+									<td>14</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstMethod&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L920">920</a></td>
+								
+								
+									
+									<td>14</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;typeCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L1727">1727</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;threshold&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/ClassWriter.java.html#L1727">1727</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;anns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java.html#L155">155</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ianns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java.html#L158">158</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java.html#L178">178</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;itanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java.html#L181">181</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;attrs&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/FieldWriter.java.html#L189">189</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outputStackTop&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java.html#L589">589</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outputStackTop&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java.html#L716">716</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;initializationCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java.html#L783">783</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outputStackTop&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java.html#L1343">1343</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outputStackTop&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Frame.java.html#L1354">1354</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Handle.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Handle.java.html#L168">168</a></td>
+								
+								
+									
+									<td>30</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;desc&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Handle.java.html#L168">168</a></td>
+								
+								
+									
+									<td>37</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tag&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Handle.java.html#L168">168</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Item.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;longVal&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Item.java.html#L292">292</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;intVal&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Item.java.html#L295">295</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;intVal&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Item.java.html#L297">297</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;longVal&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Item.java.html#L301">301</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Label.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;referenceCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Label.java.html#L380">380</a></td>
+								
+								
+									
+									<td>20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exceptionCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L477">477</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;anns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L531">531</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ianns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L534">534</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;tanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L554">554</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;itanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L557">557</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;cattrs&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L598">598</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;attrs&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L601">601</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;previousFrameOffset&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L654">654</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L726">726</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L750">750</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;stackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L778">778</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L782">782</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxLocals&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L798">798</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L835">835</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L874">874</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L918">918</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L966">966</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;previousBlock&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1098">1098</a></td>
+								
+								
+									
+									<td>36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1107">1107</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1140">1140</a></td>
+								
+								
+									
+									<td>28</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxLocals&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1168">1168</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ctanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1275">1275</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ictanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1278">1278</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ctanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1316">1316</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ictanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1319">1319</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxLocals&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1351">1351</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ctanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1383">1383</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ictanns&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1386">1386</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;firstHandler&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1519">1519</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;labels&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1583">1583</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxStackSize&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1689">1689</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A98" href = "#A98">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;frame&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L1848">1848</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A99" href = "#A99">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;classReaderLength&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2031">2031</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A100" href = "#A100">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;handlerCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2039">2039</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A101" href = "#A101">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exceptionCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2072">2072</a></td>
+								
+								
+									
+									<td>29</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A102" href = "#A102">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;synthetics&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2116">2116</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A103" href = "#A103">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;synthetics&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2117">2117</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A104" href = "#A104">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;synthetics&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2123">2123</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A105" href = "#A105">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;synthetics&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2124">2124</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A106" href = "#A106">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;handlerCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2199">2199</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A107" href = "#A107">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exceptionCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2292">2292</a></td>
+								
+								
+									
+									<td>25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A108" href = "#A108">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;exceptionCount&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2294">2294</a></td>
+								
+								
+									
+									<td>33</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A109" href = "#A109">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;localVar&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2745">2745</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A110" href = "#A110">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;localVarType&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/MethodWriter.java.html#L2745">2745</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Type.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A111" href = "#A111">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;len&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Type.java.html#L862">862</a></td>
+								
+								
+									
+									<td>52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A112" href = "#A112">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sort&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Type.java.html#L878">878</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A113" href = "#A113">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;len&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/asm/Type.java.html#L880">880</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/util/backoff/ExponentialBackOff.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A114" href = "#A114">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxElapsedTime&#39; needs &quot;ExponentialBackOff.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/util/backoff/ExponentialBackOff.java.html#L186">186</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/util/xml/XMLEventStreamReader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A115" href = "#A115">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;event&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/main/java/org/springframework/util/xml/XMLEventStreamReader.java.html#L95">95</a></td>
+								
+								
+									
+									<td>49</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/core/convert/support/DefaultConversionTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A116" href = "#A116">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;conversionService&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/core/convert/support/DefaultConversionTests.java.html#L306">306</a></td>
+								
+								
+									
+									<td>47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/core/convert/support/GenericConversionServiceTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A117" href = "#A117">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;converter&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/core/convert/support/GenericConversionServiceTests.java.html#L934">934</a></td>
+								
+								
+									
+									<td>55</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A118" href = "#A118">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;code&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/core/convert/support/GenericConversionServiceTests.java.html#L978">978</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/util/MethodInvokerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A119" href = "#A119">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-core/src/test/java/org/springframework/util/MethodInvokerTests.java.html#L275">275</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/main/java/org/springframework/expression/spel/ast/FunctionReference.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A120" href = "#A120">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;argumentConversionOccurred&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/main/java/org/springframework/expression/spel/ast/FunctionReference.java.html#L163">163</a></td>
+								
+								
+									
+									<td>44</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A121" href = "#A121">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L719">719</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A122" href = "#A122">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L722">722</a></td>
+								
+								
+									
+									<td>62</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A123" href = "#A123">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L731">731</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A124" href = "#A124">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L734">734</a></td>
+								
+								
+									
+									<td>62</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A125" href = "#A125">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L744">744</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A126" href = "#A126">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L747">747</a></td>
+								
+								
+									
+									<td>62</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A127" href = "#A127">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L819">819</a></td>
+								
+								
+									
+									<td>61</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A128" href = "#A128">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L848">848</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A129" href = "#A129">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L854">854</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A130" href = "#A130">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L860">860</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A131" href = "#A131">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L866">866</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A132" href = "#A132">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L873">873</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A133" href = "#A133">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L879">879</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A134" href = "#A134">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L885">885</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A135" href = "#A135">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L891">891</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A136" href = "#A136">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L897">897</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A137" href = "#A137">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L903">903</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A138" href = "#A138">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L916">916</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A139" href = "#A139">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L922">922</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A140" href = "#A140">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L928">928</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A141" href = "#A141">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L934">934</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A142" href = "#A142">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L940">940</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A143" href = "#A143">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L946">946</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A144" href = "#A144">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L952">952</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A145" href = "#A145">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L958">958</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A146" href = "#A146">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L964">964</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A147" href = "#A147">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L970">970</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A148" href = "#A148">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L976">976</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A149" href = "#A149">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L982">982</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A150" href = "#A150">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L989">989</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A151" href = "#A151">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L996">996</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A152" href = "#A152">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L1002">1002</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A153" href = "#A153">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L1008">1008</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A154" href = "#A154">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L1014">1014</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A155" href = "#A155">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;expression&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationCoverageTests.java.html#L3710">3710</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A156" href = "#A156">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L212">212</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A157" href = "#A157">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L217">217</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A158" href = "#A158">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L219">219</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A159" href = "#A159">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L233">233</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A160" href = "#A160">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L235">235</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A161" href = "#A161">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L275">275</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A162" href = "#A162">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L280">280</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A163" href = "#A163">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L282">282</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A164" href = "#A164">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L296">296</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A165" href = "#A165">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L298">298</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A166" href = "#A166">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L349">349</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A167" href = "#A167">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L354">354</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A168" href = "#A168">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L356">356</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A169" href = "#A169">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L370">370</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A170" href = "#A170">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L372">372</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A171" href = "#A171">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L396">396</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A172" href = "#A172">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L401">401</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A173" href = "#A173">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L403">403</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A174" href = "#A174">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L417">417</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A175" href = "#A175">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L419">419</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A176" href = "#A176">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L442">442</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A177" href = "#A177">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L446">446</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A178" href = "#A178">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L448">448</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A179" href = "#A179">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L462">462</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A180" href = "#A180">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L464">464</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A181" href = "#A181">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L487">487</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A182" href = "#A182">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L492">492</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A183" href = "#A183">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L494">494</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A184" href = "#A184">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L508">508</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A185" href = "#A185">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L510">510</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A186" href = "#A186">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L534">534</a></td>
+								
+								
+									
+									<td>32</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A187" href = "#A187">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L539">539</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A188" href = "#A188">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L541">541</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A189" href = "#A189">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L556">556</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A190" href = "#A190">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L558">558</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A191" href = "#A191">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L580">580</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A192" href = "#A192">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;iterations&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L581">581</a></td>
+								
+								
+									
+									<td>57</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A193" href = "#A193">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;count&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelCompilationPerformanceTests.java.html#L583">583</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelReproTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A194" href = "#A194">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;a&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/SpelReproTests.java.html#L869">869</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/testresources/Fruit.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A195" href = "#A195">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;colorName&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/testresources/Fruit.java.html#L39">39</a></td>
+								
+								
+									
+									<td>94</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A196" href = "#A196">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-expression/src/test/java/org/springframework/expression/spel/testresources/Fruit.java.html#L39">39</a></td>
+								
+								
+									
+									<td>112</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/BeanPropertyRowMapper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A197" href = "#A197">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;primitivesDefaultedForNullValue&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/BeanPropertyRowMapper.java.html#L258">258</a></td>
+								
+								
+									
+									<td>70</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/PreparedStatementCreatorFactory.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A198" href = "#A198">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sql&#39; needs &quot;PreparedStatementCreatorFactory.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/PreparedStatementCreatorFactory.java.html#L220">220</a></td>
+								
+								
+									
+									<td>67</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A199" href = "#A199">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;returnGeneratedKeys&#39; needs &quot;PreparedStatementCreatorFactory.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/PreparedStatementCreatorFactory.java.html#L229">229</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A200" href = "#A200">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;sql&#39; needs &quot;PreparedStatementCreatorFactory.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/core/PreparedStatementCreatorFactory.java.html#L271">271</a></td>
+								
+								
+									
+									<td>75</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/support/lob/OracleLobHandler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A201" href = "#A201">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;clobClass&#39; needs &quot;OracleLobHandler.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/support/lob/OracleLobHandler.java.html#L527">527</a></td>
+								
+								
+									
+									<td>69</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A202" href = "#A202">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;blobClass&#39; needs &quot;OracleLobHandler.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/main/java/org/springframework/jdbc/support/lob/OracleLobHandler.java.html#L527">527</a></td>
+								
+								
+									
+									<td>81</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/Customer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A203" href = "#A203">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;id&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/Customer.java.html#L48">48</a></td>
+								
+								
+									
+									<td>42</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A204" href = "#A204">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;forename&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/Customer.java.html#L48">48</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceJtaTransactionTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A205" href = "#A205">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dataSource&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceJtaTransactionTests.java.html#L206">206</a></td>
+								
+								
+									
+									<td>83</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A206" href = "#A206">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dataSource&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceJtaTransactionTests.java.html#L456">456</a></td>
+								
+								
+									
+									<td>83</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceTransactionManagerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A207" href = "#A207">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ds&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceTransactionManagerTests.java.html#L125">125</a></td>
+								
+								
+									
+									<td>102</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A208" href = "#A208">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;ds&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DataSourceTransactionManagerTests.java.html#L211">211</a></td>
+								
+								
+									
+									<td>102</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DelegatingDataSourceTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A209" href = "#A209">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;dataSource&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DelegatingDataSourceTests.java.html#L96">96</a></td>
+								
+								
+									
+									<td>53</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DriverManagerDataSourceTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A210" href = "#A210">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;connection&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DriverManagerDataSourceTests.java.html#L57">57</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A211" href = "#A211">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;connection&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DriverManagerDataSourceTests.java.html#L92">92</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A212" href = "#A212">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;connection&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jdbc/src/test/java/org/springframework/jdbc/datasource/DriverManagerDataSourceTests.java.html#L129">129</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/main/java/org/springframework/jms/listener/DefaultMessageListenerContainer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A213" href = "#A213">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxMessagesPerTask&#39; needs &quot;DefaultMessageListenerContainer.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/main/java/org/springframework/jms/listener/DefaultMessageListenerContainer.java.html#L1037">1037</a></td>
+								
+								
+									
+									<td>78</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A214" href = "#A214">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currentRecoveryMarker&#39; needs &quot;DefaultMessageListenerContainer.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/main/java/org/springframework/jms/listener/DefaultMessageListenerContainer.java.html#L1053">1053</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A215" href = "#A215">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;maxConcurrentConsumers&#39; needs &quot;DefaultMessageListenerContainer.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/main/java/org/springframework/jms/listener/DefaultMessageListenerContainer.java.html#L1131">1131</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A216" href = "#A216">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currentRecoveryMarker&#39; needs &quot;DefaultMessageListenerContainer.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/main/java/org/springframework/jms/listener/DefaultMessageListenerContainer.java.html#L1177">1177</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/test/java/org/springframework/jms/config/MessageListenerTestContainer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A217" href = "#A217">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;initializationInvoked&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/test/java/org/springframework/jms/config/MessageListenerTestContainer.java.html#L50">50</a></td>
+								
+								
+									
+									<td>40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A218" href = "#A218">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;destroyInvoked&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/test/java/org/springframework/jms/config/MessageListenerTestContainer.java.html#L54">54</a></td>
+								
+								
+									
+									<td>39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/test/java/org/springframework/jms/listener/DefaultMessageListenerContainerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A219" href = "#A219">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currentAttempts&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-jms/src/test/java/org/springframework/jms/listener/DefaultMessageListenerContainerTests.java.html#L130">130</a></td>
+								
+								
+									
+									<td>101</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/simp/annotation/support/SendToMethodReturnValueHandler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A220" href = "#A220">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;annotationRequired&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/simp/annotation/support/SendToMethodReturnValueHandler.java.html#L210">210</a></td>
+								
+								
+									
+									<td>80</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/simp/stomp/StompBrokerRelayMessageHandler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A221" href = "#A221">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;relayHost&#39; needs &quot;StompBrokerRelayMessageHandler.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/simp/stomp/StompBrokerRelayMessageHandler.java.html#L898">898</a></td>
+								
+								
+									
+									<td>76</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A222" href = "#A222">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;relayPort&#39; needs &quot;StompBrokerRelayMessageHandler.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/simp/stomp/StompBrokerRelayMessageHandler.java.html#L898">898</a></td>
+								
+								
+									
+									<td>94</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/test/java/org/springframework/messaging/simp/annotation/support/SimpAnnotationMethodMessageHandlerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A223" href = "#A223">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;invalidValue&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-messaging/src/test/java/org/springframework/messaging/simp/annotation/support/SimpAnnotationMethodMessageHandlerTests.java.html#L336">336</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm-hibernate4/src/main/java/org/springframework/orm/hibernate4/HibernateTransactionManager.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A224" href = "#A224">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;entityInterceptor&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm-hibernate4/src/main/java/org/springframework/orm/hibernate4/HibernateTransactionManager.java.html#L321">321</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/main/java/org/springframework/orm/hibernate3/HibernateTransactionManager.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A225" href = "#A225">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;entityInterceptor&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/main/java/org/springframework/orm/hibernate3/HibernateTransactionManager.java.html#L357">357</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/main/java/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A226" href = "#A226">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;jndiEnvironment&#39; needs &quot;PersistenceAnnotationBeanPostProcessor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/main/java/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.java.html#L602">602</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A227" href = "#A227">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;jndiEnvironment&#39; needs &quot;PersistenceAnnotationBeanPostProcessor.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/main/java/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.java.html#L605">605</a></td>
+								
+								
+									
+									<td>73</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/test/java/org/springframework/orm/jpa/domain/Person.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A228" href = "#A228">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;id&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/test/java/org/springframework/orm/jpa/domain/Person.java.html#L94">94</a></td>
+								
+								
+									
+									<td>77</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A229" href = "#A229">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;first_name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/test/java/org/springframework/orm/jpa/domain/Person.java.html#L94">94</a></td>
+								
+								
+									
+									<td>99</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A230" href = "#A230">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;last_name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/test/java/org/springframework/orm/jpa/domain/Person.java.html#L95">95</a></td>
+								
+								
+									
+									<td>35</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A231" href = "#A231">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;testBean&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-orm/src/test/java/org/springframework/orm/jpa/domain/Person.java.html#L95">95</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/mock/web/MockHttpServletRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A232" href = "#A232">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;session&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/mock/web/MockHttpServletRequest.java.html#L1094">1094</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A233" href = "#A233">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;contentNegotiationManager&#39; needs &quot;StandaloneMockMvcBuilder.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.java.html#L399">399</a></td>
+								
+								
+									
+									<td>70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A234" href = "#A234">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;conversionService&#39; needs &quot;StandaloneMockMvcBuilder.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.java.html#L404">404</a></td>
+								
+								
+									
+									<td>62</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A235" href = "#A235">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;validator&#39; needs &quot;StandaloneMockMvcBuilder.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/main/java/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.java.html#L416">416</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/testng/transaction/programmatic/ProgrammaticTxMgmtTestNGTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A236" href = "#A236">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;method&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/context/testng/transaction/programmatic/ProgrammaticTxMgmtTestNGTests.java.html#L90">90</a></td>
+								
+								
+									
+									<td>98</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A237" href = "#A237">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;request&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java.html#L232">232</a></td>
+								
+								
+									
+									<td>79</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A238" href = "#A238">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;response&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java.html#L233">233</a></td>
+								
+								
+									
+									<td>81</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A239" href = "#A239">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;request&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java.html#L242">242</a></td>
+								
+								
+									
+									<td>71</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A240" href = "#A240">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;response&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java.html#L243">243</a></td>
+								
+								
+									
+									<td>73</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A241" href = "#A241">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;filterChain&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-test/src/test/java/org/springframework/test/web/servlet/setup/ConditionalDelegatingFilterProxyTests.java.html#L244">244</a></td>
+								
+								
+									
+									<td>66</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/http/client/SimpleBufferingAsyncClientHttpRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A242" href = "#A242">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;outputStreaming&#39; needs &quot;SimpleBufferingAsyncClientHttpRequest.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/http/client/SimpleBufferingAsyncClientHttpRequest.java.html#L85">85</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/http/client/support/ProxyFactoryBean.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A243" href = "#A243">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;port&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/http/client/support/ProxyFactoryBean.java.html#L70">70</a></td>
+								
+								
+									
+									<td>85</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/remoting/jaxws/AbstractJaxWsServiceExporter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A244" href = "#A244">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;beanFactory&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/remoting/jaxws/AbstractJaxWsServiceExporter.java.html#L234">234</a></td>
+								
+								
+									
+									<td>60</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A245" href = "#A245">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;nextPotentialReferencePosition&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java.html#L68">68</a></td>
+								
+								
+									
+									<td>65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A246" href = "#A246">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;nextSemicolonPosition&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java.html#L74">74</a></td>
+								
+								
+									
+									<td>77</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A247" href = "#A247">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currentPosition&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java.html#L94">94</a></td>
+								
+								
+									
+									<td>55</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A248" href = "#A248">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;nextPotentialReferencePosition&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java.html#L96">96</a></td>
+								
+								
+									
+									<td>41</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A249" href = "#A249">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;currentPosition&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/main/java/org/springframework/web/util/HtmlCharacterEntityDecoder.java.html#L97">97</a></td>
+								
+								
+									
+									<td>46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/http/client/AbstractHttpRequestFactoryTestCase.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A250" href = "#A250">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;factory&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/http/client/AbstractHttpRequestFactoryTestCase.java.html#L49">49</a></td>
+								
+								
+									
+									<td>45</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A251" href = "#A251">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;factory&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/http/client/AbstractHttpRequestFactoryTestCase.java.html#L56">56</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/mock/web/test/MockHttpServletRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A252" href = "#A252">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;session&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/mock/web/test/MockHttpServletRequest.java.html#L1019">1019</a></td>
+								
+								
+									
+									<td>51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/protobuf/Msg.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A253" href = "#A253">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;foo_&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/protobuf/Msg.java.html#L375">375</a></td>
+								
+								
+									
+									<td>21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A254" href = "#A254">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;blah_&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/protobuf/Msg.java.html#L380">380</a></td>
+								
+								
+									
+									<td>24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/protobuf/SecondMsg.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A255" href = "#A255">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;blah_&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/protobuf/SecondMsg.java.html#L298">298</a></td>
+								
+								
+									
+									<td>22</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/web/context/ContextLoaderInitializerTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A256" href = "#A256">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;eventListener&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-web/src/test/java/org/springframework/web/context/ContextLoaderInitializerTests.java.html#L59">59</a></td>
+								
+								
+									
+									<td>69</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc-portlet/src/main/java/org/springframework/web/portlet/bind/MissingPortletRequestParameterException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A257" href = "#A257">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;parameterName&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc-portlet/src/main/java/org/springframework/web/portlet/bind/MissingPortletRequestParameterException.java.html#L47">47</a></td>
+								
+								
+									
+									<td>76</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/condition/ProducesRequestCondition.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A258" href = "#A258">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;MEDIA_TYPE_ALL_LIST&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/condition/ProducesRequestCondition.java.html#L281">281</a></td>
+								
+								
+									
+									<td>54</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/tags/Param.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A259" href = "#A259">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/tags/Param.java.html#L66">66</a></td>
+								
+								
+									
+									<td>50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A260" href = "#A260">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;value&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/tags/Param.java.html#L66">66</a></td>
+								
+								
+									
+									<td>72</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/test/java/org/springframework/web/servlet/view/BaseViewTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A261" href = "#A261">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;wac&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-webmvc/src/test/java/org/springframework/web/servlet/view/BaseViewTests.java.html#L329">329</a></td>
+								
+								
+									
+									<td>63</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/WebSocketConnectionManager.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A262" href = "#A262">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;client&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/WebSocketConnectionManager.java.html#L116">116</a></td>
+								
+								
+									
+									<td>71</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A263" href = "#A263">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;client&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/WebSocketConnectionManager.java.html#L117">117</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A264" href = "#A264">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;client&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/WebSocketConnectionManager.java.html#L124">124</a></td>
+								
+								
+									
+									<td>70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A265" href = "#A265">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;client&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/WebSocketConnectionManager.java.html#L125">125</a></td>
+								
+								
+									
+									<td>38</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/standard/AnnotatedEndpointConnectionManager.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A266" href = "#A266">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endpoint&#39; needs &quot;AnnotatedEndpointConnectionManager.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/standard/AnnotatedEndpointConnectionManager.java.html#L106">106</a></td>
+								
+								
+									
+									<td>85</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/standard/EndpointConnectionManager.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A267" href = "#A267">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;endpoint&#39; needs &quot;EndpointConnectionManager.this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/main/java/org/springframework/web/socket/client/standard/EndpointConnectionManager.java.html#L139">139</a></td>
+								
+								
+									
+									<td>87</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/test/java/org/springframework/web/socket/sockjs/client/TestTransport.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A268" href = "#A268">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;name&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spring-framework/spring-websocket/src/test/java/org/springframework/web/socket/sockjs/client/TestTransport.java.html#L82">82</a></td>
+								
+								
+									
+									<td>43</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

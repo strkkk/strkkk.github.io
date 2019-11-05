@@ -1,0 +1,1062 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">RequireThisCheck</td>
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												validateOnlyOverlapping
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">95</td>
+							<td id="totalBase">944</td>
+							
+								<td id="warningSeverityNumBase">944</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">95</td>
+							<td id="totalPatch">981 (37 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">981 (37 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">9 files with differences</td>
+							<td id="totalDiff">37 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">37 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumBase">944</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleStatisticsPatch">981 (37 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheckModuleNumDiff">37</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">37</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/SQL.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;rs&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/SQL.java.html#L156">156</a></td>
+								
+								
+									
+									<td>59</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple1.java.html#L180">180</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple2.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple2.java.html#L236">236</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple2.java.html#L237">237</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple3.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple3.java.html#L201">201</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple3.java.html#L202">202</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple3.java.html#L203">203</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple4.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple4.java.html#L211">211</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple4.java.html#L212">212</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple4.java.html#L213">213</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple4.java.html#L214">214</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java.html#L221">221</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java.html#L222">222</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java.html#L223">223</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java.html#L224">224</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple5.java.html#L225">225</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L231">231</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L232">232</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L233">233</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L234">234</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L235">235</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v6&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple6.java.html#L236">236</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L241">241</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L242">242</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L243">243</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L244">244</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L245">245</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v6&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L246">246</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v7&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple7.java.html#L247">247</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v1&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L244">244</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v2&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L245">245</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v3&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L246">246</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v4&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L247">247</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v5&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L248">248</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v6&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L249">249</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v7&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L250">250</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#</a></td>
+								<td>warning</td>
+								<td>RequireThis</td>
+								<td>Reference to instance variable &#39;v8&#39; needs &quot;this.&quot;.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/jOOL/src/main/java/org/jooq/lambda/tuple/Tuple8.java.html#L251">251</a></td>
+								
+								
+									
+									<td>23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
