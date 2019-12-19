@@ -1,0 +1,1493 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AvoidNoArgumentSuperConstructorCallCheck</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">4138</td>
+							<td id="totalPatch">44 (44 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">44 (44 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">36 files with differences</td>
+							<td id="totalDiff">44 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">44 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleStatisticsPatch">44 (44 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleNumDiff">44</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">44</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/analysis/PrefixAnalyzer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/analysis/PrefixAnalyzer.java.html#L61">61</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/index/TrackingConcurrentMergeScheduler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/index/TrackingConcurrentMergeScheduler.java.html#L54">54</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/search/suggest/analyzing/XAnalyzingSuggester.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/apache/lucene/search/suggest/analyzing/XAnalyzingSuggester.java.html#L1032">1032</a></td>
+								
+								
+									
+									<td>17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/ActionRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/ActionRequest.java.html#L36">36</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/admin/indices/warmer/delete/DeleteWarmerResponse.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/admin/indices/warmer/delete/DeleteWarmerResponse.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/admin/indices/warmer/put/PutWarmerResponse.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/admin/indices/warmer/put/PutWarmerResponse.java.html#L34">34</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/indexedscripts/put/PutIndexedScriptRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/indexedscripts/put/PutIndexedScriptRequest.java.html#L77">77</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/indexedscripts/put/PutIndexedScriptRequest.java.html#L85">85</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/action/indexedscripts/put/PutIndexedScriptRequest.java.html#L96">96</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/geo/builders/MultiLineStringBuilder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/geo/builders/MultiLineStringBuilder.java.html#L108">108</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/io/stream/HandlesStreamInput.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/io/stream/HandlesStreamInput.java.html#L36">36</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/unit/DistanceUnit.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/common/unit/DistanceUnit.java.html#L250">250</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/http/netty/ESHttpContentDecompressor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/http/netty/ESHttpContentDecompressor.java.html#L32">32</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/ordinals/GlobalOrdinalMapping.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/ordinals/GlobalOrdinalMapping.java.html#L39">39</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/BytesBinaryDVAtomicFieldData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/BytesBinaryDVAtomicFieldData.java.html#L39">39</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/DocValuesIndexFieldData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/DocValuesIndexFieldData.java.html#L54">54</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointBinaryDVAtomicFieldData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointBinaryDVAtomicFieldData.java.html#L40">40</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointCompressedAtomicFieldData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointCompressedAtomicFieldData.java.html#L51">51</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointCompressedAtomicFieldData.java.html#L118">118</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointDoubleArrayAtomicFieldData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/fielddata/plain/GeoPointDoubleArrayAtomicFieldData.java.html#L48">48</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/query/GeohashCellFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/query/GeohashCellFilter.java.html#L123">123</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/query/MoreLikeThisQueryBuilder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/index/query/MoreLikeThisQueryBuilder.java.html#L50">50</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/repositories/fs/FsRepositoryModule.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/repositories/fs/FsRepositoryModule.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/repositories/uri/URLRepositoryModule.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/repositories/uri/URLRepositoryModule.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/bucket/significant/SignificantTerms.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/bucket/significant/SignificantTerms.java.html#L39">39</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptBytesValues.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptBytesValues.java.html#L37">37</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptDoubleValues.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptDoubleValues.java.html#L38">38</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptLongValues.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/aggregations/support/values/ScriptLongValues.java.html#L39">39</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/highlight/CustomQueryScorer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/highlight/CustomQueryScorer.java.html#L71">71</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/rescore/RescoreSearchContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/rescore/RescoreSearchContext.java.html#L35">35</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/completion/CompletionSuggestion.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/completion/CompletionSuggestion.java.html#L63">63</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/completion/CompletionSuggestion.java.html#L81">81</a></td>
+								
+								
+									
+									<td>17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/context/ContextMapping.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/context/ContextMapping.java.html#L79">79</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/context/ContextMapping.java.html#L181">181</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/term/TermSuggestion.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/search/suggest/term/TermSuggestion.java.html#L166">166</a></td>
+								
+								
+									
+									<td>17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/transport/TransportRequest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/transport/TransportRequest.java.html#L31">31</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/transport/TransportResponse.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/elasticsearch/transport/TransportResponse.java.html#L31">31</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/joda/time/base/BaseDateTime.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/joda/time/base/BaseDateTime.java.html#L134">134</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/joda/time/base/BaseDateTime.java.html#L161">161</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/joda/time/base/BaseDateTime.java.html#L183">183</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/main/java/org/joda/time/base/BaseDateTime.java.html#L268">268</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/common/collect/CopyOnWriteHashMapTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/common/collect/CopyOnWriteHashMapTests.java.html#L36">36</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/common/collect/CopyOnWriteHashSetTests.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/common/collect/CopyOnWriteHashSetTests.java.html#L36">36</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/snapshots/mockstore/MockRepositoryModule.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/elasticsearch/src/test/java/org/elasticsearch/snapshots/mockstore/MockRepositoryModule.java.html#L32">32</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

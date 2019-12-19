@@ -1,0 +1,3198 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AvoidNoArgumentSuperConstructorCallCheck</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">1233</td>
+							<td id="totalPatch">99 (99 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">99 (99 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">91 files with differences</td>
+							<td id="totalDiff">99 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">99 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleStatisticsPatch">99 (99 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidNoArgumentSuperConstructorCallCheckModuleNumDiff">99</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">99</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/BuildException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/BuildException.java.html#L34">34</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/ExitStatusException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/ExitStatusException.java.html#L37">37</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/Project.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/Project.java.html#L2398">2398</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/BaseParamFilterReader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/BaseParamFilterReader.java.html#L40">40</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ClassConstants.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ClassConstants.java.html#L63">63</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ConcatFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ConcatFilter.java.html#L67">67</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/EscapeUnicode.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/EscapeUnicode.java.html#L53">53</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ExpandProperties.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ExpandProperties.java.html#L57">57</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/FixCrLfFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/FixCrLfFilter.java.html#L98">98</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/HeadFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/HeadFilter.java.html#L74">74</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/LineContains.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/LineContains.java.html#L75">75</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/LineContainsRegExp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/LineContainsRegExp.java.html#L78">78</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/PrefixLines.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/PrefixLines.java.html#L55">55</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ReplaceTokens.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/ReplaceTokens.java.html#L87">87</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/SortFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/SortFilter.java.html#L168">168</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripJavaComments.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripJavaComments.java.html#L59">59</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripLineBreaks.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripLineBreaks.java.html#L58">58</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripLineComments.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/StripLineComments.java.html#L68">68</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/SuffixLines.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/SuffixLines.java.html#L56">56</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TabsToSpaces.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TabsToSpaces.java.html#L59">59</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TailFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TailFilter.java.html#L76">76</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TokenFilter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/filters/TokenFilter.java.html#L77">77</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/AbstractCvsTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/AbstractCvsTask.java.html#L153">153</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Ant.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Ant.java.html#L772">772</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Apt.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Apt.java.html#L111">111</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Checksum.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Checksum.java.html#L683">683</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Definer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Definer.java.html#L108">108</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Ear.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Ear.java.html#L47">47</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Jar.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Jar.java.html#L180">180</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Jikes.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Jikes.java.html#L58">58</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/JikesOutputParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/JikesOutputParser.java.html#L95">95</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Move.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Move.java.html#L64">64</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Redirector.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Redirector.java.html#L69">69</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Sync.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Sync.java.html#L538">538</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Tar.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Tar.java.html#L787">787</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Tar.java.html#L860">860</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Tar.java.html#L939">939</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Untar.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/Untar.java.html#L206">206</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/War.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/War.java.html#L68">68</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/XmlProperty.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/XmlProperty.java.html#L205">205</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/condition/IsLastModified.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/condition/IsLastModified.java.html#L208">208</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/launcher/VmsCommandLauncher.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/launcher/VmsCommandLauncher.java.html#L36">36</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/RenameExtensions.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/RenameExtensions.java.html#L57">57</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ReplaceRegExp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ReplaceRegExp.java.html#L138">138</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheck.java.html#L50">50</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckin.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckin.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckinDefault.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckinDefault.java.html#L30">30</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckout.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCheckout.java.html#L31">31</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCreateTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMCreateTask.java.html#L52">52</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMReconfigure.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ccm/CCMReconfigure.java.html#L38">38</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/depend/DirectoryIterator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/depend/DirectoryIterator.java.html#L65">65</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/depend/JarFileIterator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/depend/JarFileIterator.java.html#L41">41</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/jlink/ClassNameReader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/jlink/ClassNameReader.java.html#L49">49</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/CustomJUnit4TestAdapterCache.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/CustomJUnit4TestAdapterCache.java.html#L44">44</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/IgnoredTestResult.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/IgnoredTestResult.java.html#L41">41</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/JUnitTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/JUnitTask.java.html#L2058">2058</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/JUnitTask.java.html#L2066">2066</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/JUnitTestRunner.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/JUnitTestRunner.java.html#L294">294</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/OutErrSummaryJUnitResultFormatter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/OutErrSummaryJUnitResultFormatter.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/TestListenerWrapper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/junit/TestListenerWrapper.java.html#L31">31</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/net/FTP.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/net/FTP.java.html#L342">342</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/net/FTPTaskMirrorImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/net/FTPTaskMirrorImpl.java.html#L243">243</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/pvcs/Pvcs.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/pvcs/Pvcs.java.html#L659">659</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/pvcs/PvcsProject.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/pvcs/PvcsProject.java.html#L31">31</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHBase.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHBase.java.html#L50">50</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHExec.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A66" href = "#A66">#A66</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHExec.java.html#L96">96</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHUserInfo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A67" href = "#A67">#A67</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHUserInfo.java.html#L37">37</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A68" href = "#A68">#A68</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/taskdefs/optional/ssh/SSHUserInfo.java.html#L47">47</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/AbstractFileSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A69" href = "#A69">#A69</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/AbstractFileSet.java.html#L83">83</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/ArchiveFileSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A70" href = "#A70">#A70</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/ArchiveFileSet.java.html#L76">76</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/Commandline.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A71" href = "#A71">#A71</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/Commandline.java.html#L81">81</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A72" href = "#A72">#A72</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/Commandline.java.html#L95">95</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/DirSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A73" href = "#A73">#A73</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/DirSet.java.html#L37">37</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/Environment.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A74" href = "#A74">#A74</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/Environment.java.html#L55">55</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FileList.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A75" href = "#A75">#A75</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FileList.java.html#L48">48</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FileSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A76" href = "#A76">#A76</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FileSet.java.html#L36">36</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FilterSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A77" href = "#A77">#A77</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/FilterSet.java.html#L211">211</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/PatternSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A78" href = "#A78">#A78</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/PatternSet.java.html#L195">195</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/TarFileSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A79" href = "#A79">#A79</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/TarFileSet.java.html#L46">46</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/ZipFileSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A80" href = "#A80">#A80</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/ZipFileSet.java.html#L40">40</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/resources/Files.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A81" href = "#A81">#A81</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/resources/Files.java.html#L59">59</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/resources/ImmutableResourceException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A82" href = "#A82">#A82</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/types/resources/ImmutableResourceException.java.html#L35">35</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/IdentityStack.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A83" href = "#A83">#A83</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/IdentityStack.java.html#L62">62</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LayoutPreservingProperties.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A84" href = "#A84">#A84</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LayoutPreservingProperties.java.html#L105">105</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LazyHashtable.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A85" href = "#A85">#A85</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LazyHashtable.java.html#L38">38</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LeadPipeInputStream.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A86" href = "#A86">#A86</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LeadPipeInputStream.java.html#L42">42</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A87" href = "#A87">#A87</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/LeadPipeInputStream.java.html#L51">51</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/VectorSet.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A88" href = "#A88">#A88</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/VectorSet.java.html#L45">45</a></td>
+								
+								
+									
+									<td>26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/facade/ImplementationSpecificArgument.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A89" href = "#A89">#A89</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/facade/ImplementationSpecificArgument.java.html#L35">35</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/JakartaOroRegexp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A90" href = "#A90">#A90</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/JakartaOroRegexp.java.html#L34">34</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/JakartaRegexpRegexp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A91" href = "#A91">#A91</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/JakartaRegexpRegexp.java.html#L34">34</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/Jdk14RegexpRegexp.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A92" href = "#A92">#A92</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/ant/util/regexp/Jdk14RegexpRegexp.java.html#L33">33</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2InputStream.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A93" href = "#A93">#A93</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2InputStream.java.html#L154">154</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A94" href = "#A94">#A94</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2InputStream.java.html#L1024">1024</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2OutputStream.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A95" href = "#A95">#A95</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2OutputStream.java.html#L625">625</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A96" href = "#A96">#A96</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/main/org/apache/tools/bzip2/CBZip2OutputStream.java.html#L1570">1570</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/BuildFileTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A97" href = "#A97">#A97</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/BuildFileTest.java.html#L53">53</a></td>
+								
+								
+									
+									<td>9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/taskdefs/EchoTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A98" href = "#A98">#A98</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/taskdefs/EchoTest.java.html#L91">91</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/taskdefs/optional/net/FTPTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td><a name="A99" href = "#A99">#A99</a></td>
+								<td>warning</td>
+								<td>AvoidNoArgumentSuperConstructorCall</td>
+								<td>Unnecessary call to superclass constructor with no arguments.</td>
+								
+									
+									<td><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-ant/src/tests/junit/org/apache/tools/ant/taskdefs/optional/net/FTPTest.java.html#L534">534</a></td>
+								
+								
+									
+									<td>13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
