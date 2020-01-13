@@ -1,0 +1,2042 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">AvoidDoubleBraceInitializationCheck</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">1983</td>
+							<td id="totalPatch">77 (77 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">77 (77 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">35 files with differences</td>
+							<td id="totalDiff">77 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">77 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.AvoidDoubleBraceInitializationCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidDoubleBraceInitializationCheckModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidDoubleBraceInitializationCheckModuleStatisticsPatch">77 (77 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.AvoidDoubleBraceInitializationCheckModuleNumDiff">77</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">77</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/CompositeTextProvider.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/CompositeTextProvider.java.html#L114">114</a></td>
+								
+								
+									
+									<td class="keepWidth">67</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/config/impl/LocatableFactory.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/config/impl/LocatableFactory.java.html#L61">61</a></td>
+								
+								
+									
+									<td class="keepWidth">61</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ContainerBuilder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ContainerBuilder.java.html#L172">172</a></td>
+								
+								
+									
+									<td class="keepWidth">60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ContainerBuilder.java.html#L263">263</a></td>
+								
+								
+									
+									<td class="keepWidth">60</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ContainerBuilder.java.html#L552">552</a></td>
+								
+								
+									
+									<td class="keepWidth">60</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ExternalContext.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/com/opensymphony/xwork2/inject/ExternalContext.java.html#L66">66</a></td>
+								
+								
+									
+									<td class="keepWidth">64</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/org/apache/struts2/dispatcher/HttpParameters.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/org/apache/struts2/dispatcher/HttpParameters.java.html#L58">58</a></td>
+								
+								
+									
+									<td class="keepWidth">45</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/DefaultActionMapper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/DefaultActionMapper.java.html#L132">132</a></td>
+								
+								
+									
+									<td class="keepWidth">65</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/DefaultActionMapper.java.html#L140">140</a></td>
+								
+								
+									
+									<td class="keepWidth">39</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/CompositeTextProviderTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/CompositeTextProviderTest.java.html#L63">63</a></td>
+								
+								
+									
+									<td class="keepWidth">98</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/CompositeTextProviderTest.java.html#L65">65</a></td>
+								
+								
+									
+									<td class="keepWidth">102</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/InterceptorBuilderTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/InterceptorBuilderTest.java.html#L119">119</a></td>
+								
+								
+									
+									<td class="keepWidth">61</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProviderInterceptorParamOverridingTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProviderInterceptorParamOverridingTest.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProviderInterceptorStackParamOverridingTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProviderInterceptorStackParamOverridingTest.java.html#L50">50</a></td>
+								
+								
+									
+									<td class="keepWidth">65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParameterRemoverInterceptorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParameterRemoverInterceptorTest.java.html#L54">54</a></td>
+								
+								
+									
+									<td class="keepWidth">116</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParameterRemoverInterceptorTest.java.html#L82">82</a></td>
+								
+								
+									
+									<td class="keepWidth">116</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParameterRemoverInterceptorTest.java.html#L104">104</a></td>
+								
+								
+									
+									<td class="keepWidth">116</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L55">55</a></td>
+								
+								
+									
+									<td class="keepWidth">76</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L66">66</a></td>
+								
+								
+									
+									<td class="keepWidth">78</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L84">84</a></td>
+								
+								
+									
+									<td class="keepWidth">74</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L121">121</a></td>
+								
+								
+									
+									<td class="keepWidth">74</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L160">160</a></td>
+								
+								
+									
+									<td class="keepWidth">74</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L279">279</a></td>
+								
+								
+									
+									<td class="keepWidth">74</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L417">417</a></td>
+								
+								
+									
+									<td class="keepWidth">68</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L448">448</a></td>
+								
+								
+									
+									<td class="keepWidth">68</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L669">669</a></td>
+								
+								
+									
+									<td class="keepWidth">76</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L675">675</a></td>
+								
+								
+									
+									<td class="keepWidth">72</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L692">692</a></td>
+								
+								
+									
+									<td class="keepWidth">76</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/interceptor/ParametersInterceptorTest.java.html#L698">698</a></td>
+								
+								
+									
+									<td class="keepWidth">72</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/security/DefaultAcceptedPatternsCheckerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/security/DefaultAcceptedPatternsCheckerTest.java.html#L32">32</a></td>
+								
+								
+									
+									<td class="keepWidth">55</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/security/DefaultExcludedPatternsCheckerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/security/DefaultExcludedPatternsCheckerTest.java.html#L33">33</a></td>
+								
+								
+									
+									<td class="keepWidth">55</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L106">106</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L114">114</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L149">149</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L157">157</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L169">169</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L186">186</a></td>
+								
+								
+									
+									<td class="keepWidth">59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L190">190</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L200">200</a></td>
+								
+								
+									
+									<td class="keepWidth">59</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/TextParseUtilTest.java.html#L204">204</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/fs/DefaultFileManagerFactoryTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/util/fs/DefaultFileManagerFactoryTest.java.html#L100">100</a></td>
+								
+								
+									
+									<td class="keepWidth">42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/validator/ActionValidatorManagerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/validator/ActionValidatorManagerTest.java.html#L124">124</a></td>
+								
+								
+									
+									<td class="keepWidth">84</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/validator/ActionValidatorManagerTest.java.html#L133">133</a></td>
+								
+								
+									
+									<td class="keepWidth">82</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/com/opensymphony/xwork2/validator/ActionValidatorManagerTest.java.html#L142">142</a></td>
+								
+								
+									
+									<td class="keepWidth">81</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/ClassInstantiationTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/ClassInstantiationTest.java.html#L32">32</a></td>
+								
+								
+									
+									<td class="keepWidth">54</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/ClassInstantiationTest.java.html#L46">46</a></td>
+								
+								
+									
+									<td class="keepWidth">54</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L77">77</a></td>
+								
+								
+									
+									<td class="keepWidth">70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L92">92</a></td>
+								
+								
+									
+									<td class="keepWidth">70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L112">112</a></td>
+								
+								
+									
+									<td class="keepWidth">70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L131">131</a></td>
+								
+								
+									
+									<td class="keepWidth">70</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L401">401</a></td>
+								
+								
+									
+									<td class="keepWidth">71</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/dispatcher/DispatcherTest.java.html#L417">417</a></td>
+								
+								
+									
+									<td class="keepWidth">71</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/interceptor/ActionMappingParametersInterceptorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/interceptor/ActionMappingParametersInterceptorTest.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">78</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/interceptor/ActionMappingParametersInterceptorTest.java.html#L53">53</a></td>
+								
+								
+									
+									<td class="keepWidth">82</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/interceptor/ActionMappingParametersInterceptorTest.java.html#L59">59</a></td>
+								
+								
+									
+									<td class="keepWidth">86</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/result/StrutsResultSupportTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/result/StrutsResultSupportTest.java.html#L137">137</a></td>
+								
+								
+									
+									<td class="keepWidth">47</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/TemplateEngineManagerTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/TemplateEngineManagerTest.java.html#L52">52</a></td>
+								
+								
+									
+									<td class="keepWidth">108</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ActionTagTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ActionTagTest.java.html#L308">308</a></td>
+								
+								
+									
+									<td class="keepWidth">54</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L166">166</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L196">196</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L226">226</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L256">256</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L286">286</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L314">314</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/PropertyTagTest.java.html#L343">343</a></td>
+								
+								
+									
+									<td class="keepWidth">38</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/DebugTagTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A66" href = "#A66">#A66</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/DebugTagTest.java.html#L88">88</a></td>
+								
+								
+									
+									<td class="keepWidth">57</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/FormTagTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A67" href = "#A67">#A67</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/FormTagTest.java.html#L403">403</a></td>
+								
+								
+									
+									<td class="keepWidth">52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A68" href = "#A68">#A68</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/FormTagTest.java.html#L712">712</a></td>
+								
+								
+									
+									<td class="keepWidth">54</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/OptGroupTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A69" href = "#A69">#A69</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/OptGroupTest.java.html#L154">154</a></td>
+								
+								
+									
+									<td class="keepWidth">57</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/RadioTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A70" href = "#A70">#A70</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/RadioTest.java.html#L127">127</a></td>
+								
+								
+									
+									<td class="keepWidth">34</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/TooltipTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A71" href = "#A71">#A71</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/core/src/test/java/org/apache/struts2/views/jsp/ui/TooltipTest.java.html#L373">373</a></td>
+								
+								
+									
+									<td class="keepWidth">52</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/main/java/org/apache/struts2/views/java/JavaTemplateEngine.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A72" href = "#A72">#A72</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/main/java/org/apache/struts2/views/java/JavaTemplateEngine.java.html#L56">56</a></td>
+								
+								
+									
+									<td class="keepWidth">42</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/main/java/org/apache/struts2/views/java/simple/SimpleTheme.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A73" href = "#A73">#A73</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/main/java/org/apache/struts2/views/java/simple/SimpleTheme.java.html#L33">33</a></td>
+								
+								
+									
+									<td class="keepWidth">76</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/test/java/org/apache/struts2/views/java/simple/FieldErrorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A74" href = "#A74">#A74</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/test/java/org/apache/struts2/views/java/simple/FieldErrorTest.java.html#L90">90</a></td>
+								
+								
+									
+									<td class="keepWidth">65</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/test/java/org/apache/struts2/views/java/simple/SelectTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A75" href = "#A75">#A75</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/javatemplates/src/test/java/org/apache/struts2/views/java/simple/SelectTest.java.html#L135">135</a></td>
+								
+								
+									
+									<td class="keepWidth">55</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/rest/src/test/java/org/apache/struts2/rest/RestWorkflowInterceptorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A76" href = "#A76">#A76</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/rest/src/test/java/org/apache/struts2/rest/RestWorkflowInterceptorTest.java.html#L55">55</a></td>
+								
+								
+									
+									<td class="keepWidth">82</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/tiles/src/main/java/org/apache/struts2/tiles/StrutsTilesContainerFactory.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A77" href = "#A77">#A77</a></td>
+								<td>warning</td>
+								<td>AvoidDoubleBraceInitialization</td>
+								<td>Avoid double brace initialization.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/apache-struts/plugins/tiles/src/main/java/org/apache/struts2/tiles/StrutsTilesContainerFactory.java.html#L230">230</a></td>
+								
+								
+									
+									<td class="keepWidth">59</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
