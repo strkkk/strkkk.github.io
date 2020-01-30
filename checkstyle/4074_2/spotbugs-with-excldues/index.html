@@ -1,0 +1,2076 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">NewlineAtEndOfFile</td>
+										
+										<td class="c">
+											
+												lineSeparator
+												
+													<li>lf</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												lineSeparator
+												
+													<li>lf</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">2686</td>
+							<td id="totalBase">64</td>
+							
+								<td id="warningSeverityNumBase">64</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">2686</td>
+							<td id="totalPatch">121 (57 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">121 (57 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">57 files with differences</td>
+							<td id="totalDiff">57 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">57 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleNumBase">64</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleStatisticsPatch">121 (57 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleNumDiff">57</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">57</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/defaultScenario/A.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/defaultScenario/A.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/defaultScenario/B.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/defaultScenario/B.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/jdtScenario/C.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/jdtScenario/C.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/ChangePublicToProtectedResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/ChangePublicToProtectedResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateAndOddnessCheckResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateAndOddnessCheckResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateDoPrivilegedBlockResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateDoPrivilegedBlockResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateMutableCloneResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateMutableCloneResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateRemainderOddnessCheckResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateRemainderOddnessCheckResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateSuperCallResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/CreateSuperCallResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeFieldFinalResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeFieldFinalResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeFieldStaticResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeFieldStaticResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeInnerTypeStaticResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/MakeInnerTypeStaticResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessMethodResolutionFIEmptyExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessMethodResolutionFIEmptyExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessMethodResolutionFIUselessExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessMethodResolutionFIUselessExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessStatementResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/RemoveUselessStatementResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/UseValueOfResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixOutput/UseValueOfResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/AbstractCreateSuperCallResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/AbstractCreateSuperCallResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/ChangePublicToProtectedResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/ChangePublicToProtectedResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateAndOddnessCheckResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateAndOddnessCheckResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateDoPrivilegedBlockResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateDoPrivilegedBlockResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateMutableCloneResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateMutableCloneResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateRemainderOddnessCheckResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateRemainderOddnessCheckResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateSuperCallResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/CreateSuperCallResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeFieldFinalResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeFieldFinalResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeFieldStaticResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeFieldStaticResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeInnerTypeStaticResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/MakeInnerTypeStaticResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessMethodResolutionFIEmptyExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessMethodResolutionFIEmptyExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessMethodResolutionFIUselessExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessMethodResolutionFIUselessExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessStatementResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/RemoveUselessStatementResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/UseValueOfResolutionExample.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/quickfixScenario/UseValueOfResolutionExample.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/secondSrcScenario/D.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/secondSrcScenario/D.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/src/de/tobject/findbugs/view/test/BugExplorerViewTwoSrcFoldersTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/eclipsePlugin-test/src/de/tobject/findbugs/view/test/BugExplorerViewTwoSrcFoldersTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugs/src/main/java/edu/umd/cs/findbugs/GlobalOptions.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugs/src/main/java/edu/umd/cs/findbugs/GlobalOptions.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugs/src/main/java/edu/umd/cs/findbugs/detect/FindRoughConstants.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugs/src/main/java/edu/umd/cs/findbugs/detect/FindRoughConstants.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1874896/Foo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1874896/Foo.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1874896/TestFoo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1874896/TestFoo.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1920108.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug1920108.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3079260.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3079260.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3092411.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3092411.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3092772.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3092772.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3118278.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3118278.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3126724.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3126724.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3135098.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3135098.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3139802.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3139802.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3149714.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3149714.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3152881.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3152881.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3160693.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3160693.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3167096.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3167096.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3180721.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3180721.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3185865.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3185865.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3189992.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/Bug3189992.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/RFE2958584.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/RFE2958584.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/bug2727187/FailedClass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugs/bug2727187/FailedClass.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1325.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1325.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1331jdk8.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1331jdk8.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1352.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1352.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1361.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/spotbugs-with-excldues/spotbugsTestCases/src/java/sfBugsNew/Bug1361.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

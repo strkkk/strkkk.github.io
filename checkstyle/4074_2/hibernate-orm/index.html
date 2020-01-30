@@ -1,0 +1,3812 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">NewlineAtEndOfFile</td>
+										
+										<td class="c">
+											
+												lineSeparator
+												
+													<li>lf</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												lineSeparator
+												
+													<li>lf</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">6386</td>
+							<td id="totalBase">862</td>
+							
+								<td id="warningSeverityNumBase">862</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">6386</td>
+							<td id="totalPatch">975 (113 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">975 (113 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">113 files with differences</td>
+							<td id="totalDiff">113 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">113 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleNumBase">862</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleStatisticsPatch">975 (113 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheckModuleNumDiff">113</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">113</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/MappingNotFoundException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/MappingNotFoundException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/QueryParameterException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/QueryParameterException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/TypeMismatchException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/TypeMismatchException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/CollectionId.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/CollectionId.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Fetch.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Fetch.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FetchMode.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FetchMode.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FilterJoinTable.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FilterJoinTable.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FilterJoinTables.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/FilterJoinTables.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Generated.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Generated.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/GenerationTime.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/GenerationTime.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyCollection.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyCollection.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyCollectionOption.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyCollectionOption.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyToOne.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyToOne.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyToOneOption.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/LazyToOneOption.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Parent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Parent.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/SQLDeleteAll.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/SQLDeleteAll.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Subselect.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Subselect.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Synchronize.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Synchronize.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Target.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Target.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Tuplizer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Tuplizer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Tuplizers.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/Tuplizers.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/WhereJoinTable.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/annotations/WhereJoinTable.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/CreateKeySecondPass.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/CreateKeySecondPass.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/WrappedInferredData.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/WrappedInferredData.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/annotations/IdBagBinder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/cfg/annotations/IdBagBinder.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/ResultColumnReferenceStrategy.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/ResultColumnReferenceStrategy.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/function/AnsiTrimEmulationFunction.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/function/AnsiTrimEmulationFunction.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/function/SQLFunctionRegistry.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/dialect/function/SQLFunctionRegistry.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/enhanced/AccessCallback.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/enhanced/AccessCallback.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/Binder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/Binder.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/IdentifierGeneratingInsert.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/IdentifierGeneratingInsert.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/InsertSelectIdentityInsert.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/id/insert/InsertSelectIdentityInsert.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/BatchFailedException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/BatchFailedException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/BatchedTooManyRowsAffectedException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/BatchedTooManyRowsAffectedException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/Expectation.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/Expectation.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/TooManyRowsAffectedException.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/jdbc/TooManyRowsAffectedException.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/CollectionFetchReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/CollectionFetchReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/CollectionReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/CollectionReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/EntityFetchReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/EntityFetchReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/FetchReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/FetchReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/NonScalarReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/NonScalarReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/Return.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/Return.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/RootReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/RootReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/ScalarReturn.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/loader/custom/ScalarReturn.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/proxy/EntityNotFoundDelegate.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/proxy/EntityNotFoundDelegate.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/sql/CacheJoinFragment.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/sql/CacheJoinFragment.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/AliasToBeanConstructorResultTransformer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/AliasToBeanConstructorResultTransformer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/ToListResultTransformer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/ToListResultTransformer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/Transformers.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/transform/Transformers.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/tuple/component/DynamicMapComponentTuplizer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/tuple/component/DynamicMapComponentTuplizer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/CharArrayType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/CharArrayType.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/CharacterArrayType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/CharacterArrayType.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/MaterializedBlobType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/MaterializedBlobType.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/WrapperBinaryType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/main/java/org/hibernate/type/WrapperBinaryType.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/lob/hhh4635/LobTestEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/lob/hhh4635/LobTestEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Attrset.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Attrset.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Attrvalue.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Attrvalue.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Employee.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Employee.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Employeegroup.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/annotations/query/Employeegroup.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/ATable.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/ATable.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableA.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableA.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableB.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableB.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableBId.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/collectionalias/TableBId.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/enums/Person.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/enums/Person.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/extralazy/Child.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/extralazy/Child.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/extralazy/Parent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A66" href = "#A66">#A66</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/extralazy/Parent.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/hql/Panel.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A67" href = "#A67">#A67</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/hql/Panel.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/hql/TrtPanel.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A68" href = "#A68">#A68</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/hql/TrtPanel.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/ConfEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A69" href = "#A69">#A69</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/ConfEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/UserConfEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A70" href = "#A70">#A70</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/UserConfEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/UserEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A71" href = "#A71">#A71</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/UserEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/EnumUserType.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A72" href = "#A72">#A72</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/EnumUserType.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/TestEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A73" href = "#A73">#A73</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/TestEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/TestEnum.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A74" href = "#A74">#A74</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/mapping/usertypes/TestEnum.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/naturalid/mutable/cached/CachedMutableNaturalIdNonStrictReadWriteTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A75" href = "#A75">#A75</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/naturalid/mutable/cached/CachedMutableNaturalIdNonStrictReadWriteTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/naturalid/mutable/cached/CachedMutableNaturalIdStrictReadWriteTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A76" href = "#A76">#A76</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/naturalid/mutable/cached/CachedMutableNaturalIdStrictReadWriteTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/Group.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A77" href = "#A77">#A77</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/Group.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/ManyToManyOrphanTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A78" href = "#A78">#A78</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/ManyToManyOrphanTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/User.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A79" href = "#A79">#A79</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/orphan/manytomany/User.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/CompositeKey.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A80" href = "#A80">#A80</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/CompositeKey.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/EntityWithCompositeKey.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A81" href = "#A81">#A81</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/EntityWithCompositeKey.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/EntityWithStringCompositeKey.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A82" href = "#A82">#A82</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/querycache/EntityWithStringCompositeKey.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/unidir/Child1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A83" href = "#A83">#A83</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/unidir/Child1.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/unidir/Child2.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A84" href = "#A84">#A84</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-core/src/test/java/org/hibernate/test/unidir/Child2.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-ehcache/src/test/java/org/hibernate/test/cache/ehcache/management/impl/RegisterMBeansTaskTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A85" href = "#A85">#A85</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-ehcache/src/test/java/org/hibernate/test/cache/ehcache/management/impl/RegisterMBeansTaskTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/main/java/org/hibernate/ejb/Ejb3ConfigurationObjectFactory.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A86" href = "#A86">#A86</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/main/java/org/hibernate/ejb/Ejb3ConfigurationObjectFactory.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/main/java/org/hibernate/ejb/metamodel/MapMember.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A87" href = "#A87">#A87</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/main/java/org/hibernate/ejb/metamodel/MapMember.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/NoPackageEntity.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A88" href = "#A88">#A88</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/NoPackageEntity.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/IncrementListener.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A89" href = "#A89">#A89</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/IncrementListener.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/Lighter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A90" href = "#A90">#A90</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/Lighter.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/Money.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A91" href = "#A91">#A91</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/Money.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/OtherIncrementListener.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A92" href = "#A92">#A92</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/defaultpar/OtherIncrementListener.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/explicitpar/Washer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A93" href = "#A93">#A93</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/explicitpar/Washer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/overridenpar/Bug.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A94" href = "#A94">#A94</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/overridenpar/Bug.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/spacepar/Bug.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A95" href = "#A95">#A95</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/spacepar/Bug.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/IncrementListener.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A96" href = "#A96">#A96</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/IncrementListener.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/Lighter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A97" href = "#A97">#A97</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/Lighter.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/Money.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A98" href = "#A98">#A98</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/Money.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/OtherIncrementListener.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A99" href = "#A99">#A99</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/pack/war/OtherIncrementListener.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Article.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A100" href = "#A100">#A100</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Article.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Light.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A101" href = "#A101">#A101</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Light.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Lighter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A102" href = "#A102">#A102</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/ejb/test/xml/Lighter.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/Child.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A103" href = "#A103">#A103</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/Child.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/Parent.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A104" href = "#A104">#A104</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/Parent.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/PostLoadTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A105" href = "#A105">#A105</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-entitymanager/src/test/java/org/hibernate/jpa/test/collection/PostLoadTest.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/Contact.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A106" href = "#A106">#A106</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/Contact.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/Customer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A107" href = "#A107">#A107</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/Customer.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/Account.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A108" href = "#A108">#A108</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/Account.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/AccountHolder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A109" href = "#A109">#A109</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/AccountHolder.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/ClassLoaderTestDAO.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A110" href = "#A110">#A110</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/functional/classloader/ClassLoaderTestDAO.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Address.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A111" href = "#A111">#A111</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Address.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Family.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A112" href = "#A112">#A112</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Family.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Person.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A113" href = "#A113">#A113</a></td>
+								<td>warning</td>
+								<td>NewlineAtEndOfFile</td>
+								<td>Expected line ending for file is LF(\n), but CRLF(\r\n) is detected.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/stress/entities/Person.java.html#L1">1</a></td>
+								
+								
+									<td class="keepWidth"> </td>
+									
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
