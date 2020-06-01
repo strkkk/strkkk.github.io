@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>/checkstyle/contribution/checkstyle-tester/repositories/cyclops/cyclops-pure/src/main/java/cyclops/hkt/Active.java xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> cyclops.hkt;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> com.oath.cyclops.hkt.Higher;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> com.oath.cyclops.types.Filters;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> com.oath.cyclops.types.foldable.To;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> com.oath.cyclops.types.functor.Transformable;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> cyclops.arrow.*;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> cyclops.data.LazySeq;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> cyclops.control.*;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> cyclops.control.Maybe;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> cyclops.data.ImmutableList;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> cyclops.function.*;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> cyclops.reactive.ReactiveSeq;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.Comprehensions;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.InstanceDefinitions;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.foldable.Foldable;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.foldable.Unfoldable;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.monad.Applicative;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.monad.MonadPlus;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.monad.MonadZero;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> cyclops.typeclasses.monad.Traverse;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> lombok.AccessLevel;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> lombok.AllArgsConstructor;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> lombok.EqualsAndHashCode;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> lombok.Getter;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> cyclops.data.tuple.Tuple;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> cyclops.data.tuple.Tuple2;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> cyclops.data.tuple.Tuple3;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> java.util.function.*;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> cyclops.data.tuple.Tuple.tuple;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <em class="jxr_javadoccomment"> * Provide easy access to all typeclasses for a type</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <em class="jxr_javadoccomment"> * e.g.</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <em class="jxr_javadoccomment"> * &lt;pre&gt;</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <em class="jxr_javadoccomment"> *     {@code</em>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <em class="jxr_javadoccomment"> *       Active&lt;list,Integer&gt; active = Active.of(ListX.of(1,2,3),ListX.Instances.definitions());</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  <em class="jxr_javadoccomment"> *       Active&lt;list,Integer&gt; doubled = active.map(i-&gt;i*2);</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <em class="jxr_javadoccomment"> *       Active&lt;list,Integer&gt; doubledPlusOne = doubled.flatMap(i-&gt;ListX.of(i+1));</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_javadoccomment"> *     }</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment"> * &lt;/pre&gt;</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment"> * @param &lt;W&gt; Witness type</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment"> * @param &lt;T&gt; Data type</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  @AllArgsConstructor(access= AccessLevel.PRIVATE)
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  @EqualsAndHashCode(of={<span class="jxr_string">"single"</span>})
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Active&lt;W,T&gt; <strong class="jxr_keyword">implements</strong> Filters&lt;T&gt;,
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>                                      Transformable&lt;T&gt;, To&lt;Active&lt;W,T&gt;&gt; {
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      @Getter
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Higher&lt;W, T&gt; single;
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      @Getter
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> InstanceDefinitions&lt;W&gt; def1;
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;W, T&gt; Active&lt;W, T&gt; of(Higher&lt;W, T&gt; single, InstanceDefinitions&lt;W&gt; def1) {
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Active&lt;&gt;(single, def1);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      }
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;C,W, T&gt; Active&lt;W, T&gt; of(Function&lt;? <strong class="jxr_keyword">super</strong> C,? <strong class="jxr_keyword">extends</strong> Higher&lt;W, T&gt;&gt; single, C c,InstanceDefinitions&lt;W&gt; def1) {
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <strong class="jxr_keyword">return</strong> of(single.apply(c),def1);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      }
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;W, T&gt; Active&lt;W, T&gt; of(InstanceDefinitions&lt;W&gt; def1,T value) {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Active&lt;&gt;(def1.unit().unit(value), def1);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  <em class="jxr_javadoccomment">     * Perform a custom operation</em>
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  <em class="jxr_javadoccomment">     * &lt;pre&gt;</em>
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>  <em class="jxr_javadoccomment">     *     {@code</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  <em class="jxr_javadoccomment">     *       Active&lt;list,Integer&gt; active = Active.of(ListX.of(1,2,3), ListX.Instances.definitions());</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  <em class="jxr_javadoccomment">     *      Active&lt;list, ListX&lt;Integer&gt;&gt; grouped = active.custom(ListX::narrowK, l -&gt; l.grouped(10));</em>
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  <em class="jxr_javadoccomment">     *     }</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>  <em class="jxr_javadoccomment">     * &lt;/pre&gt;</em>
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  <em class="jxr_javadoccomment">     * @param narrow Function that narrows Higher Kinded encoding to it's concrete type</em>
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  <em class="jxr_javadoccomment">     * @param fn Transformation function</em>
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  <em class="jxr_javadoccomment">     * @param &lt;S&gt; Concrete type</em>
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>  <em class="jxr_javadoccomment">     * @param &lt;R&gt; Return type</em>
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  <em class="jxr_javadoccomment">     * @return Transformed Active after custom operation</em>
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>      <strong class="jxr_keyword">public</strong> &lt;S,R&gt; Active&lt;W,R&gt; custom(Function&lt;? <strong class="jxr_keyword">super</strong> Higher&lt;W, T&gt;,? <strong class="jxr_keyword">extends</strong> S&gt; narrow,Function&lt;? <strong class="jxr_keyword">super</strong> S,? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R&gt;&gt; fn){
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          <strong class="jxr_keyword">return</strong> Active.of(fn.apply(narrow.apply(single)),def1);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>  <em class="jxr_javadoccomment">     * Convert this Active to a new type via the underlying concrete type</em>
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>  <em class="jxr_javadoccomment">     * e.g. Given an Active List</em>
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  <em class="jxr_javadoccomment">     * &lt;pre&gt;</em>
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>  <em class="jxr_javadoccomment">     *     {@code</em>
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  <em class="jxr_javadoccomment">     *     Active&lt;list,Integer&gt; active = Active.of(ListX.of(1,2,3), ListX.Instances.definitions());</em>
+<a class="jxr_linenumber" name="L100" href="#L100">100</a> <em class="jxr_javadoccomment">     *     }</em>
+<a class="jxr_linenumber" name="L101" href="#L101">101</a> <em class="jxr_javadoccomment">     * &lt;/pre&gt;</em>
+<a class="jxr_linenumber" name="L102" href="#L102">102</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> <em class="jxr_javadoccomment">     * We can convert it to a set via concreteConversion</em>
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L105" href="#L105">105</a> <em class="jxr_javadoccomment">     * &lt;pre&gt;</em>
+<a class="jxr_linenumber" name="L106" href="#L106">106</a> <em class="jxr_javadoccomment">     *     {@code</em>
+<a class="jxr_linenumber" name="L107" href="#L107">107</a> <em class="jxr_javadoccomment">     *      SetX&lt;Integer&gt; set = active.concreteConversion(ListX.&lt;Integer&gt;kindCokleisli())</em>
+<a class="jxr_linenumber" name="L108" href="#L108">108</a> <em class="jxr_javadoccomment">                                      .to(ListX::toSetX());</em>
+<a class="jxr_linenumber" name="L109" href="#L109">109</a> <em class="jxr_javadoccomment">     *     }</em>
+<a class="jxr_linenumber" name="L110" href="#L110">110</a> <em class="jxr_javadoccomment">     * &lt;/pre&gt;</em>
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> <em class="jxr_javadoccomment">     * Most cyclops-react types provide kindCokleisli implementations that convert a Higher Kinded encoding of the type</em>
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> <em class="jxr_javadoccomment">     * back to the concrete type</em>
+<a class="jxr_linenumber" name="L113" href="#L113">113</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L114" href="#L114">114</a> <em class="jxr_javadoccomment">     * @param narrow Narrowing function (Cokleisli) to a concrete type</em>
+<a class="jxr_linenumber" name="L115" href="#L115">115</a> <em class="jxr_javadoccomment">     * @param &lt;S&gt; Concrete type</em>
+<a class="jxr_linenumber" name="L116" href="#L116">116</a> <em class="jxr_javadoccomment">     * @param &lt;R&gt; Return type</em>
+<a class="jxr_linenumber" name="L117" href="#L117">117</a> <em class="jxr_javadoccomment">     * @return Converter that works on the concrete type</em>
+<a class="jxr_linenumber" name="L118" href="#L118">118</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     <strong class="jxr_keyword">public</strong> &lt;S,R&gt; Converter&lt;S&gt; concreteConversion(Function&lt;? <strong class="jxr_keyword">super</strong> Higher&lt;W, T&gt;,? <strong class="jxr_keyword">extends</strong> S&gt; narrow){
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         <strong class="jxr_keyword">return</strong>  <strong class="jxr_keyword">new</strong> Converter&lt;S&gt;(){
+<a class="jxr_linenumber" name="L121" href="#L121">121</a> 
+<a class="jxr_linenumber" name="L122" href="#L122">122</a> 
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>             @Override
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>             <strong class="jxr_keyword">public</strong> &lt;R&gt; R to(Function&lt;S, R&gt; fn) {
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>                 <strong class="jxr_keyword">return</strong> fn.apply(narrow.apply(single));
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>             }
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         };
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     }
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">interface</strong> Converter&lt;S&gt;{
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         <strong class="jxr_keyword">public</strong> &lt;R&gt; R to(Function&lt;S,R&gt; fn);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     }
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     <strong class="jxr_keyword">public</strong> &lt;C,R&gt; R fold(Function&lt;? <strong class="jxr_keyword">super</strong> Higher&lt;W, T&gt;,? <strong class="jxr_keyword">extends</strong> C&gt; narrow, Function&lt;? <strong class="jxr_keyword">super</strong> C,? <strong class="jxr_keyword">extends</strong> R&gt; visitor){
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         <strong class="jxr_keyword">return</strong> visitor.apply(narrow.apply(single));
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>     }
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; R fold(Function&lt;? <strong class="jxr_keyword">super</strong> Higher&lt;W, T&gt;,? <strong class="jxr_keyword">extends</strong> R&gt; visitor){
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         <strong class="jxr_keyword">return</strong> visitor.apply(single);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     }
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; R visitA(Function&lt;? <strong class="jxr_keyword">super</strong> Active&lt;W, T&gt;,? <strong class="jxr_keyword">extends</strong> R&gt; visitor){
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         <strong class="jxr_keyword">return</strong> visitor.apply(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>     }
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>     <strong class="jxr_keyword">public</strong> Higher&lt;W, T&gt; getActive() {
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         <strong class="jxr_keyword">return</strong> single;
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     }
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> 
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; unit(R value) {
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         <strong class="jxr_keyword">return</strong> of(def1.unit().unit(value), def1);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>     }
+<a class="jxr_linenumber" name="L149" href="#L149">149</a> 
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     <strong class="jxr_keyword">public</strong> Active&lt;W, T&gt; filter(Predicate&lt;? <strong class="jxr_keyword">super</strong> T&gt; predicate) {
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         <strong class="jxr_keyword">return</strong> of(def1.monadZero().fold(s -&gt; s.filter(predicate, single), () -&gt; single), def1);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     }
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,Tuple2&lt;T, R&gt;&gt; zip(Higher&lt;W, R&gt; fb) {
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <strong class="jxr_keyword">return</strong> of(def1.applicative().zip(single,fb),def1);
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     }
+<a class="jxr_linenumber" name="L156" href="#L156">156</a> 
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>     <strong class="jxr_keyword">public</strong> &lt;W2&gt; Active&lt;W2, T&gt; mapK(FunctionK&lt;W,W2,T&gt; fn) {
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         <strong class="jxr_keyword">return</strong> of( fn.apply(single), fn.definitions());
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     }
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; map(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> R&gt; fn) {
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         <strong class="jxr_keyword">return</strong> of(def1.functor().map(fn, single), def1);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>     }
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,R&gt; mapWithIndex(BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,Long,? <strong class="jxr_keyword">extends</strong> R&gt; f) {
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         <strong class="jxr_keyword">return</strong> of(def1.traverse().mapWithIndex(f,single),def1);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     }
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     <strong class="jxr_keyword">public</strong> T intercalate(Monoid&lt;T&gt; monoid, T value) {
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         <strong class="jxr_keyword">return</strong> def1.foldable().intercalate(monoid,value,single);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>     }
+<a class="jxr_linenumber" name="L169" href="#L169">169</a> 
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> anyMatch(Predicate&lt;? <strong class="jxr_keyword">super</strong> T&gt; pred){
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         <strong class="jxr_keyword">return</strong> def1.foldable().anyMatch(pred,single);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>     }
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> allMatch(Predicate&lt;? <strong class="jxr_keyword">super</strong> T&gt; pred){
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         <strong class="jxr_keyword">return</strong> def1.foldable().allMatch(pred,single);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     }
+<a class="jxr_linenumber" name="L176" href="#L176">176</a> 
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>     <strong class="jxr_keyword">public</strong> Option&lt;T&gt; getAt(<strong class="jxr_keyword">int</strong> index){
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         <strong class="jxr_keyword">return</strong> toLazySeq().get(index);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     }
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; reverse(){
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <strong class="jxr_keyword">return</strong> of(def1.traverse().reverse(single),def1);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>     }
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>     <strong class="jxr_keyword">public</strong> LazySeq&lt;T&gt; toLazySeq(){
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         <strong class="jxr_keyword">return</strong> def1.foldable().lazySeq(single);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>     }
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>     <strong class="jxr_keyword">public</strong>  ReactiveSeq&lt;T&gt; stream(){
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         <strong class="jxr_keyword">return</strong> toLazySeq().stream();
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>     }
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>     <strong class="jxr_keyword">public</strong>  <strong class="jxr_keyword">long</strong> size() {
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         <strong class="jxr_keyword">return</strong> def1.foldable().size(single);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>     }
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,Tuple2&lt;T,Long&gt;&gt; zipWithIndex() {
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         <strong class="jxr_keyword">return</strong> of(def1.traverse().zipWithIndex(single),def1);
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>     }
+<a class="jxr_linenumber" name="L196" href="#L196">196</a> 
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>     <strong class="jxr_keyword">public</strong> &lt;W2,T2,R&gt; Active&lt;W,R&gt; zipWith(Active&lt;W2,T2&gt; a,  BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> Maybe&lt;T2&gt;,? <strong class="jxr_keyword">extends</strong> R&gt; f) {
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         <strong class="jxr_keyword">return</strong> of(def1.traverse().zipWith(a.def1.foldable(),f,single,a.single),def1);
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>     }
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>     <strong class="jxr_keyword">public</strong> &lt;W2,T2,R&gt; Active&lt;W,R&gt; zipWith(Foldable&lt;W2&gt; foldable,Higher&lt;W2,T2&gt; a,  BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> Maybe&lt;T2&gt;,? <strong class="jxr_keyword">extends</strong> R&gt; f) {
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         <strong class="jxr_keyword">return</strong> of(def1.traverse().zipWith(foldable,f,single,a),def1);
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>     }
+<a class="jxr_linenumber" name="L203" href="#L203">203</a> 
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> 
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>     <strong class="jxr_keyword">public</strong> &lt;C&gt; Narrowed&lt;C&gt; concreteMonoid(Kleisli&lt;W,C,T&gt; widen, Cokleisli&lt;W,T,C&gt; narrow){
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Narrowed&lt;C&gt;(widen,narrow);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>     }
+<a class="jxr_linenumber" name="L208" href="#L208">208</a> 
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L210" href="#L210">210</a> <em class="jxr_javadoccomment">     * Use concreteFlatMap to access a flatMap operator that works with the concrete type (rather than the higher kind encoding)</em>
+<a class="jxr_linenumber" name="L211" href="#L211">211</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L212" href="#L212">212</a> <em class="jxr_javadoccomment">     * e.g. using a vavr Vector</em>
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L214" href="#L214">214</a> <em class="jxr_javadoccomment">     * &lt;pre&gt;</em>
+<a class="jxr_linenumber" name="L215" href="#L215">215</a> <em class="jxr_javadoccomment">     *     {@code</em>
+<a class="jxr_linenumber" name="L216" href="#L216">216</a> <em class="jxr_javadoccomment">     *     Active&lt;vector,Integer&gt; vector = Vectors.allTypeclasses(Vector.of(1,2,3));</em>
+<a class="jxr_linenumber" name="L217" href="#L217">217</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L218" href="#L218">218</a> <em class="jxr_javadoccomment">     *     vector.concreteFlatMap(Vectors.kindKleisli())</em>
+<a class="jxr_linenumber" name="L219" href="#L219">219</a> <em class="jxr_javadoccomment">                .flatMap(i-&gt;Vector.of(1,2,3)); //flatMap accepts Vector rather than Higher&lt;vector,T&gt;</em>
+<a class="jxr_linenumber" name="L220" href="#L220">220</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L221" href="#L221">221</a> <em class="jxr_javadoccomment">     *     }</em>
+<a class="jxr_linenumber" name="L222" href="#L222">222</a> <em class="jxr_javadoccomment">     * &lt;/pre&gt;</em>
+<a class="jxr_linenumber" name="L223" href="#L223">223</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L224" href="#L224">224</a> <em class="jxr_javadoccomment">     * Note this is not typically needed for cyclops-react types</em>
+<a class="jxr_linenumber" name="L225" href="#L225">225</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L226" href="#L226">226</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L227" href="#L227">227</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>     <strong class="jxr_keyword">public</strong> &lt;C,R&gt; NarrowedFlatMap&lt;C,R&gt; concreteFlatMap(Kleisli&lt;W,C,R&gt; widen){
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> NarrowedFlatMap&lt;&gt;(widen);
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>     }
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>     <strong class="jxr_keyword">public</strong> &lt;C,R&gt; NarrowedApplicative&lt;C,R&gt; concreteAp(Kleisli&lt;W,C,Function&lt;T,R&gt;&gt; widen){
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> NarrowedApplicative&lt;&gt;(widen);
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>     }
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>     <strong class="jxr_keyword">public</strong> &lt;C,R&gt; NarrowedTailRec&lt;C,R&gt; concreteTailRec(Kleisli&lt;W,C,Either&lt;T,R&gt;&gt; widen){
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> NarrowedTailRec&lt;&gt;(widen);
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>     }
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> NarrowedFlatMap&lt;C,R&gt;{
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Kleisli&lt;W,C,R&gt; narrow;
+<a class="jxr_linenumber" name="L240" href="#L240">240</a> 
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         <strong class="jxr_keyword">public</strong> Active&lt;W, R&gt; flatMap(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> C&gt; fn) {
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>             <strong class="jxr_keyword">return</strong> Active.<strong class="jxr_keyword">this</strong>.flatMap(fn.andThen(narrow));
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         }
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         <strong class="jxr_keyword">public</strong> &lt;R2&gt; Active&lt;W, R2&gt; zip(C fb, BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> R,? <strong class="jxr_keyword">extends</strong> R2&gt; f) {
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>             <strong class="jxr_keyword">return</strong> Active.<strong class="jxr_keyword">this</strong>.zip(narrow.apply(fb),f);
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         }
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         <strong class="jxr_keyword">public</strong>  Active&lt;W, Tuple2&lt;T,R&gt;&gt; zip(C fb) {
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>             <strong class="jxr_keyword">return</strong> Active.<strong class="jxr_keyword">this</strong>.zip(narrow.apply(fb));
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         }
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>     }
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> NarrowedTailRec&lt;C,R&gt;{
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Kleisli&lt;W,C,Either&lt;T,R&gt;&gt;  narrow;
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> 
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         <strong class="jxr_keyword">public</strong>  Active&lt;W, R&gt; tailRec(T initial,Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> C&gt; fn){
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>             <strong class="jxr_keyword">return</strong> of(def1.monadRec().&lt;T,R&gt;tailRec(initial,fn.andThen(r-&gt;narrow.apply(r))),def1);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         }
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>     }
+<a class="jxr_linenumber" name="L259" href="#L259">259</a> 
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> NarrowedApplicative&lt;C,R&gt;{
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Kleisli&lt;W,C,Function&lt;T,R&gt;&gt;  narrow;
+<a class="jxr_linenumber" name="L263" href="#L263">263</a> 
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         <strong class="jxr_keyword">public</strong>  Active&lt;W, R&gt; ap(C fn) {
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>             <strong class="jxr_keyword">return</strong> of(def1.applicative().ap(narrow.apply(fn), single), def1);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         }
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>     }
+<a class="jxr_linenumber" name="L268" href="#L268">268</a> 
+<a class="jxr_linenumber" name="L269" href="#L269">269</a> 
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Narrowed&lt;C&gt;{
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         <em class="jxr_comment">//plus, sum</em>
+<a class="jxr_linenumber" name="L273" href="#L273">273</a> 
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Kleisli&lt;W,C,T&gt; widen;
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Cokleisli&lt;W,T,C&gt; narrow;
+<a class="jxr_linenumber" name="L276" href="#L276">276</a> 
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         <strong class="jxr_keyword">public</strong> C extract(){
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>             <strong class="jxr_keyword">return</strong> narrow.apply(single);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         }
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; plus(Monoid&lt;C&gt; m,C add){
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>             <strong class="jxr_keyword">return</strong> sum(m,LazySeq.of(add));
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         }
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; sum(C seed, BinaryOperator&lt;C&gt; op,ImmutableList&lt;C&gt; list){
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>             C res =list.plus(narrow.apply(single)).foldLeft(seed,(a,b)-&gt;op.apply(a,b));
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>             <strong class="jxr_keyword">return</strong> of(widen.apply(res),def1);
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         }
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; sum(Monoid&lt;C&gt; s,ImmutableList&lt;C&gt; list){
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>             C res =list.plus(narrow.apply(single)).foldLeft(s.zero(),(a,b)-&gt;s.apply(a,b));
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>             <strong class="jxr_keyword">return</strong> of(widen.apply(res),def1);
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         }
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; sumInverted(Group&lt;C&gt; s, ImmutableList&lt;C&gt; list){
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>             C res = s.invert(list.plus(narrow.apply(single)).foldLeft(s.zero(),(a,b)-&gt;s.apply(a,b)));
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>             <strong class="jxr_keyword">return</strong> of(widen.apply(res),def1);
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         }
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         <strong class="jxr_keyword">public</strong> Maybe&lt;Active&lt;W,T&gt;&gt; sum(ImmutableList&lt;C&gt; list){
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>             <strong class="jxr_keyword">return</strong> Active.<strong class="jxr_keyword">this</strong>.plus().flatMap(s -&gt;
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>                     Maybe.just(sum(narrow.apply(s.monoid().zero()), (C a, C b) -&gt; narrow.apply(s.monoid().apply(widen.apply(a), widen.apply(b))), list))
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>             );
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>         }
+<a class="jxr_linenumber" name="L300" href="#L300">300</a> 
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>     }
+<a class="jxr_linenumber" name="L302" href="#L302">302</a> 
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>     <strong class="jxr_keyword">public</strong> &lt;T2, R&gt; Active&lt;W, R&gt; zip(Higher&lt;W, T2&gt; fb, BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> T2,? <strong class="jxr_keyword">extends</strong> R&gt; f) {
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         <strong class="jxr_keyword">return</strong> of(def1.applicative().zip(single,fb,f),def1);
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>     }
+<a class="jxr_linenumber" name="L306" href="#L306">306</a> 
+<a class="jxr_linenumber" name="L307" href="#L307">307</a> 
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>     <strong class="jxr_keyword">public</strong> &lt;T2,R&gt; Eval&lt;Active&lt;W,R&gt;&gt; lazyZip(Eval&lt;Higher&lt;W,T2&gt;&gt; lazy, BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> T2,? <strong class="jxr_keyword">extends</strong> R&gt; fn) {
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>         <strong class="jxr_keyword">return</strong> lazy.map(e-&gt; zip(e,fn));
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>     }
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>     <strong class="jxr_keyword">public</strong> &lt;T2,R&gt; Eval&lt;Active&lt;W,R&gt;&gt; lazyZipA(Eval&lt;Active&lt;W,T2&gt;&gt; lazy, BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> T2,? <strong class="jxr_keyword">extends</strong> R&gt; fn) {
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         <strong class="jxr_keyword">return</strong> lazy.map(e-&gt;zip(e.getSingle(),fn));
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>     }
+<a class="jxr_linenumber" name="L314" href="#L314">314</a> 
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>     <strong class="jxr_keyword">public</strong> Active&lt;W, T&gt; peek(Consumer&lt;? <strong class="jxr_keyword">super</strong> T&gt; fn) {
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         <strong class="jxr_keyword">return</strong> of(def1.functor().peek(fn, single), def1);
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>     }
+<a class="jxr_linenumber" name="L318" href="#L318">318</a> 
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Function&lt;Active&lt;W, T&gt;, Active&lt;W, R&gt;&gt; lift(<strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> R&gt; fn) {
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         <strong class="jxr_keyword">return</strong> t -&gt; of(def1.functor().map(fn, t.single), def1);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>     }
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,Tuple2&lt;T,T&gt;&gt; zip(Active&lt;W,T&gt; p2){
+<a class="jxr_linenumber" name="L323" href="#L323">323</a> 
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         <strong class="jxr_keyword">return</strong> zip(p2, Tuple::tuple);
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>     }
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,R&gt; zip(Active&lt;W,T&gt; p2,BiFunction&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> R&gt; zipper){
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>         Applicative&lt;W&gt; ap = def1.applicative();
+<a class="jxr_linenumber" name="L328" href="#L328">328</a> 
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         Function&lt;T, Function&lt;T, R&gt;&gt; fn = a-&gt;b-&gt;zipper.apply(a,b);
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         Higher&lt;W, Function&lt;T, Function&lt;T, R&gt;&gt;&gt; hfn = ap.unit(fn);
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         <strong class="jxr_keyword">return</strong> of(ap.ap(ap.ap(hfn,single),p2.getSingle()),def1);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>     }
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,Tuple3&lt;T,T,T&gt;&gt; zip(Active&lt;W,T&gt; p2, Active&lt;W,T&gt; p3){
+<a class="jxr_linenumber" name="L334" href="#L334">334</a> 
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>         <strong class="jxr_keyword">return</strong> zip(p2, p3,Tuple::tuple);
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>     }
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,R&gt; zip(Active&lt;W,T&gt; p2,Active&lt;W,T&gt; p3,Function3&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> R&gt; zipper){
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>         Applicative&lt;W&gt; ap = def1.applicative();
+<a class="jxr_linenumber" name="L339" href="#L339">339</a> 
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>         Function&lt;T, Function&lt;T,Function&lt;T, R&gt;&gt;&gt; fn = a-&gt;b-&gt;c-&gt;zipper.apply(a,b,c);
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>         Higher&lt;W, Function&lt;T, Function&lt;T,Function&lt;T, R&gt;&gt;&gt;&gt; hfn = ap.unit(fn);
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>         <strong class="jxr_keyword">return</strong> of(ap.ap(ap.ap(ap.ap(hfn,single),p2.getSingle()),p3.getSingle()),def1);
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>     }
+<a class="jxr_linenumber" name="L344" href="#L344">344</a> 
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; flatMap(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W, R&gt;&gt; fn) {
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         <strong class="jxr_keyword">return</strong> of(def1.monad().flatMap(fn, single), def1);
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>     }
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; flatMapA(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Active&lt;W, R&gt;&gt; fn) {
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         <strong class="jxr_keyword">return</strong> of(def1.monad().flatMap(fn.andThen(Active::getActive), single), def1);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>     }
+<a class="jxr_linenumber" name="L351" href="#L351">351</a> 
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; ap(Higher&lt;W, ? <strong class="jxr_keyword">extends</strong> Function&lt;T, R&gt;&gt; fn) {
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>         <strong class="jxr_keyword">return</strong> of(def1.applicative().ap(fn, single), def1);
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>     }
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>     <strong class="jxr_keyword">public</strong> &lt;C,R&gt; Active&lt;W, R&gt; ap(C c,Function&lt;? <strong class="jxr_keyword">super</strong> C, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W, ? <strong class="jxr_keyword">extends</strong> Function&lt;T, R&gt;&gt;&gt; fn) {
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>         <strong class="jxr_keyword">return</strong> ap(fn.apply(c));
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>     }
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; plus(SemigroupK&lt;W&gt; semigroupK, Higher&lt;W,T&gt; add){
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>         <strong class="jxr_keyword">return</strong> of(semigroupK.apply(single,add),def1);
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>     }
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; plus(SemigroupK&lt;W&gt; semigroupK, Active&lt;W,T&gt; add){
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>         <strong class="jxr_keyword">return</strong> of(semigroupK.apply(single,add.getSingle()),def1);
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>     }
+<a class="jxr_linenumber" name="L364" href="#L364">364</a> 
+<a class="jxr_linenumber" name="L365" href="#L365">365</a> 
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>     <strong class="jxr_keyword">public</strong> Unfolds unfolds(Unfoldable&lt;W&gt; unfoldable){
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Unfolds(unfoldable);
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>     }
+<a class="jxr_linenumber" name="L369" href="#L369">369</a> 
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>     <strong class="jxr_keyword">public</strong> Plus plus(MonadPlus&lt;W&gt; plus){
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Plus(plus);
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>     }
+<a class="jxr_linenumber" name="L373" href="#L373">373</a> 
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>     <strong class="jxr_keyword">public</strong> Unfolds unfoldsDefault(){
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Unfolds(def1.unfoldable().fold(p-&gt;p,()-&gt;<strong class="jxr_keyword">new</strong> Unfoldable.UnsafeValueUnfoldable&lt;&gt;()));
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>     }
+<a class="jxr_linenumber" name="L377" href="#L377">377</a> 
+<a class="jxr_linenumber" name="L378" href="#L378">378</a> 
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>     <strong class="jxr_keyword">public</strong> Maybe&lt;Unfolds&gt; unfolds(){
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>         <strong class="jxr_keyword">return</strong> def1.unfoldable().fold(e-&gt;Maybe.just(<strong class="jxr_keyword">new</strong> Unfolds(e)),Maybe::nothing);
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>     }
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>     <strong class="jxr_keyword">public</strong> Maybe&lt;Plus&gt; plus(){
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>         <strong class="jxr_keyword">return</strong> def1.monadPlus().fold(e-&gt;Maybe.just(<strong class="jxr_keyword">new</strong> Plus(e)),Maybe::nothing);
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>     }
+<a class="jxr_linenumber" name="L385" href="#L385">385</a> 
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Plus{
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> MonadPlus&lt;W&gt; monadPlus;
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>         <strong class="jxr_keyword">public</strong> MonoidK&lt;W&gt; monoidK(){
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>             <strong class="jxr_keyword">return</strong> monadPlus.monoid();
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         }
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         <strong class="jxr_keyword">public</strong> Monoid&lt;Higher&lt;W,T&gt;&gt; monoid(){
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>             <strong class="jxr_keyword">return</strong> monadPlus.monoid().asMonoid();
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>         }
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; zero(){
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>             Higher&lt;W, T&gt; h = monadPlus.zero();
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>             <strong class="jxr_keyword">return</strong> of(h, def1);
+<a class="jxr_linenumber" name="L398" href="#L398">398</a> 
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>         }
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; sum(ImmutableList&lt;Higher&lt;W, T&gt;&gt; list){
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>             <strong class="jxr_keyword">return</strong> of(monadPlus.sum(list.plus(single)),def1);
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>         }
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; sumA(ImmutableList&lt;Active&lt;W, T&gt;&gt; list){
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>             <strong class="jxr_keyword">return</strong> sum(list.map(Active::getActive));
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         }
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; plus(Higher&lt;W, T&gt; a){
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>             <strong class="jxr_keyword">return</strong> of(monadPlus.plus(single,a),def1);
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         }
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; plusA(Active&lt;W, T&gt; ac){
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>             Higher&lt;W, T&gt; a =ac.single;
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>             <strong class="jxr_keyword">return</strong> plus(a);
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         }
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>     }
+<a class="jxr_linenumber" name="L414" href="#L414">414</a> 
+<a class="jxr_linenumber" name="L415" href="#L415">415</a> 
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; tailRec(T initial,Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> Higher&lt;W, ? <strong class="jxr_keyword">extends</strong> Either&lt;T, R&gt;&gt;&gt; fn){
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>         <strong class="jxr_keyword">return</strong> of(def1.monadRec().&lt;T,R&gt;tailRec(initial,fn),def1);
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>     }
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W, R&gt; tailRecA(T initial,Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> Active&lt;W, ? <strong class="jxr_keyword">extends</strong> Either&lt;T, R&gt;&gt;&gt; fn){
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         <strong class="jxr_keyword">return</strong> of(def1.monadRec().&lt;T,R&gt;tailRec(initial,fn.andThen(Active::getActive)),def1);
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>     }
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>     @AllArgsConstructor
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Unfolds{
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Unfoldable&lt;W&gt; unfoldable;
+<a class="jxr_linenumber" name="L425" href="#L425">425</a> 
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         <strong class="jxr_keyword">public</strong> &lt;R, T&gt; Active&lt;W, R&gt; unfold(T b, Function&lt;? <strong class="jxr_keyword">super</strong> T, Option&lt;Tuple2&lt;R, T&gt;&gt;&gt; fn){
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>             <strong class="jxr_keyword">return</strong> of(unfoldable.unfold(b,fn),def1);
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         }
+<a class="jxr_linenumber" name="L429" href="#L429">429</a> 
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>         <strong class="jxr_keyword">public</strong> &lt;T&gt; Active&lt;W, T&gt; replicate(<strong class="jxr_keyword">long</strong> n, T value) {
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>             <strong class="jxr_keyword">return</strong> unfold(n,i -&gt; i&gt;0? Option.some(tuple(value, i&lt;Long.MAX_VALUE? i-1 : i)) : Option.none());
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>         }
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>         <strong class="jxr_keyword">public</strong> &lt;R&gt; Nested&lt;W, W,R&gt; replicate(Function&lt;? <strong class="jxr_keyword">super</strong> T,Long&gt; fn, Function&lt;? <strong class="jxr_keyword">super</strong> T,R&gt; mapper) {
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>             <strong class="jxr_keyword">return</strong> Nested.of(def1.functor().map(value-&gt;replicate(fn.apply(value), mapper.apply(value)).getSingle(),single),def1,def1);
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         }
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>         <strong class="jxr_keyword">public</strong> Nested&lt;W, W,T&gt; replicate(<strong class="jxr_keyword">long</strong> n) {
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>             <strong class="jxr_keyword">return</strong> Nested.of(def1.functor().map(value-&gt;replicate(n,value).getSingle(),single),def1,def1);
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>         }
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         <strong class="jxr_keyword">public</strong> &lt;T&gt; Active&lt;W, T&gt; cycle(T value) {
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>             <strong class="jxr_keyword">return</strong> replicate(Long.MAX_VALUE, value);
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>         }
+<a class="jxr_linenumber" name="L442" href="#L442">442</a> 
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         <strong class="jxr_keyword">public</strong> &lt;R&gt; Active&lt;W,R&gt; none() {
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>             <strong class="jxr_keyword">return</strong> unfold((T) <strong class="jxr_keyword">null</strong>, t -&gt; Option.&lt;Tuple2&lt;R, T&gt;&gt;none());
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         }
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>         <strong class="jxr_keyword">public</strong> &lt;T&gt; Active&lt;W,T&gt; one(T a) {
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>             <strong class="jxr_keyword">return</strong> replicate(1, a);
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>         }
+<a class="jxr_linenumber" name="L449" href="#L449">449</a> 
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>     }
+<a class="jxr_linenumber" name="L451" href="#L451">451</a> 
+<a class="jxr_linenumber" name="L452" href="#L452">452</a> 
+<a class="jxr_linenumber" name="L453" href="#L453">453</a> 
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>     <strong class="jxr_keyword">public</strong> &lt;R&gt; R foldMap(<strong class="jxr_keyword">final</strong> Monoid&lt;R&gt; mb, <strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> R&gt; fn) {
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>         <strong class="jxr_keyword">return</strong> def1.foldable().foldMap(mb,fn,single);
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>     }
+<a class="jxr_linenumber" name="L457" href="#L457">457</a> 
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>     <strong class="jxr_keyword">public</strong> T foldRight(Monoid&lt;T&gt; monoid) {
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>         <strong class="jxr_keyword">return</strong>  def1.foldable().foldRight(monoid, single);
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>     }
+<a class="jxr_linenumber" name="L461" href="#L461">461</a> 
+<a class="jxr_linenumber" name="L462" href="#L462">462</a> 
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>     <strong class="jxr_keyword">public</strong> T foldRight(T identity, BinaryOperator&lt;T&gt; semigroup) {
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>         <strong class="jxr_keyword">return</strong> foldRight(Monoid.fromBiFunction(identity, semigroup));
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>     }
+<a class="jxr_linenumber" name="L466" href="#L466">466</a> 
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>     <strong class="jxr_keyword">public</strong> T foldLeft(Monoid&lt;T&gt; monoid) {
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>         <strong class="jxr_keyword">return</strong> def1.foldable().foldLeft(monoid, single);
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>     }
+<a class="jxr_linenumber" name="L470" href="#L470">470</a> 
+<a class="jxr_linenumber" name="L471" href="#L471">471</a> 
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>     <strong class="jxr_keyword">public</strong> T foldLeft(T identity, BinaryOperator&lt;T&gt; semigroup) {
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>         <strong class="jxr_keyword">return</strong> foldLeft(Monoid.fromBiFunction(identity, semigroup));
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>     }
+<a class="jxr_linenumber" name="L475" href="#L475">475</a> 
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>     <strong class="jxr_keyword">public</strong>  &lt;W2, R&gt; Higher&lt;W2, Higher&lt;W, R&gt;&gt; flatTraverse(Applicative&lt;W2&gt; applicative,
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>                                                           Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> Higher&lt;W2, Higher&lt;W, R&gt;&gt;&gt;f) {
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>         <strong class="jxr_keyword">return</strong> def1.traverse()
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>                 .flatTraverse(applicative,def1.monad(),single,f);
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>     }
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>     <strong class="jxr_keyword">public</strong> &lt;C2, R&gt; Higher&lt;C2, Active&lt;W,R&gt;&gt; traverseA(Applicative&lt;C2&gt; applicative, Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;C2, R&gt;&gt; fn){
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>         <strong class="jxr_keyword">return</strong> traverseA(applicative,fn,<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L483" href="#L483">483</a> 
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>     }
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;W,T,C2, R&gt; Higher&lt;C2, Active&lt;W,R&gt;&gt; traverseA(Applicative&lt;C2&gt; applicative, Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;C2, R&gt;&gt; fn,Active&lt;W,T&gt; n){
+<a class="jxr_linenumber" name="L486" href="#L486">486</a> 
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>         Traverse&lt;W&gt; traverse = n.def1.traverse();
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>         Higher&lt;C2, Higher&lt;W, R&gt;&gt; r = traverse.traverseA(applicative,fn,n.single);
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>         Higher&lt;C2, Active&lt;W,R&gt;&gt; x = applicative.map(nr -&gt; Active.of(nr, n.def1), r);
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>         <strong class="jxr_keyword">return</strong> x;
+<a class="jxr_linenumber" name="L491" href="#L491">491</a> 
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>     }
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>     <strong class="jxr_keyword">public</strong>  &lt;C2,T&gt; Higher&lt;C2, Active&lt;W,T&gt;&gt; sequenceA(Applicative&lt;C2&gt; applicative,
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>                                                          Active&lt;W,Higher&lt;C2,T&gt;&gt; ds){
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>        <strong class="jxr_keyword">return</strong> traverseA(applicative, i -&gt; i, ds);
+<a class="jxr_linenumber" name="L496" href="#L496">496</a> 
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>     }
+<a class="jxr_linenumber" name="L498" href="#L498">498</a> 
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>     <strong class="jxr_keyword">public</strong>   &lt;C2, R&gt; Higher&lt;C2, Active&lt;W,R&gt;&gt; flatTraverseA(Applicative&lt;C2&gt; applicative,
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>                                                               Function&lt;? <strong class="jxr_keyword">super</strong> T,? <strong class="jxr_keyword">extends</strong> Higher&lt;C2, Active&lt;W, R&gt;&gt;&gt; f) {
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>         <strong class="jxr_keyword">return</strong> applicative.map_(traverseA(applicative, f), it-&gt;  it.flatMapA(a-&gt;a));
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>     }
+<a class="jxr_linenumber" name="L503" href="#L503">503</a> 
+<a class="jxr_linenumber" name="L504" href="#L504">504</a>     <strong class="jxr_keyword">public</strong>  &lt;C2,T&gt; Higher&lt;C2, Active&lt;W,T&gt;&gt; flatSequenceA(Applicative&lt;C2&gt; applicative, Active&lt;W,Higher&lt;C2,Active&lt;W,T&gt;&gt;&gt; fgfa) {
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>         <strong class="jxr_keyword">return</strong> applicative.map(i -&gt; i.flatMapA(Function.identity()),sequenceA(applicative, fgfa) );
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>     }
+<a class="jxr_linenumber" name="L507" href="#L507">507</a> 
+<a class="jxr_linenumber" name="L508" href="#L508">508</a> 
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>     <strong class="jxr_keyword">public</strong> &lt;W2&gt; Product&lt;W,W2,T&gt; concat(Active&lt;W2,T&gt; active){
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>         <strong class="jxr_keyword">return</strong> Product.of(<strong class="jxr_keyword">this</strong>,active);
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>     }
+<a class="jxr_linenumber" name="L512" href="#L512">512</a> 
+<a class="jxr_linenumber" name="L513" href="#L513">513</a> 
+<a class="jxr_linenumber" name="L514" href="#L514">514</a> 
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>     @Override
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>     <strong class="jxr_keyword">public</strong> &lt;U&gt; Active&lt;W,U&gt; ofType(Class&lt;? <strong class="jxr_keyword">extends</strong> U&gt; type) {
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>         <strong class="jxr_keyword">return</strong> (Active&lt;W,U&gt;)Filters.<strong class="jxr_keyword">super</strong>.ofType(type);
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>     }
+<a class="jxr_linenumber" name="L519" href="#L519">519</a> 
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>     @Override
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; filterNot(Predicate&lt;? <strong class="jxr_keyword">super</strong> T&gt; predicate) {
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>         <strong class="jxr_keyword">return</strong> (Active&lt;W,T&gt;)Filters.<strong class="jxr_keyword">super</strong>.filterNot(predicate);
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>     }
+<a class="jxr_linenumber" name="L524" href="#L524">524</a> 
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>     @Override
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>     <strong class="jxr_keyword">public</strong> Active&lt;W,T&gt; notNull() {
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>         <strong class="jxr_keyword">return</strong> (Active&lt;W,T&gt;)Filters.<strong class="jxr_keyword">super</strong>.notNull();
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>     }
+<a class="jxr_linenumber" name="L529" href="#L529">529</a> 
+<a class="jxr_linenumber" name="L530" href="#L530">530</a> 
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>     <strong class="jxr_keyword">public</strong> &lt;T2, R1, R2, R3, R&gt; Active&lt;W,R&gt; forEach4(<strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R2&gt;&gt; value2, <strong class="jxr_keyword">final</strong> Function3&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R3&gt;&gt; value3,
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>                                                     <strong class="jxr_keyword">final</strong> Function4&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">super</strong> R3, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>         <strong class="jxr_keyword">return</strong> of(Comprehensions.of(def1.monad()).forEach4(<strong class="jxr_keyword">this</strong>.single,value1,value2,value3,yieldingFunction),def1);
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>     }
+<a class="jxr_linenumber" name="L535" href="#L535">535</a> 
+<a class="jxr_linenumber" name="L536" href="#L536">536</a> 
+<a class="jxr_linenumber" name="L537" href="#L537">537</a>     <strong class="jxr_keyword">public</strong> &lt;T2, R1, R2, R3, R&gt; Maybe&lt;Active&lt;W,R&gt;&gt; forEach4(<strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R2&gt;&gt; value2, <strong class="jxr_keyword">final</strong> Function3&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R3&gt;&gt; value3, <strong class="jxr_keyword">final</strong> Function4&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">super</strong> R3, Boolean&gt; filterFunction, <strong class="jxr_keyword">final</strong> Function4&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">super</strong> R3, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>         <strong class="jxr_keyword">if</strong>(!def1.monadZero().isPresent())
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>             <strong class="jxr_keyword">return</strong> Maybe.nothing();
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>         MonadZero&lt;W&gt; mZero = def1.monadZero().orElse(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L541" href="#L541">541</a> 
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>         <strong class="jxr_keyword">return</strong> Maybe.just(of(Comprehensions.of(mZero).forEach4(<strong class="jxr_keyword">this</strong>.single,value1,value2,value3,filterFunction,yieldingFunction),def1));
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>     }
+<a class="jxr_linenumber" name="L544" href="#L544">544</a> 
+<a class="jxr_linenumber" name="L545" href="#L545">545</a> 
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>     <strong class="jxr_keyword">public</strong> &lt;T2, R1, R2, R&gt; Active&lt;W,R&gt; forEach3(<strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R2&gt;&gt; value2, <strong class="jxr_keyword">final</strong> Function3&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>         <strong class="jxr_keyword">return</strong> of(Comprehensions.of(def1.monad()).forEach3(<strong class="jxr_keyword">this</strong>.single,value1,value2,yieldingFunction),def1);
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>     }
+<a class="jxr_linenumber" name="L549" href="#L549">549</a> 
+<a class="jxr_linenumber" name="L550" href="#L550">550</a>     <strong class="jxr_keyword">public</strong> &lt;T2, R1, R2, R&gt; Maybe&lt;Active&lt;W,R&gt;&gt; forEach3(<strong class="jxr_keyword">final</strong> Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R2&gt;&gt; value2, <strong class="jxr_keyword">final</strong> Function3&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, Boolean&gt; filterFunction, <strong class="jxr_keyword">final</strong> Function3&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">super</strong> R2, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L551" href="#L551">551</a>         <strong class="jxr_keyword">if</strong>(!def1.monadZero().isPresent())
+<a class="jxr_linenumber" name="L552" href="#L552">552</a>             <strong class="jxr_keyword">return</strong> Maybe.nothing();
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>         MonadZero&lt;W&gt; mZero = def1.monadZero().orElse(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L554" href="#L554">554</a>         <strong class="jxr_keyword">return</strong> Maybe.just(of(Comprehensions.of(mZero).forEach3(<strong class="jxr_keyword">this</strong>.single,value1,value2,filterFunction,yieldingFunction),def1));
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>     }
+<a class="jxr_linenumber" name="L556" href="#L556">556</a> 
+<a class="jxr_linenumber" name="L557" href="#L557">557</a> 
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>     <strong class="jxr_keyword">public</strong> &lt;R1, R&gt; Active&lt;W,R&gt; forEach2(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>         <strong class="jxr_keyword">return</strong> of(Comprehensions.of(def1.monad()).forEach2(<strong class="jxr_keyword">this</strong>.single,value1,yieldingFunction),def1);
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>     }
+<a class="jxr_linenumber" name="L561" href="#L561">561</a> 
+<a class="jxr_linenumber" name="L562" href="#L562">562</a> 
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>     <strong class="jxr_keyword">public</strong> &lt;R1, R&gt; Maybe&lt;Active&lt;W,R&gt;&gt; forEach2(Function&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">extends</strong> Higher&lt;W,R1&gt;&gt; value1, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, Boolean&gt; filterFunction, <strong class="jxr_keyword">final</strong> BiFunction&lt;? <strong class="jxr_keyword">super</strong> T, ? <strong class="jxr_keyword">super</strong> R1, ? <strong class="jxr_keyword">extends</strong> R&gt; yieldingFunction) {
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>         <strong class="jxr_keyword">if</strong>(!def1.monadZero().isPresent())
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>             <strong class="jxr_keyword">return</strong> Maybe.nothing();
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>         MonadZero&lt;W&gt; mZero = def1.monadZero().orElse(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>         <strong class="jxr_keyword">return</strong> Maybe.just(of(Comprehensions.of(mZero).forEach2(<strong class="jxr_keyword">this</strong>.single,value1,filterFunction,yieldingFunction),def1));
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>     }
+<a class="jxr_linenumber" name="L569" href="#L569">569</a> 
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>     <strong class="jxr_keyword">public</strong> String show(){
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>         <strong class="jxr_keyword">return</strong> def1.show().show(single);
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>     }
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>     <strong class="jxr_keyword">public</strong> String toString(){
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Active["</span>+single.toString()+<span class="jxr_string">"]"</span>;
+<a class="jxr_linenumber" name="L575" href="#L575">575</a>     }
+<a class="jxr_linenumber" name="L576" href="#L576">576</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>

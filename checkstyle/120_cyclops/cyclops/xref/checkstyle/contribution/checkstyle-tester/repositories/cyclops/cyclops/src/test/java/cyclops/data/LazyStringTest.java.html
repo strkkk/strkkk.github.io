@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>LazyStringTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> cyclops.data;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> cyclops.control.Option;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.junit.Before;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.util.Arrays;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.Collection;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.Comparator;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> java.util.Objects;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> java.util.Random;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> java.util.stream.Collectors;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> java.util.stream.Stream;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.hamcrest.Matchers.containsInAnyOrder;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.hamcrest.Matchers.hasItem;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.hamcrest.Matchers.hasItems;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.hamcrest.core.IsEqual.equalTo;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.*;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> LazyStringTest {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      LazyString str = LazyString.of(<span class="jxr_string">"hello world"</span>);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      LazyString strLines = LazyString.of(<span class="jxr_string">"hello world\nboo hoo"</span>);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      LazyString caps = LazyString.of(<span class="jxr_string">"HELLO WORLD"</span>);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      LazyString longStr = LazyString.of(<span class="jxr_string">"the quick brown fox jumps over the dog"</span>);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      LazyString empty = LazyString.empty();
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      LazySeq&lt;Character&gt; helloWorld = LazySeq.of('h','e','l','l','o',' ','w','o','r','l','d');
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      @Test
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> fromLazySeq() {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          assertThat(empty,equalTo(LazyString.fromLazySeq(LazySeq.empty())));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          assertThat(str,equalTo(LazyString.fromLazySeq(helloWorld)));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      }
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      @Test
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> fromIterable() {
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          assertThat(empty,equalTo(LazyString.fromIterable(LazySeq.empty())));
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          assertThat(str,equalTo(LazyString.fromIterable(helloWorld)));
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      @Test
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> of() {
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          assertThat(empty,equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          assertThat(str,equalTo(LazyString.of(<span class="jxr_string">"hello world"</span>)));
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      @Test
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> collector() {
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          LazyString hw = Stream.of('h','e','l','l','o', ' ', 'w','o','r','l','d').collect(LazyString.collector());
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          LazyString empty2 = Stream.&lt;Character&gt;empty().collect(LazyString.collector());
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          assertThat(str,equalTo(hw));
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          assertThat(empty2,equalTo(empty));
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      }
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      @Test
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> unitIterable() {
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          assertThat(empty.unitIterable(str),equalTo(str));
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          assertThat(empty.unitIterable(str.lazySeq()),equalTo(str));
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      }
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      @Test
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> unitStream() {
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          assertThat(empty.unitStream(str.stream()),equalTo(str));
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      }
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      @Test
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> empty() {
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          assertThat(LazyString.empty(),equalTo(empty));
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      }
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      @Test
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> op() {
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          assertThat(str.op(s-&gt;s.reverse()),equalTo(str.reverse()));
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>      }
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      @Test
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> substring() {
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          assertThat(str.substring(6).toString(),equalTo(<span class="jxr_string">"world"</span>));
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          assertThat(empty.substring(6).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>      }
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>  
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      @Test
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> substring1() {
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          assertThat(str.substring(0,5).toString(),equalTo(<span class="jxr_string">"hello"</span>));
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          assertThat(empty.substring(0,5).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      @Test
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toUpperCase() {
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          assertThat(str.toUpperCase().toString(),equalTo(<span class="jxr_string">"HELLO WORLD"</span>));
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          assertThat(empty.toUpperCase().toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      }
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     @Test
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toLowerCase() {
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         assertThat(caps.toLowerCase().toString(),equalTo(<span class="jxr_string">"hello world"</span>));
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         assertThat(empty.toLowerCase().toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     }
+<a class="jxr_linenumber" name="L105" href="#L105">105</a> 
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>     @Test
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> words() {
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         assertThat(str.words().map(ls-&gt;ls.toString()),equalTo(LazySeq.of(<span class="jxr_string">"hello"</span>, <span class="jxr_string">"world"</span>)));
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         assertThat(empty.words().map(ls-&gt;ls.toString()),equalTo(LazySeq.empty()));
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     }
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> 
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     @Test
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> lines() {
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         assertThat(str.lines().map(ls-&gt;ls.toString()),equalTo(LazySeq.of(<span class="jxr_string">"hello world"</span>)));
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         assertThat(strLines.lines().map(ls-&gt;ls.toString()),equalTo(LazySeq.of(<span class="jxr_string">"hello world"</span>,<span class="jxr_string">"boo hoo"</span>)));
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         assertThat(empty.lines().map(ls-&gt;ls.toString()),equalTo(LazySeq.empty()));
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>     }
+<a class="jxr_linenumber" name="L118" href="#L118">118</a> 
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     @Test
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mapChar() {
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         assertThat(str.mapChar(c-&gt;<strong class="jxr_keyword">new</strong> Character((<strong class="jxr_keyword">char</strong>)(c+1))),equalTo(LazyString.of(<span class="jxr_string">"ifmmp!xpsme"</span>)));
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         assertThat(empty.mapChar(c-&gt;<strong class="jxr_keyword">new</strong> Character((<strong class="jxr_keyword">char</strong>)(c+1))),equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>     }
+<a class="jxr_linenumber" name="L124" href="#L124">124</a> 
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     @Test
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> flatMapChar() {
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         assertThat(str.flatMapChar(c-&gt;LazyString.of(<span class="jxr_string">""</span>+<strong class="jxr_keyword">new</strong> Character((<strong class="jxr_keyword">char</strong>)(c+1)))),equalTo(LazyString.of(<span class="jxr_string">"ifmmp!xpsme"</span>)));
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         assertThat(empty.flatMapChar(c-&gt;LazyString.of(<span class="jxr_string">""</span>+<strong class="jxr_keyword">new</strong> Character((<strong class="jxr_keyword">char</strong>)(c+1)))),equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>     }
+<a class="jxr_linenumber" name="L130" href="#L130">130</a> 
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     @Test
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> filter() {
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>        assertThat(str.filter(i-&gt;!Objects.equals(i,'h')).toString(),equalTo(<span class="jxr_string">"ello world"</span>));
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>        assertThat(empty.filter(i-&gt;!Objects.equals(i,'h')).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>     }
+<a class="jxr_linenumber" name="L136" href="#L136">136</a> 
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>     @Test
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> map() {
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         assertThat(str.map(i -&gt; i + <span class="jxr_string">"1"</span>).vector().join(),equalTo(<span class="jxr_string">"h1e1l1l1o1 1w1o1r1l1d1"</span>));
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         assertThat(empty.map(i-&gt;i+<span class="jxr_string">"1"</span>).toString(),equalTo(<span class="jxr_string">"[]"</span>));
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>     }
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> 
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>     @Test
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> flatMap() {
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         assertThat(str.flatMap(i -&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).vector().join(),equalTo(<span class="jxr_string">"h1e1l1l1o1 1w1o1r1l1d1"</span>));
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         assertThat(empty.flatMap(i-&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).toString(),equalTo(<span class="jxr_string">"[]"</span>));
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     }
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> 
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     @Test
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> concatMap() {
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         assertThat(str.concatMap(i -&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).vector().join(),equalTo(<span class="jxr_string">"h1e1l1l1o1 1w1o1r1l1d1"</span>));
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         assertThat(empty.concatMap(i-&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).toString(),equalTo(<span class="jxr_string">"[]"</span>));
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     }
+<a class="jxr_linenumber" name="L154" href="#L154">154</a> 
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     @Test
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mergeMap() {
+<a class="jxr_linenumber" name="L157" href="#L157">157</a> 
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         System.out.println(Vector.of(<span class="jxr_string">"h1"</span>,<span class="jxr_string">"e1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">" 1"</span>,<span class="jxr_string">"w1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">"r1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"d1"</span>));
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         assertThat(str.mergeMap(i -&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).vector(),hasItems(<span class="jxr_string">"h1"</span>,<span class="jxr_string">"e1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">" 1"</span>,<span class="jxr_string">"w1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">"r1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"d1"</span>));
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         assertThat(empty.mergeMap(i-&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).toString(),equalTo(<span class="jxr_string">"[]"</span>));
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>     }
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> 
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     @Test
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mergeMap1() {
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         assertThat(str.mergeMap(10,i -&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).vector(),hasItems(<span class="jxr_string">"h1"</span>,<span class="jxr_string">"e1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">" 1"</span>,<span class="jxr_string">"w1"</span>,<span class="jxr_string">"o1"</span>,<span class="jxr_string">"r1"</span>,<span class="jxr_string">"l1"</span>,<span class="jxr_string">"d1"</span>));
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         assertThat(empty.mergeMap(10,i-&gt; LazySeq.of(i + <span class="jxr_string">"1"</span>)).toString(),equalTo(<span class="jxr_string">"[]"</span>));
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     }
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> 
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>     @Test
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> fold() {
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         assertThat(str.fold(s-&gt;<span class="jxr_string">"10"</span>,n-&gt;<span class="jxr_string">"20"</span>),equalTo(<span class="jxr_string">"10"</span>));
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         assertThat(empty.fold(s-&gt;<span class="jxr_string">"10"</span>,n-&gt;<span class="jxr_string">"20"</span>),equalTo(<span class="jxr_string">"20"</span>));
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>     }
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     @Test
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onEmpty() {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         assertThat(str.onEmpty('a'),equalTo(str));
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         assertThat(empty.onEmpty('a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     }
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     @Test
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onEmptyGet() {
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         assertThat(str.onEmptyGet(()-&gt;'a'),equalTo(str));
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         assertThat(empty.onEmptyGet(()-&gt;'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>     }
+<a class="jxr_linenumber" name="L186" href="#L186">186</a> 
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>     @Test
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onEmptySwitch() {
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         assertThat(str.onEmptySwitch(()-&gt;empty),equalTo(str));
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         assertThat(empty.onEmptySwitch(()-&gt;str),equalTo(str));
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>     }
+<a class="jxr_linenumber" name="L192" href="#L192">192</a> 
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     @Test
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> stream() {
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         assertThat(str.stream().join(),equalTo(<span class="jxr_string">"hello world"</span>));
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         assertThat(empty.stream().join(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>     }
+<a class="jxr_linenumber" name="L198" href="#L198">198</a> 
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>     @Test
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> take() {
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> 
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         assertThat(str.take(0).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         assertThat(str.take(-1).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         assertThat(str.take(1).toString(), equalTo(<span class="jxr_string">"h"</span>));
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         assertThat(str.take(2).toString(), equalTo(<span class="jxr_string">"he"</span>));
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         assertThat(str.take(2000).toString(), equalTo(<span class="jxr_string">"hello world"</span>));
+<a class="jxr_linenumber" name="L207" href="#L207">207</a> 
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         assertThat(empty.take(0).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>         assertThat(empty.take(-1).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         assertThat(empty.take(1).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         assertThat(empty.take(2).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         assertThat(empty.take(2000).toString(), equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> 
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>     }
+<a class="jxr_linenumber" name="L215" href="#L215">215</a> 
+<a class="jxr_linenumber" name="L216" href="#L216">216</a> 
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>     @Test
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> emptyUnit() {
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         assertThat(str.emptyUnit(),equalTo(empty));
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>     }
+<a class="jxr_linenumber" name="L221" href="#L221">221</a> 
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>     @Test
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> replaceFirst() {
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         assertThat(str.replaceFirst('l','b').toString(),equalTo(<span class="jxr_string">"heblo world"</span>));
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         assertThat(empty.replaceFirst('l','b').toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>     }
+<a class="jxr_linenumber" name="L227" href="#L227">227</a> 
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>     @Test
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeFirst() {
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         assertThat(str.removeFirst(i-&gt;i=='l').toString(),equalTo(<span class="jxr_string">"helo world"</span>));
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         assertThat(empty.removeFirst(i-&gt;i=='l').toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>     }
+<a class="jxr_linenumber" name="L233" href="#L233">233</a> 
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>     @Test
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> subList() {
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         assertThat(str.subList(0,str.length()),equalTo(str));
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         assertThat(str.subList(-1100,Integer.MAX_VALUE),equalTo(str));
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         assertThat(str.subList(0,5).toString(),equalTo(<span class="jxr_string">"hello"</span>));
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         assertThat(str.subList(6,11).toString(),equalTo(<span class="jxr_string">"world"</span>));
+<a class="jxr_linenumber" name="L240" href="#L240">240</a> 
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         assertThat(empty.subList(0,str.length()),equalTo(empty));
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         assertThat(empty.subList(-1100,Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         assertThat(empty.subList(0,5).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         assertThat(empty.subList(6,11).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>     }
+<a class="jxr_linenumber" name="L246" href="#L246">246</a> 
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>     @Test
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> filterNot() {
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         assertThat(str.filterNot(i-&gt;i=='l').toString(),equalTo(<span class="jxr_string">"heo word"</span>));
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>     }
+<a class="jxr_linenumber" name="L251" href="#L251">251</a> 
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>     @Test
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> notNull() {
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> 
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         assertThat(LazyString.fromIterable(Vector.of('h',<strong class="jxr_keyword">null</strong>,'e')).notNull().toString(),equalTo(<span class="jxr_string">"he"</span>));
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         assertThat(LazyString.fromLazySeq(LazySeq.of('h',<strong class="jxr_keyword">null</strong>,'e')).notNull().toString(),equalTo(<span class="jxr_string">"he"</span>));
+<a class="jxr_linenumber" name="L257" href="#L257">257</a> 
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>     }
+<a class="jxr_linenumber" name="L259" href="#L259">259</a> 
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>     <strong class="jxr_keyword">boolean</strong> called;
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>     @Test
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> peek() {
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         called = false;
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         LazyString s = str.take(1).peek(i-&gt;{
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>             called = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>             assertThat(i,equalTo('h'));
+<a class="jxr_linenumber" name="L267" href="#L267">267</a> 
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         });
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         assertFalse(called);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         s.join();
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         assertTrue(called);
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>     }
+<a class="jxr_linenumber" name="L273" href="#L273">273</a> 
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>     @Test
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> tailOrElse() {
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>         assertThat(str.tailOrElse(LazySeq.of('h')),equalTo(LazyString.of(<span class="jxr_string">"ello world"</span>)));
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         assertThat(empty.tailOrElse(LazySeq.of('h')),equalTo(LazyString.of(<span class="jxr_string">"h"</span>)));
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>     }
+<a class="jxr_linenumber" name="L279" href="#L279">279</a> 
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>     @Test
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeStream() {
+<a class="jxr_linenumber" name="L282" href="#L282">282</a> 
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         assertThat(str.removeStream(Stream.of('a','b','c')),equalTo(str));
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>         assertThat(str.removeStream(Stream.of('a','b','c','h')).toString(),equalTo(<span class="jxr_string">"ello world"</span>));
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         assertThat(str.removeStream(Stream.of('h','e','l','h')).toString(),equalTo(<span class="jxr_string">"o word"</span>));
+<a class="jxr_linenumber" name="L286" href="#L286">286</a> 
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         assertThat(empty.removeStream(Stream.of('a','b','c')),equalTo(empty));
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         assertThat(empty.removeStream(Stream.of('a','b','c','h')).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         assertThat(empty.removeStream(Stream.of('h','e','l','h')).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>     }
+<a class="jxr_linenumber" name="L291" href="#L291">291</a> 
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>     @Test
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeAt() {
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         assertThat(str.removeAt(0),equalTo(LazyString.of(<span class="jxr_string">"ello world"</span>)));
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         assertThat(str.removeAt(1),equalTo(LazyString.of(<span class="jxr_string">"hllo world"</span>)));
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>         assertThat(str.removeAt(10),equalTo(LazyString.of(<span class="jxr_string">"hello worl"</span>)));
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         assertThat(str.removeAt(-1),equalTo(str));
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         assertThat(str.removeAt(100),equalTo(str));
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>         assertThat(str.removeAt(Integer.MAX_VALUE),equalTo(str));
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         assertThat(str.removeAt(Integer.MAX_VALUE),equalTo(str));
+<a class="jxr_linenumber" name="L301" href="#L301">301</a> 
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         assertThat(empty.removeAt(0),equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         assertThat(empty.removeAt(1),equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         assertThat(empty.removeAt(10),equalTo(LazyString.of(<span class="jxr_string">""</span>)));
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         assertThat(empty.removeAt(-1),equalTo(empty));
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         assertThat(empty.removeAt(100),equalTo(empty));
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>         assertThat(empty.removeAt(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>         assertThat(empty.removeAt(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>     }
+<a class="jxr_linenumber" name="L310" href="#L310">310</a> 
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>     @Test
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeAll() {
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         assertThat(str.removeAll(),equalTo(str));
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         assertThat(str.removeAll('l'),equalTo(LazyString.of(<span class="jxr_string">"heo word"</span>)));
+<a class="jxr_linenumber" name="L315" href="#L315">315</a> 
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         assertThat(empty.removeAll(),equalTo(empty));
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         assertThat(empty.removeAll('l'),equalTo(empty));
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>     }
+<a class="jxr_linenumber" name="L319" href="#L319">319</a> 
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>     @Test
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> retainAll() {
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         assertThat(str.retainAll(),equalTo(empty));
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         assertThat(str.retainAll('l'),equalTo(LazyString.of(<span class="jxr_string">"lll"</span>)));
+<a class="jxr_linenumber" name="L324" href="#L324">324</a> 
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         assertThat(empty.retainAll(),equalTo(empty));
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         assertThat(empty.retainAll('l'),equalTo(empty));
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>     }
+<a class="jxr_linenumber" name="L328" href="#L328">328</a> 
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>     @Test
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> retainStream() {
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         assertThat(str.retainStream(Stream.of('a','b','c')),equalTo(empty));
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         assertThat(str.retainStream(Stream.of('a','b','c','h')).toString(),equalTo(<span class="jxr_string">"h"</span>));
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         assertThat(str.retainStream(Stream.of('h','e','l','h')).toString(),equalTo(<span class="jxr_string">"helll"</span>));
+<a class="jxr_linenumber" name="L334" href="#L334">334</a> 
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>         assertThat(empty.retainStream(Stream.of('a','b','c')),equalTo(empty));
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>         assertThat(empty.retainStream(Stream.of('a','b','c','h')).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>         assertThat(empty.retainStream(Stream.of('h','e','l','h')).toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>     }
+<a class="jxr_linenumber" name="L339" href="#L339">339</a> 
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>     @Test
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> retainAll1() {
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>         assertThat(str.retainAll(Vector.empty()),equalTo(empty));
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         assertThat(str.retainAll(Arrays.asList('l')),equalTo(LazyString.of(<span class="jxr_string">"lll"</span>)));
+<a class="jxr_linenumber" name="L344" href="#L344">344</a> 
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         assertThat(empty.retainAll(Vector.empty()),equalTo(empty));
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         assertThat(empty.retainAll(Vector.of('l')),equalTo(empty));
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>     }
+<a class="jxr_linenumber" name="L348" href="#L348">348</a> 
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>     @Test
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> distinct() {
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>         assertThat(empty.distinct(),equalTo(empty));
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>         assertThat(str.distinct(),equalTo(LazyString.of(<span class="jxr_string">"helo wrd"</span>)));
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>     }
+<a class="jxr_linenumber" name="L354" href="#L354">354</a> 
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>     @Test
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sorted() {
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>         assertThat(empty.sorted(),equalTo(empty));
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         assertThat(str.sorted().toString(),equalTo(<span class="jxr_string">" dehllloorw"</span>));
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>     }
+<a class="jxr_linenumber" name="L360" href="#L360">360</a> 
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>     @Test
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sorted1() {
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>         assertThat(empty.sorted(),equalTo(empty));
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         assertThat(str.sorted(<strong class="jxr_keyword">new</strong> Comparator&lt;Character&gt;() {
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>             @Override
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compare(Character o1, Character o2) {
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>                 <strong class="jxr_keyword">return</strong> -o1.compareTo(o2);
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>             }
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>         }).toString(),equalTo(<span class="jxr_string">"wroolllhed "</span>));
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>     }
+<a class="jxr_linenumber" name="L371" href="#L371">371</a> 
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>     @Test
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> takeWhile() {
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>         assertThat(empty.takeWhile(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>         assertThat(empty.takeWhile(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>         assertThat(str.takeWhile(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(str));
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>         assertThat(str.takeWhile(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>     }
+<a class="jxr_linenumber" name="L379" href="#L379">379</a> 
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>     @Test
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> dropWhile() {
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>         assertThat(empty.dropWhile(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>         assertThat(empty.dropWhile(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>         assertThat(str.dropWhile(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>         assertThat(str.dropWhile(i-&gt;false),equalTo(str));
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>     }
+<a class="jxr_linenumber" name="L387" href="#L387">387</a> 
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>     @Test
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> takeUntil() {
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>         assertThat(empty.takeUntil(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         assertThat(empty.takeUntil(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         assertThat(str.takeUntil(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>         assertThat(str.takeUntil(i-&gt;false),equalTo(str));
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>     }
+<a class="jxr_linenumber" name="L395" href="#L395">395</a> 
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>     @Test
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> dropUntil() {
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>         assertThat(empty.dropUntil(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(empty));
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>         assertThat(empty.dropUntil(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         assertThat(str.dropUntil(i-&gt;<strong class="jxr_keyword">true</strong>),equalTo(str));
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         assertThat(str.dropUntil(i-&gt;false),equalTo(empty));
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>     }
+<a class="jxr_linenumber" name="L403" href="#L403">403</a> 
+<a class="jxr_linenumber" name="L404" href="#L404">404</a> 
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>     @Test
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> dropRight() {
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>         assertThat(empty.dropRight(2),equalTo(empty));
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         assertThat(empty.dropRight(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         assertThat(str.dropRight(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         assertThat(str.dropRight(-2),equalTo(str));
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>         assertThat(str.dropRight(2).toString(),equalTo(<span class="jxr_string">"hello wor"</span>));
+<a class="jxr_linenumber" name="L412" href="#L412">412</a> 
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>     }
+<a class="jxr_linenumber" name="L414" href="#L414">414</a> 
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>     @Test
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> takeRight() {
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>         assertThat(empty.takeRight(2),equalTo(empty));
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>         assertThat(empty.takeRight(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>         assertThat(str.takeRight(Integer.MAX_VALUE),equalTo(str));
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         assertThat(str.takeRight(-2),equalTo(empty));
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>         assertThat(str.takeRight(2).toString(),equalTo(<span class="jxr_string">"ld"</span>));
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>     }
+<a class="jxr_linenumber" name="L423" href="#L423">423</a> 
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>     @Test
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> shuffle() {
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         assertThat(empty.shuffle(),equalTo(empty));
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>         List&lt;Character&gt; list = str.shuffle().listView();
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         System.out.println(list);
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>         assertThat(list,hasItems(str.lazySeq().listView().toArray(<strong class="jxr_keyword">new</strong> Character[0])));
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>     }
+<a class="jxr_linenumber" name="L431" href="#L431">431</a> 
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>     @Test
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> shuffle1() {
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>         assertThat(empty.shuffle(<strong class="jxr_keyword">new</strong> Random()),equalTo(empty));
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         assertThat(str.shuffle(<strong class="jxr_keyword">new</strong> Random()),hasItems(str.lazySeq().listView().toArray(<strong class="jxr_keyword">new</strong> Character[0])));
+<a class="jxr_linenumber" name="L436" href="#L436">436</a> 
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>     }
+<a class="jxr_linenumber" name="L438" href="#L438">438</a> 
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>     @Test
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> slice() {
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>         assertThat(empty.slice(0,100),equalTo(empty));
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>         assertThat(empty.slice(-100,100),equalTo(empty));
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         assertThat(empty.slice(-100,Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L444" href="#L444">444</a> 
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         assertThat(str.slice(0,100),equalTo(str));
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>         assertThat(str.slice(-100,100),equalTo(str));
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>         assertThat(str.slice(-100,Integer.MAX_VALUE),equalTo(str));
+<a class="jxr_linenumber" name="L448" href="#L448">448</a> 
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>         assertThat(str.slice(3,7).toString(),equalTo(<span class="jxr_string">"lo w"</span>));
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>     }
+<a class="jxr_linenumber" name="L451" href="#L451">451</a> 
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>     @Test
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sorted2() {
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>         assertThat(empty.sorted(i-&gt;i.hashCode()),equalTo(empty));
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>         assertThat(str.sorted(i-&gt;i.hashCode()).toString(),equalTo(<span class="jxr_string">" dehllloorw"</span>));
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>     }
+<a class="jxr_linenumber" name="L457" href="#L457">457</a> 
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>     @Test
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prependStream() {
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>         assertThat(empty.prependStream(str.stream()),equalTo(str));
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>         assertThat(str.prependStream(empty.stream()),equalTo(str));
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>         assertThat(str.prependStream(str.stream()).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>         assertThat(str.prependStream(LazyString.of(<span class="jxr_string">"bob"</span>).stream()).toString(),equalTo(<span class="jxr_string">"bobhello world"</span>));
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>     }
+<a class="jxr_linenumber" name="L465" href="#L465">465</a> 
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>     @Test
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> appendAll() {
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>         assertThat(empty.appendAll(str),equalTo(str));
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>         assertThat(str.appendAll(empty),equalTo(str));
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>         assertThat(str.appendAll(str).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>         assertThat(str.appendAll(LazyString.of(<span class="jxr_string">"bob"</span>).stream()).toString(),equalTo(<span class="jxr_string">"hello worldbob"</span>));
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>     }
+<a class="jxr_linenumber" name="L473" href="#L473">473</a> 
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>     @Test
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prependAll() {
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>         assertThat(empty.prependAll(str.stream()),equalTo(str));
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>         assertThat(str.prependAll(empty.stream()),equalTo(str));
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>         assertThat(str.prependAll(str.stream()).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>         assertThat(str.prependAll(LazyString.of(<span class="jxr_string">"bob"</span>).stream()).toString(),equalTo(<span class="jxr_string">"bobhello world"</span>));
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>     }
+<a class="jxr_linenumber" name="L481" href="#L481">481</a> 
+<a class="jxr_linenumber" name="L482" href="#L482">482</a> 
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>     @Test
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> hashCodeTest(){
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>         assertThat(empty.hashCode(),equalTo(LazySeq.empty().hashCode()));
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>     }
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>     @Test
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> deleteBetween() {
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>         assertThat(empty.deleteBetween(0,100),equalTo(empty));
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>         assertThat(empty.deleteBetween(-10000,10000),equalTo(empty));
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>         assertThat(empty.deleteBetween(-10000,Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L492" href="#L492">492</a> 
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>         assertThat(str.deleteBetween(-10000,Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>         assertThat(str.deleteBetween(0,100),equalTo(empty));
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>         assertThat(str.deleteBetween(-10000,10000),equalTo(empty));
+<a class="jxr_linenumber" name="L496" href="#L496">496</a> 
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>         assertThat(str.deleteBetween(2,5),equalTo(LazyString.of(<span class="jxr_string">"he world"</span>)));
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>         assertThat(str.deleteBetween(2,Integer.MAX_VALUE),equalTo(LazyString.of(<span class="jxr_string">"he"</span>)));
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>     }
+<a class="jxr_linenumber" name="L500" href="#L500">500</a> 
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>     @Test
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> insertStreamAt() {
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>         assertThat(empty.insertStreamAt(0,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L504" href="#L504">504</a>         assertThat(empty.insertStreamAt(1,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>         assertThat(empty.insertStreamAt(Integer.MAX_VALUE,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>         assertThat(empty.insertStreamAt(-1,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>         assertThat(empty.insertStreamAt(-10000,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L508" href="#L508">508</a> 
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>         assertThat(str.insertStreamAt(0,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>         assertThat(str.insertStreamAt(1,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"habello world"</span>)));
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>         assertThat(str.insertStreamAt(Integer.MAX_VALUE,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"hello worldab"</span>)));
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>         assertThat(str.insertStreamAt(-1,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>         assertThat(str.insertStreamAt(-10000,Stream.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L514" href="#L514">514</a>     }
+<a class="jxr_linenumber" name="L515" href="#L515">515</a> 
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>     @Test
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> plusAll() {
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>         assertThat(empty.plusAll(str),equalTo(str));
+<a class="jxr_linenumber" name="L519" href="#L519">519</a>         assertThat(str.plusAll(empty),equalTo(str));
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>         assertThat(str.plusAll(str).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>         assertThat(str.plusAll(LazyString.of(<span class="jxr_string">"bob"</span>)).toString(),equalTo(<span class="jxr_string">"bobhello world"</span>));
+<a class="jxr_linenumber" name="L522" href="#L522">522</a> 
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>     }
+<a class="jxr_linenumber" name="L524" href="#L524">524</a> 
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>     @Test
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> plus() {
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>         assertThat(empty.plus('a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>         assertThat(str.plus('a'),equalTo(LazyString.of(<span class="jxr_string">"ahello world"</span>)));
+<a class="jxr_linenumber" name="L529" href="#L529">529</a>     }
+<a class="jxr_linenumber" name="L530" href="#L530">530</a> 
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>     @Test
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeValue() {
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>         assertThat(empty.removeValue('h'),equalTo(empty));
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>         assertThat(str.removeValue('x'),equalTo(str));
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>         assertThat(str.removeValue('l'),equalTo(LazyString.of(<span class="jxr_string">"helo world"</span>)));
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>     }
+<a class="jxr_linenumber" name="L537" href="#L537">537</a> 
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>     @Test
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeAll1() {
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>         assertThat(empty.removeAll('h'),equalTo(empty));
+<a class="jxr_linenumber" name="L541" href="#L541">541</a>         assertThat(str.removeAll('x'),equalTo(str));
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>         assertThat(str.removeAll('l'),equalTo(LazyString.of(<span class="jxr_string">"heo word"</span>)));
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>         assertThat(str.removeAll('l','e'),equalTo(LazyString.of(<span class="jxr_string">"ho word"</span>)));
+<a class="jxr_linenumber" name="L544" href="#L544">544</a>         assertThat(str.removeAll('l','e','o'),equalTo(LazyString.of(<span class="jxr_string">"h wrd"</span>)));
+<a class="jxr_linenumber" name="L545" href="#L545">545</a> 
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>         assertThat(empty.removeAll(Seq.of('h')),equalTo(empty));
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>         assertThat(str.removeAll(Vector.of('x')),equalTo(str));
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>         assertThat(str.removeAll(Vector.of('l')),equalTo(LazyString.of(<span class="jxr_string">"heo word"</span>)));
+<a class="jxr_linenumber" name="L549" href="#L549">549</a>         assertThat(str.removeAll(Vector.of('l','e')),equalTo(LazyString.of(<span class="jxr_string">"ho word"</span>)));
+<a class="jxr_linenumber" name="L550" href="#L550">550</a>         assertThat(str.removeAll(Vector.of('l','e','o')),equalTo(LazyString.of(<span class="jxr_string">"h wrd"</span>)));
+<a class="jxr_linenumber" name="L551" href="#L551">551</a> 
+<a class="jxr_linenumber" name="L552" href="#L552">552</a> 
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>     }
+<a class="jxr_linenumber" name="L554" href="#L554">554</a> 
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>     @Test
+<a class="jxr_linenumber" name="L556" href="#L556">556</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> updateAt() {
+<a class="jxr_linenumber" name="L557" href="#L557">557</a>         assertThat(empty.updateAt(0,'h'),equalTo(empty));
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>         assertThat(empty.updateAt(-100,'h'),equalTo(empty));
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>         assertThat(empty.updateAt(100,'h'),equalTo(empty));
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>         assertThat(empty.updateAt(Integer.MAX_VALUE,'h'),equalTo(empty));
+<a class="jxr_linenumber" name="L561" href="#L561">561</a> 
+<a class="jxr_linenumber" name="L562" href="#L562">562</a> 
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>         assertThat(str.updateAt(0,'x'),equalTo(LazyString.of(<span class="jxr_string">"xello world"</span>)));
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>         assertThat(str.updateAt(1,'x'),equalTo(LazyString.of(<span class="jxr_string">"hxllo world"</span>)));
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>         assertThat(str.updateAt(-100,'x'),equalTo(str));
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>         assertThat(str.updateAt(100,'x'),equalTo(str));
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>         assertThat(str.updateAt(Integer.MAX_VALUE,'x'),equalTo(str));
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>     }
+<a class="jxr_linenumber" name="L569" href="#L569">569</a> 
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>     @Test
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> insertAt1() {
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>         assertThat(empty.insertAt(0,'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>         assertThat(empty.insertAt(1,'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>         assertThat(empty.insertAt(Integer.MAX_VALUE,'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L575" href="#L575">575</a>         assertThat(empty.insertAt(-1,'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L576" href="#L576">576</a>         assertThat(empty.insertAt(-10000,'a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L577" href="#L577">577</a> 
+<a class="jxr_linenumber" name="L578" href="#L578">578</a>         assertThat(str.insertAt(0,'a'),equalTo(LazyString.of(<span class="jxr_string">"ahello world"</span>)));
+<a class="jxr_linenumber" name="L579" href="#L579">579</a>         assertThat(str.insertAt(1,'a'),equalTo(LazyString.of(<span class="jxr_string">"haello world"</span>)));
+<a class="jxr_linenumber" name="L580" href="#L580">580</a>         assertThat(str.insertAt(Integer.MAX_VALUE,'a'),equalTo(LazyString.of(<span class="jxr_string">"hello worlda"</span>)));
+<a class="jxr_linenumber" name="L581" href="#L581">581</a>         assertThat(str.insertAt(-1,'a'),equalTo(LazyString.of(<span class="jxr_string">"ahello world"</span>)));
+<a class="jxr_linenumber" name="L582" href="#L582">582</a>         assertThat(str.insertAt(-10000,'a'),equalTo(LazyString.of(<span class="jxr_string">"ahello world"</span>)));
+<a class="jxr_linenumber" name="L583" href="#L583">583</a>     }
+<a class="jxr_linenumber" name="L584" href="#L584">584</a> 
+<a class="jxr_linenumber" name="L585" href="#L585">585</a>     @Test
+<a class="jxr_linenumber" name="L586" href="#L586">586</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> insertAt2() {
+<a class="jxr_linenumber" name="L587" href="#L587">587</a>         assertThat(empty.insertAt(0,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L588" href="#L588">588</a>         assertThat(empty.insertAt(1,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L589" href="#L589">589</a>         assertThat(empty.insertAt(Integer.MAX_VALUE,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L590" href="#L590">590</a>         assertThat(empty.insertAt(-1,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L591" href="#L591">591</a>         assertThat(empty.insertAt(-10000,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L592" href="#L592">592</a> 
+<a class="jxr_linenumber" name="L593" href="#L593">593</a>         assertThat(str.insertAt(0,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L594" href="#L594">594</a>         assertThat(str.insertAt(1,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"habello world"</span>)));
+<a class="jxr_linenumber" name="L595" href="#L595">595</a>         assertThat(str.insertAt(Integer.MAX_VALUE,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"hello worldab"</span>)));
+<a class="jxr_linenumber" name="L596" href="#L596">596</a>         assertThat(str.insertAt(-1,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L597" href="#L597">597</a>         assertThat(str.insertAt(-10000,'a','b'),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L598" href="#L598">598</a>     }
+<a class="jxr_linenumber" name="L599" href="#L599">599</a>     @Test
+<a class="jxr_linenumber" name="L600" href="#L600">600</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> insertAt3() {
+<a class="jxr_linenumber" name="L601" href="#L601">601</a>         assertThat(empty.insertAt(0,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L602" href="#L602">602</a>         assertThat(empty.insertAt(1,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L603" href="#L603">603</a>         assertThat(empty.insertAt(Integer.MAX_VALUE,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L604" href="#L604">604</a>         assertThat(empty.insertAt(-1,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L605" href="#L605">605</a>         assertThat(empty.insertAt(-10000,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"ab"</span>)));
+<a class="jxr_linenumber" name="L606" href="#L606">606</a> 
+<a class="jxr_linenumber" name="L607" href="#L607">607</a>         assertThat(str.insertAt(0,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L608" href="#L608">608</a>         assertThat(str.insertAt(1,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"habello world"</span>)));
+<a class="jxr_linenumber" name="L609" href="#L609">609</a>         assertThat(str.insertAt(Integer.MAX_VALUE,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"hello worldab"</span>)));
+<a class="jxr_linenumber" name="L610" href="#L610">610</a>         assertThat(str.insertAt(-1,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L611" href="#L611">611</a>         assertThat(str.insertAt(-10000,Seq.of('a','b')),equalTo(LazyString.of(<span class="jxr_string">"abhello world"</span>)));
+<a class="jxr_linenumber" name="L612" href="#L612">612</a>     }
+<a class="jxr_linenumber" name="L613" href="#L613">613</a> 
+<a class="jxr_linenumber" name="L614" href="#L614">614</a>     @Test
+<a class="jxr_linenumber" name="L615" href="#L615">615</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> drop() {
+<a class="jxr_linenumber" name="L616" href="#L616">616</a>         assertThat(empty.drop(-1),equalTo(empty));
+<a class="jxr_linenumber" name="L617" href="#L617">617</a>         assertThat(empty.drop(-10000),equalTo(empty));
+<a class="jxr_linenumber" name="L618" href="#L618">618</a>         assertThat(empty.drop(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L619" href="#L619">619</a>         assertThat(empty.drop(10),equalTo(empty));
+<a class="jxr_linenumber" name="L620" href="#L620">620</a> 
+<a class="jxr_linenumber" name="L621" href="#L621">621</a>         assertThat(str.drop(-1),equalTo(str));
+<a class="jxr_linenumber" name="L622" href="#L622">622</a>         assertThat(str.drop(-10000),equalTo(str));
+<a class="jxr_linenumber" name="L623" href="#L623">623</a>         assertThat(str.drop(Integer.MAX_VALUE),equalTo(empty));
+<a class="jxr_linenumber" name="L624" href="#L624">624</a>         assertThat(str.drop(50),equalTo(empty));
+<a class="jxr_linenumber" name="L625" href="#L625">625</a>         assertThat(str.drop(5),equalTo(LazyString.of(<span class="jxr_string">" world"</span>)));
+<a class="jxr_linenumber" name="L626" href="#L626">626</a>     }
+<a class="jxr_linenumber" name="L627" href="#L627">627</a> 
+<a class="jxr_linenumber" name="L628" href="#L628">628</a>     @Test
+<a class="jxr_linenumber" name="L629" href="#L629">629</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> reverse() {
+<a class="jxr_linenumber" name="L630" href="#L630">630</a>         assertThat(empty.reverse(),equalTo(empty));
+<a class="jxr_linenumber" name="L631" href="#L631">631</a>         assertThat(str.reverse().toString(),equalTo(<span class="jxr_string">"dlrow olleh"</span>));
+<a class="jxr_linenumber" name="L632" href="#L632">632</a>     }
+<a class="jxr_linenumber" name="L633" href="#L633">633</a> 
+<a class="jxr_linenumber" name="L634" href="#L634">634</a>     @Test
+<a class="jxr_linenumber" name="L635" href="#L635">635</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> get() {
+<a class="jxr_linenumber" name="L636" href="#L636">636</a>         assertThat(empty.get(10),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L637" href="#L637">637</a>         assertThat(empty.get(Integer.MAX_VALUE),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L638" href="#L638">638</a>         assertThat(empty.get(-100),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L639" href="#L639">639</a> 
+<a class="jxr_linenumber" name="L640" href="#L640">640</a>         assertThat(str.get(100),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L641" href="#L641">641</a>         assertThat(str.get(Integer.MAX_VALUE),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L642" href="#L642">642</a>         assertThat(str.get(-100),equalTo(Option.none()));
+<a class="jxr_linenumber" name="L643" href="#L643">643</a>         assertThat(str.get(1),equalTo(Option.some('e')));
+<a class="jxr_linenumber" name="L644" href="#L644">644</a>     }
+<a class="jxr_linenumber" name="L645" href="#L645">645</a> 
+<a class="jxr_linenumber" name="L646" href="#L646">646</a>     @Test
+<a class="jxr_linenumber" name="L647" href="#L647">647</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> getOrElse() {
+<a class="jxr_linenumber" name="L648" href="#L648">648</a>         assertThat(empty.getOrElse(10,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L649" href="#L649">649</a>         assertThat(empty.getOrElse(Integer.MAX_VALUE,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L650" href="#L650">650</a>         assertThat(empty.getOrElse(-100,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L651" href="#L651">651</a> 
+<a class="jxr_linenumber" name="L652" href="#L652">652</a>         assertThat(str.getOrElse(100,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L653" href="#L653">653</a>         assertThat(str.getOrElse(Integer.MAX_VALUE,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L654" href="#L654">654</a>         assertThat(str.getOrElse(-100,'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L655" href="#L655">655</a>         assertThat(str.getOrElse(1,'x'),equalTo('e'));
+<a class="jxr_linenumber" name="L656" href="#L656">656</a>     }
+<a class="jxr_linenumber" name="L657" href="#L657">657</a> 
+<a class="jxr_linenumber" name="L658" href="#L658">658</a>     @Test
+<a class="jxr_linenumber" name="L659" href="#L659">659</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> getOrElseGet() {
+<a class="jxr_linenumber" name="L660" href="#L660">660</a>         assertThat(empty.getOrElseGet(10,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L661" href="#L661">661</a>         assertThat(empty.getOrElseGet(Integer.MAX_VALUE,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L662" href="#L662">662</a>         assertThat(empty.getOrElseGet(-100,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L663" href="#L663">663</a> 
+<a class="jxr_linenumber" name="L664" href="#L664">664</a>         assertThat(str.getOrElseGet(100,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L665" href="#L665">665</a>         assertThat(str.getOrElseGet(Integer.MAX_VALUE,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L666" href="#L666">666</a>         assertThat(str.getOrElseGet(-100,()-&gt;'x'),equalTo('x'));
+<a class="jxr_linenumber" name="L667" href="#L667">667</a>         assertThat(str.getOrElseGet(1,()-&gt;'x'),equalTo('e'));
+<a class="jxr_linenumber" name="L668" href="#L668">668</a>     }
+<a class="jxr_linenumber" name="L669" href="#L669">669</a> 
+<a class="jxr_linenumber" name="L670" href="#L670">670</a>     @Test
+<a class="jxr_linenumber" name="L671" href="#L671">671</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prepend() {
+<a class="jxr_linenumber" name="L672" href="#L672">672</a>         assertThat(empty.prepend('a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L673" href="#L673">673</a>         assertThat(str.prepend('a'),equalTo(LazyString.of(<span class="jxr_string">"ahello world"</span>)));
+<a class="jxr_linenumber" name="L674" href="#L674">674</a>     }
+<a class="jxr_linenumber" name="L675" href="#L675">675</a> 
+<a class="jxr_linenumber" name="L676" href="#L676">676</a>     @Test
+<a class="jxr_linenumber" name="L677" href="#L677">677</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> append() {
+<a class="jxr_linenumber" name="L678" href="#L678">678</a>         assertThat(empty.append('a'),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L679" href="#L679">679</a>         assertThat(str.append('a'),equalTo(LazyString.of(<span class="jxr_string">"hello worlda"</span>)));
+<a class="jxr_linenumber" name="L680" href="#L680">680</a>     }
+<a class="jxr_linenumber" name="L681" href="#L681">681</a> 
+<a class="jxr_linenumber" name="L682" href="#L682">682</a>     @Test
+<a class="jxr_linenumber" name="L683" href="#L683">683</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prependAll1() {
+<a class="jxr_linenumber" name="L684" href="#L684">684</a>         assertThat(empty.prependAll(str),equalTo(str));
+<a class="jxr_linenumber" name="L685" href="#L685">685</a>         assertThat(str.prependAll(empty),equalTo(str));
+<a class="jxr_linenumber" name="L686" href="#L686">686</a>         assertThat(str.prependAll(str).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L687" href="#L687">687</a>         assertThat(str.prependAll(LazyString.of(<span class="jxr_string">"bob"</span>)).toString(),equalTo(<span class="jxr_string">"bobhello world"</span>));
+<a class="jxr_linenumber" name="L688" href="#L688">688</a>     }
+<a class="jxr_linenumber" name="L689" href="#L689">689</a> 
+<a class="jxr_linenumber" name="L690" href="#L690">690</a>     @Test
+<a class="jxr_linenumber" name="L691" href="#L691">691</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> appendAll1() {
+<a class="jxr_linenumber" name="L692" href="#L692">692</a>         assertThat(empty.appendAll(str),equalTo(str));
+<a class="jxr_linenumber" name="L693" href="#L693">693</a>         assertThat(str.appendAll(empty),equalTo(str));
+<a class="jxr_linenumber" name="L694" href="#L694">694</a>         assertThat(str.appendAll(str).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L695" href="#L695">695</a>         assertThat(str.appendAll(LazyString.of(<span class="jxr_string">"bob"</span>).stream()).toString(),equalTo(<span class="jxr_string">"hello worldbob"</span>));
+<a class="jxr_linenumber" name="L696" href="#L696">696</a>     }
+<a class="jxr_linenumber" name="L697" href="#L697">697</a> 
+<a class="jxr_linenumber" name="L698" href="#L698">698</a>     @Test
+<a class="jxr_linenumber" name="L699" href="#L699">699</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> appendAll2() {
+<a class="jxr_linenumber" name="L700" href="#L700">700</a>         assertThat(empty.appendAll(str.toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])),equalTo(str));
+<a class="jxr_linenumber" name="L701" href="#L701">701</a>         assertThat(str.appendAll(empty.toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])),equalTo(str));
+<a class="jxr_linenumber" name="L702" href="#L702">702</a>         assertThat(str.appendAll(str.toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L703" href="#L703">703</a>         assertThat(str.appendAll(LazyString.of(<span class="jxr_string">"bob"</span>).stream().toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])).toString(),equalTo(<span class="jxr_string">"hello worldbob"</span>));
+<a class="jxr_linenumber" name="L704" href="#L704">704</a>     }
+<a class="jxr_linenumber" name="L705" href="#L705">705</a> 
+<a class="jxr_linenumber" name="L706" href="#L706">706</a>     @Test
+<a class="jxr_linenumber" name="L707" href="#L707">707</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prependAll2() {
+<a class="jxr_linenumber" name="L708" href="#L708">708</a>         assertThat(empty.prependAll(str.stream().toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])),equalTo(str));
+<a class="jxr_linenumber" name="L709" href="#L709">709</a>         assertThat(str.prependAll(empty.stream().toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])),equalTo(str));
+<a class="jxr_linenumber" name="L710" href="#L710">710</a>         assertThat(str.prependAll(str.stream().toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])).toString(),equalTo(<span class="jxr_string">"hello worldhello world"</span>));
+<a class="jxr_linenumber" name="L711" href="#L711">711</a>         assertThat(str.prependAll(LazyString.of(<span class="jxr_string">"bob"</span>).stream().toArray(i-&gt;<strong class="jxr_keyword">new</strong> Character[i])).toString(),equalTo(<span class="jxr_string">"bobhello world"</span>));
+<a class="jxr_linenumber" name="L712" href="#L712">712</a>     }
+<a class="jxr_linenumber" name="L713" href="#L713">713</a> 
+<a class="jxr_linenumber" name="L714" href="#L714">714</a>     @Test
+<a class="jxr_linenumber" name="L715" href="#L715">715</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> append1() {
+<a class="jxr_linenumber" name="L716" href="#L716">716</a>         assertThat(empty.append(<span class="jxr_string">"a"</span>),equalTo(LazyString.of(<span class="jxr_string">"a"</span>)));
+<a class="jxr_linenumber" name="L717" href="#L717">717</a>         assertThat(str.append(<span class="jxr_string">"a"</span>),equalTo(LazyString.of(<span class="jxr_string">"hello worlda"</span>)));
+<a class="jxr_linenumber" name="L718" href="#L718">718</a>         assertThat(str.append(<span class="jxr_string">"ab"</span>),equalTo(LazyString.of(<span class="jxr_string">"hello worldab"</span>)));
+<a class="jxr_linenumber" name="L719" href="#L719">719</a>     }
+<a class="jxr_linenumber" name="L720" href="#L720">720</a> 
+<a class="jxr_linenumber" name="L721" href="#L721">721</a>     @Test
+<a class="jxr_linenumber" name="L722" href="#L722">722</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> size() {
+<a class="jxr_linenumber" name="L723" href="#L723">723</a>         assertThat(empty.size(),equalTo(0));
+<a class="jxr_linenumber" name="L724" href="#L724">724</a>         assertThat(str.size(),equalTo(<span class="jxr_string">"hello world"</span>.length()));
+<a class="jxr_linenumber" name="L725" href="#L725">725</a>     }
+<a class="jxr_linenumber" name="L726" href="#L726">726</a> 
+<a class="jxr_linenumber" name="L727" href="#L727">727</a>     @Test
+<a class="jxr_linenumber" name="L728" href="#L728">728</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> isEmpty() {
+<a class="jxr_linenumber" name="L729" href="#L729">729</a>         assertThat(empty.isEmpty(),equalTo(<strong class="jxr_keyword">true</strong>));
+<a class="jxr_linenumber" name="L730" href="#L730">730</a>         assertThat(str.isEmpty(),equalTo(false));
+<a class="jxr_linenumber" name="L731" href="#L731">731</a>     }
+<a class="jxr_linenumber" name="L732" href="#L732">732</a> 
+<a class="jxr_linenumber" name="L733" href="#L733">733</a>     @Test
+<a class="jxr_linenumber" name="L734" href="#L734">734</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> length() {
+<a class="jxr_linenumber" name="L735" href="#L735">735</a>         assertThat(empty.length(),equalTo(0));
+<a class="jxr_linenumber" name="L736" href="#L736">736</a>         assertThat(str.length(),equalTo(<span class="jxr_string">"hello world"</span>.length()));
+<a class="jxr_linenumber" name="L737" href="#L737">737</a>     }
+<a class="jxr_linenumber" name="L738" href="#L738">738</a> 
+<a class="jxr_linenumber" name="L739" href="#L739">739</a>     @Test
+<a class="jxr_linenumber" name="L740" href="#L740">740</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toStringTest() {
+<a class="jxr_linenumber" name="L741" href="#L741">741</a>         assertThat(empty.toString(),equalTo(<span class="jxr_string">""</span>));
+<a class="jxr_linenumber" name="L742" href="#L742">742</a>         assertThat(str.toString(),equalTo(<span class="jxr_string">"hello world"</span>));
+<a class="jxr_linenumber" name="L743" href="#L743">743</a>     }
+<a class="jxr_linenumber" name="L744" href="#L744">744</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>
