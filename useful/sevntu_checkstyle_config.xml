@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+    <property name="severity" value="error"/>
+    <module name="TreeWalker">
+        <module name="StaticMethodCandidate"/>
+        <module name="CustomDeclarationOrder">
+            <property name="customDeclarationOrder"
+                      value="InnerEnum(public .*)
+                      ### Field(public static final)
+                      ### Field(public static .*)
+                      ### Field(protected static final)
+                      ### Field(protected static .*)
+                      ### Field(static final)
+                      ### Field(static .*)
+                      ### Field(private static final)
+                      ### Field(private static .*)
+                      ### DeclareAnonClassField(public static final)
+                      ### DeclareAnonClassField((private|protected) static final)
+                      ### Field(@Autowired.* public)
+                      ### Field(@Inject.* public)
+                      ### Field(public.*)
+                      ### Field(public)
+                      ### Field(private final)
+                      ### Field(private.*)
+                      ### Field(private)
+                      ### Field(.*)
+                      ### Ctor(public)
+                      ### Ctor(private)
+                      ### MainMethod(.*)
+                      ### Method((public|protected)?(\w*\s)?abstract\s)
+                      ### Method(public static .*)
+                      ### Method(public .*)
+                      ### Method(private .*)
+                      ### InnerEnum(private .*)
+                      ### InnerInterface(.*)
+                      ### InnerClass(.*)"/>
+        </module>
+    </module>
+</module>
