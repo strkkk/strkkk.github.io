@@ -1,0 +1,2255 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">InnerTypeLastCheck</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">6386</td>
+							<td id="totalBase">2565</td>
+							
+								<td id="warningSeverityNumBase">2565</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">6386</td>
+							<td id="totalPatch">2639 (74 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">2639 (74 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">50 files with differences</td>
+							<td id="totalDiff">74 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">74 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleNumBase">2565</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleStatisticsPatch">2639 (74 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleNumDiff">74</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">74</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/collection/internal/AbstractPersistentCollection.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/collection/internal/AbstractPersistentCollection.java.html#L491">491</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/collection/internal/AbstractPersistentCollection.java.html#L494">494</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/collection/internal/PersistentIndexedElementHolder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/collection/internal/PersistentIndexedElementHolder.java.html#L117">117</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/criterion/Example.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/criterion/Example.java.html#L184">184</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/internal/JoinSequence.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/internal/JoinSequence.java.html#L115">115</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/internal/ParameterBinder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/internal/ParameterBinder.java.html#L56">56</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/query/spi/ParameterParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/query/spi/ParameterParser.java.html#L51">51</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/spi/CascadeStyle.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/spi/CascadeStyle.java.html#L285">285</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/engine/spi/CascadeStyle.java.html#L290">290</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/hql/internal/ast/util/NodeTraverser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/hql/internal/ast/util/NodeTraverser.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/id/CompositeNestedGeneratedValueGenerator.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/id/CompositeNestedGeneratedValueGenerator.java.html#L107">107</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/id/IdentifierGeneratorHelper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/id/IdentifierGeneratorHelper.java.html#L717">717</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/ValueHolder.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/ValueHolder.java.html#L60">60</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/ValueHolder.java.html#L64">64</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/beans/BeanInfoHelper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/beans/BeanInfoHelper.java.html#L43">43</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/beans/BeanInfoHelper.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java.html#L1637">1637</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java.html#L1699">1699</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java.html#L1721">1721</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java.html#L1738">1738</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/BoundedConcurrentHashMap.java.html#L1745">1745</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L940">940</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1002">1002</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1025">1025</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1042">1042</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1061">1061</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1070">1070</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/internal/util/collections/ConcurrentReferenceHashMap.java.html#L1082">1082</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/jdbc/Expectations.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/jdbc/Expectations.java.html#L193">193</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/loader/custom/sql/SQLQueryParser.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/loader/custom/sql/SQLQueryParser.java.html#L66">66</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/mapping/Table.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/mapping/Table.java.html#L102">102</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/mapping/Table.java.html#L104">104</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/service/spi/ServiceBinding.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/service/spi/ServiceBinding.java.html#L53">53</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/service/spi/ServiceBinding.java.html#L60">60</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/sql/SelectValues.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/sql/SelectValues.java.html#L58">58</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/transform/DistinctResultTransformer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/transform/DistinctResultTransformer.java.html#L82">82</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/BlobTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/BlobTypeDescriptor.java.html#L73">73</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/CalendarTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/CalendarTypeDescriptor.java.html#L51">51</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/ClobTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/ClobTypeDescriptor.java.html#L71">71</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/DateTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/DateTypeDescriptor.java.html#L52">52</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcDateTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcDateTypeDescriptor.java.html#L54">54</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcTimeTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcTimeTypeDescriptor.java.html#L55">55</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcTimestampTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/JdbcTimestampTypeDescriptor.java.html#L62">62</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/LocaleTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/LocaleTypeDescriptor.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/NClobTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/NClobTypeDescriptor.java.html#L71">71</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/SerializableTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/SerializableTypeDescriptor.java.html#L65">65</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/TimeZoneTypeDescriptor.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/TimeZoneTypeDescriptor.java.html#L47">47</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/LineItem.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/LineItem.java.html#L78">78</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/LineItem.java.html#L86">86</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/Order.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/Order.java.html#L68">68</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/Order.java.html#L75">75</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/PurchaseRecord.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/cid/PurchaseRecord.java.html#L87">87</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/event/collection/CollectionListeners.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/event/collection/CollectionListeners.java.html#L160">160</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/event/collection/detached/MultipleCollectionListeners.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/event/collection/detached/MultipleCollectionListeners.java.html#L182">182</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Container.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Container.java.html#L126">126</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Foo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Foo.java.html#L79">79</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Foo.java.html#L82">82</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/legacy/Foo.java.html#L86">86</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/manytomanyassociationclass/compositeid/MembershipWithCompositeId.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/manytomanyassociationclass/compositeid/MembershipWithCompositeId.java.html#L98">98</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/manytomanyassociationclass/compositeid/MembershipWithCompositeId.java.html#L102">102</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/orphan/one2one/fk/composite/EmployeeInfo.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/orphan/one2one/fk/composite/EmployeeInfo.java.html#L87">87</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/orphan/one2one/fk/composite/EmployeeInfo.java.html#L90">90</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/orphan/one2one/fk/composite/EmployeeInfo.java.html#L94">94</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/type/descriptor/java/AbstractDescriptorTest.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-core/src/test/java/org/hibernate/test/type/descriptor/java/AbstractDescriptorTest.java.html#L57">57</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/Ejb3Configuration.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/Ejb3Configuration.java.html#L174">174</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/CriteriaQueryCompiler.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A66" href = "#A66">#A66</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/CriteriaQueryCompiler.java.html#L140">140</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/expression/SearchedCaseExpression.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A67" href = "#A67">#A67</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/expression/SearchedCaseExpression.java.html#L74">74</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/expression/SimpleCaseExpression.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A68" href = "#A68">#A68</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/expression/SimpleCaseExpression.java.html#L75">75</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/path/MapKeyHelpers.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A69" href = "#A69">#A69</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-entitymanager/src/main/java/org/hibernate/ejb/criteria/path/MapKeyHelpers.java.html#L183">183</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-envers/src/test/java/org/hibernate/envers/test/EnversRunner.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A70" href = "#A70">#A70</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-envers/src/test/java/org/hibernate/envers/test/EnversRunner.java.html#L99">99</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-envers/src/test/java/org/hibernate/envers/test/integration/onetomany/embeddedid/PersonTuple.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A71" href = "#A71">#A71</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-envers/src/test/java/org/hibernate/envers/test/integration/onetomany/embeddedid/PersonTuple.java.html#L98">98</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A72" href = "#A72">#A72</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-envers/src/test/java/org/hibernate/envers/test/integration/onetomany/embeddedid/PersonTuple.java.html#L101">101</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/util/ClassLoaderAwareCache.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A73" href = "#A73">#A73</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-infinispan/src/test/java/org/hibernate/test/cache/infinispan/util/ClassLoaderAwareCache.java.html#L89">89</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-testing/src/main/java/org/hibernate/testing/junit4/ClassLoadingIsolater.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A74" href = "#A74">#A74</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/hibernate-orm-with-excludes/hibernate-testing/src/main/java/org/hibernate/testing/junit4/ClassLoadingIsolater.java.html#L41">41</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

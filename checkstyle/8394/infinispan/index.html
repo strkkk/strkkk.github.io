@@ -1,0 +1,2146 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">InnerTypeLastCheck</td>
+										
+										<td class="c">
+											
+										</td>
+										
+										
+										<td class="c">
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+										<td class="c">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">4840</td>
+							<td id="totalBase">1692</td>
+							
+								<td id="warningSeverityNumBase">1692</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">4840</td>
+							<td id="totalPatch">1767 (75 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">1767 (75 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">41 files with differences</td>
+							<td id="totalDiff">75 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">75 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleNumBase">1692</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleStatisticsPatch">1767 (75 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.design.InnerTypeLastCheckModuleNumDiff">75</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">75</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntriesEvictedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntriesEvictedAdapter.java.html#L88">88</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryActivatedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryActivatedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryCreatedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryCreatedAdapter.java.html#L141">141</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryEvictedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryEvictedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryInvalidatedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryInvalidatedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryLoadedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryLoadedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryModifiedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryModifiedAdapter.java.html#L151">151</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryPassivatedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryPassivatedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryRemovedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryRemovedAdapter.java.html#L151">151</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryVisitedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/CacheEntryVisitedAdapter.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/DataRehashedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/DataRehashedAdapter.java.html#L138">138</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TopologyChangedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TopologyChangedAdapter.java.html#L102">102</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TransactionCompletedAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TransactionCompletedAdapter.java.html#L110">110</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TransactionRegisteredAdapter.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/event/cache/TransactionRegisteredAdapter.java.html#L100">100</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/util/Annotateds.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/cdi/src/main/java/org/infinispan/cdi/util/Annotateds.java.html#L147">147</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/marshall/InstanceReusingAdvancedExternalizer.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/marshall/InstanceReusingAdvancedExternalizer.java.html#L31">31</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/marshall/InstanceReusingAdvancedExternalizer.java.html#L35">35</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/CollectionFactory.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/CollectionFactory.java.html#L104">104</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/OsgiClassLoader.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/OsgiClassLoader.java.html#L44">44</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java.html#L626">626</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java.html#L674">674</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java.html#L686">686</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java.html#L694">694</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/ConcurrentWeakKeyHashMap.java.html#L705">705</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2095">2095</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2111">2111</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2138">2138</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2163">2163</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2185">2185</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2207">2207</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L2231">2231</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/BoundedEquivalentConcurrentHashMapV8.java.html#L7920">7920</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L850">850</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L867">867</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L883">883</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L905">905</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L928">928</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/EquivalentConcurrentHashMapV8.java.html#L6299">6299</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java.html#L2470">2470</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java.html#L2489">2489</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java.html#L2517">2517</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java.html#L2542">2542</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinPool.java.html#L3329">3329</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinTask.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/ForkJoinTask.java.html#L1469">1469</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/Striped64.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/Striped64.java.html#L167">167</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/Striped64.java.html#L303">303</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/StrippedConcurrentLinkedDeque.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/commons/src/main/java/org/infinispan/commons/util/concurrent/jdk8backported/StrippedConcurrentLinkedDeque.java.html#L686">686</a></td>
+								
+								
+									
+									<td class="keepWidth">3</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/distexec/DistributedExecutionCompletionService.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/distexec/DistributedExecutionCompletionService.java.html#L55">55</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/distexec/DistributedExecutionCompletionService.java.html#L76">76</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/distribution/group/GroupManagerImpl.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/distribution/group/GroupManagerImpl.java.html#L68">68</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/iteration/impl/DistributedEntryRetriever.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/iteration/impl/DistributedEntryRetriever.java.html#L116">116</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/iteration/impl/LocalEntryRetriever.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/iteration/impl/LocalEntryRetriever.java.html#L139">139</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/persistence/async/BufferLock.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/persistence/async/BufferLock.java.html#L130">130</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java.html#L1594">1594</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java.html#L1666">1666</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java.html#L1689">1689</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java.html#L1707">1707</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/main/java/org/infinispan/util/concurrent/BoundedConcurrentHashMap.java.html#L1714">1714</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L837">837</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L850">850</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L864">864</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L884">884</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L906">906</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/commons/util/concurrent/jdk8backported/ConcurrentHashMapV8.java.html#L6258">6258</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/test/fwk/TransactionSetup.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/core/src/test/java/org/infinispan/test/fwk/TransactionSetup.java.html#L46">46</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/hql/FilterParsingResult.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A66" href = "#A66">#A66</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/hql/FilterParsingResult.java.html#L48">48</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/predicateindex/Predicates.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A67" href = "#A67">#A67</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/predicateindex/Predicates.java.html#L95">95</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/util/IntervalTree.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A68" href = "#A68">#A68</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/util/IntervalTree.java.html#L73">73</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/util/ReflectionHelper.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A69" href = "#A69">#A69</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/object-filter/src/main/java/org/infinispan/objectfilter/impl/util/ReflectionHelper.java.html#L238">238</a></td>
+								
+								
+									
+									<td class="keepWidth">4</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/CacheConfigurationService.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A70" href = "#A70">#A70</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/CacheConfigurationService.java.html#L53">53</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/CacheService.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A71" href = "#A71">#A71</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/CacheService.java.html#L64">64</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/EmbeddedCacheManagerConfigurationService.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A72" href = "#A72">#A72</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/infinispan/src/main/java/org/jboss/as/clustering/infinispan/subsystem/EmbeddedCacheManagerConfigurationService.java.html#L98">98</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/testsuite/src/test/java/org/infinispan/server/test/client/memcached/MemcachedClient.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A73" href = "#A73">#A73</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/testsuite/src/test/java/org/infinispan/server/test/client/memcached/MemcachedClient.java.html#L98">98</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A74" href = "#A74">#A74</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/testsuite/src/test/java/org/infinispan/server/test/client/memcached/MemcachedClient.java.html#L102">102</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A75" href = "#A75">#A75</a></td>
+								<td>warning</td>
+								<td>InnerTypeLast</td>
+								<td>Fields and methods should be before inner classes.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/checkstyle/contribution/checkstyle-tester/repositories/infinispan/server/integration/testsuite/src/test/java/org/infinispan/server/test/client/memcached/MemcachedClient.java.html#L110">110</a></td>
+								
+								
+									
+									<td class="keepWidth">5</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
