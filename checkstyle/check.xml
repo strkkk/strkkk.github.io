@@ -37,10 +37,4 @@
         <property name="acceptOnMatch" value="false"/>
     </module>
     -->
-
-    <!-- as we run on regression even on non-compiled files we need to skip exceptions on them -->
-    <module name="SuppressionSingleFilter">
-      <property name="message" value="Exception occurred while parsing"/>
-      <property name="checks" value="Checker"/>
-    </module>
 </module>
