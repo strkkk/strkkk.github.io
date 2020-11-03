@@ -18,6 +18,8 @@
         <module name="StaticVariableName"/>
         <module name="TypeName"/>
         <module name="AvoidStarImport"/>
+        <module name="LambdaBodyLength"/>
+        <module name="MultipleStringLiterals"/>
         <module name="SingleSpaceSeparator"/>
         <module name="IllegalImport">
             <property name="illegalPkgs" value="sun,org.easymock.classextension"/>
